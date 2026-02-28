@@ -2,25 +2,15 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
- <title>Outdoor – Nici Singer | Outdoor Videografin aus Köln</title>
- <meta name="description" content="Portfolio von Nici Singer, Videografin aus Köln. Outdoor-Projekte, Branding, Events, Weddings – nationale und internationale Projekte.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Outdoor – Nici Singer | Outdoor Videografin aus Köln</title>
+  <meta name="description" content="Portfolio von Nici Singer, Videografin aus Köln. Outdoor-Projekte, Branding, Events, Weddings – nationale und internationale Projekte.">
   <meta name="keywords" content="Videografin Köln, Branding Video, Event Videografie, Hochzeiten Video, Travel Video, internationale Videografin">
   <meta name="robots" content="index, follow">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <style>
-  /* Vorschauvideo jetzt volle Breite */
-  .preview-video {
-    width: 100vw;           /* volle Breite des Viewports */
-    height: 60vh;           /* gleiche Höhe wie vorher */
-    object-fit: cover;
-    display: block;
-    margin-left: calc(-50vw + 50%); /* damit es genau am linken Rand beginnt */
-    margin-bottom: 2rem;
-  }
-</style>
 </head>
 <body>
 
@@ -36,7 +26,22 @@
     <a href="ueber-mich.html">Über mich</a>
     <a href="kontakt.html">Kontakt</a>
   </nav>
+  <!-- Hamburger Button (nur Mobile) -->
+  <button class="hamburger" id="hamburger" aria-label="Menü öffnen">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </header>
+
+<!-- Mobile Navigation Overlay -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html">Home</a>
+  <a href="portfolio.html" class="active">Portfolio</a>
+  <a href="studio.html">Studio</a>
+  <a href="ueber-mich.html">Über mich</a>
+  <a href="kontakt.html">Kontakt</a>
+</div>
 
 <main>
 
@@ -50,11 +55,9 @@
     <button onclick="window.location.href='drohne.html'">Drohne</button>
   </nav>
 
-  <!-- Vorschauvideo unter den Kategorien -->
   <video class="preview-video" src="assets/video-outdoor.mp4" autoplay muted loop playsinline></video>
 
   <section class="portfolio-detail">
-
     <div class="detail-intro">
       <h2>The best shooting locations are probably out there.</h2>
       <p>
@@ -65,7 +68,6 @@
         für deine Brand in unglaublicher Umgebung! 
       </p>
     </div>
-
   </section>
 
   <section class="video-showcase">
@@ -96,62 +98,41 @@
       </a>
 
       <a href="#" class="video-item youtube-preview" data-video="x6ioGWMVLQs">
-    <img src="assets/thumbnails/outdoor-iceland.jpg" alt="Iceland">
-    <div class="video-text-overlay">
-        <h3>The beauty of Iceland</h3>
-        <p>Breathtaking landscapes</p>
-    </div>
-</a>
+        <img src="assets/thumbnails/outdoor-iceland.jpg" alt="Iceland">
+        <div class="video-text-overlay">
+          <h3>The beauty of Iceland</h3>
+          <p>Breathtaking landscapes</p>
+        </div>
+      </a>
 
     </div>
   </section>
 
 </main>
 
-<script>
-  const header = document.querySelector("header");
-
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 10) {
-      header.classList.add("scrolled");
-    } else {
-      header.classList.remove("scrolled");
-    }
-  });
-</script>
+<!-- Video Modal -->
+<div class="video-modal" id="videoModal">
+  <div class="modal-content">
+    <button class="close-btn" id="closeVideoModal">&times;</button>
+    <iframe id="videoIframe" src="" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
 
 <footer class="site-footer fade-in-section">
   <div class="footer-inner">
-
-    <!-- Linke Seite -->
     <div class="footer-brand">
-
-      <a href="index.html" class="footer-name">
-        Nici Singer – Videografin
-      </a>
-
-      <!-- Mailadresse -->
-      <a href="mailto:nicisinger.media@gmail.com" class="footer-mail">
-        nicisinger.media@gmail.com
-      </a>
-
-      <!-- Social Icons -->
+      <a href="index.html" class="footer-name">Nici Singer – Videografin</a>
+      <a href="mailto:nicisinger.media@gmail.com" class="footer-mail">nicisinger.media@gmail.com</a>
       <div class="footer-icons">
         <a href="https://www.instagram.com/nicisinger/" target="_blank" aria-label="Instagram">
           <img src="assets/icons/instagram.svg" alt="Instagram">
         </a>
-
         <a href="mailto:nicisinger.media@gmail.com" aria-label="E-Mail">
           <img src="assets/icons/mail.svg" alt="E-Mail">
         </a>
       </div>
-
     </div>
-
-    <!-- Rechte Seite -->
     <div class="footer-links">
-
-      <!-- Hauptnavigation -->
       <nav class="footer-nav-main">
         <a href="index.html">Home</a>
         <a href="portfolio.html">Portfolio</a>
@@ -159,44 +140,73 @@
         <a href="ueber-mich.html">Über mich</a>
         <a href="kontakt.html">Kontakt</a>
       </nav>
-
-      <!-- Rechtliches -->
       <nav class="footer-nav-legal">
         <a href="impressum.html">Impressum</a>
         <a href="datenschutz.html">Datenschutz</a>
       </nav>
-
     </div>
   </div>
 </footer>
 
 <script>
-const fadeElements = document.querySelectorAll('.fade-in, .fade-in-section');
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      // observer.unobserve(entry.target); // Optional: animiere jedes Mal, wenn sichtbar
-    }
+  const header = document.querySelector("header");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 10) { header.classList.add("scrolled"); }
+    else { header.classList.remove("scrolled"); }
   });
-}, {
-  threshold: 0.2
-});
+</script>
 
-fadeElements.forEach(el => observer.observe(el));
-
-// Klick-Logik für alle YouTube-Vorschaubilder
-    document.querySelectorAll('.youtube-preview').forEach(item => {
-        item.addEventListener('click', e => {
-            e.preventDefault(); // Verhindert, dass die Seite nach oben springt
-            const videoId = item.dataset.video;
-            // YouTube URL mit Autoplay setzen
-            videoIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
-            videoModal.style.display = 'flex'; // Modal anzeigen
-        });
+<script>
+  const fadeElements = document.querySelectorAll('.fade-in, .fade-in-section');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.classList.add('visible'); }
     });
+  }, { threshold: 0.2 });
+  fadeElements.forEach(el => observer.observe(el));
+</script>
 
+<script>
+  const videoModal = document.getElementById('videoModal');
+  const videoIframe = document.getElementById('videoIframe');
+  const closeVideoModal = document.getElementById('closeVideoModal');
+
+  document.querySelectorAll('.youtube-preview').forEach(item => {
+    item.addEventListener('click', e => {
+      e.preventDefault();
+      const videoId = item.dataset.video;
+      videoIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+      videoModal.style.display = 'flex';
+    });
+  });
+
+  function closeModal() {
+    videoModal.style.display = 'none';
+    videoIframe.src = "";
+  }
+  closeVideoModal.addEventListener('click', closeModal);
+  videoModal.addEventListener('click', e => { if (e.target === videoModal) closeModal(); });
+</script>
+
+<script>
+  // Hamburger Menü
+  (function() {
+    var hamburger = document.getElementById('hamburger');
+    var mobileNav  = document.getElementById('mobileNav');
+    if (!hamburger || !mobileNav) return;
+    hamburger.addEventListener('click', function() {
+      hamburger.classList.toggle('open');
+      mobileNav.classList.toggle('open');
+      document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+    });
+    mobileNav.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        hamburger.classList.remove('open');
+        mobileNav.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  })();
 </script>
 
 </body>
