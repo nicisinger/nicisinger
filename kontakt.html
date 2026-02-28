@@ -2,6 +2,7 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kontakt – Nici Singer</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10,34 +11,29 @@
 
   <link rel="stylesheet" href="style.css">
   <style>
-    /* ------------------------------
-       Modal / Popup
-    ------------------------------ */
     .modal-overlay {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
       background: rgba(0,0,0,0.3);
       backdrop-filter: blur(3px);
-      display: none; /* unsichtbar standardmäßig */
+      display: none;
       justify-content: center;
       align-items: center;
       z-index: 1000;
     }
 
     .modal {
-  background: #F7F4EA;
-  padding: 40px 30px;
-  border-radius: 8px;
-  text-align: center;
-  max-width: 500px;       /* vorher 400px, jetzt breiter */
-  width: 90%;             /* flexibel auf kleineren Bildschirmen */
-  position: relative;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  font-family: 'Inter', sans-serif;
-}
+      background: #F7F4EA;
+      padding: 40px 30px;
+      border-radius: 8px;
+      text-align: center;
+      max-width: 500px;
+      width: 90%;
+      position: relative;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      font-family: 'Inter', sans-serif;
+    }
 
     .modal h3 {
       font-size: 20px;
@@ -54,8 +50,7 @@
 
     .modal .close-btn {
       position: absolute;
-      top: 12px;
-      right: 12px;
+      top: 12px; right: 12px;
       font-size: 18px;
       font-weight: bold;
       color: #111;
@@ -80,19 +75,37 @@
       <a href="ueber-mich.html">Über mich</a>
       <a href="kontakt.html" class="active">Kontakt</a>
     </nav>
+    <!-- Hamburger Button (nur Mobile) -->
+    <button class="hamburger" id="hamburger" aria-label="Menü öffnen">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </header>
+
+<!-- Mobile Navigation Overlay -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html">Home</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="studio.html">Studio</a>
+  <a href="ueber-mich.html">Über mich</a>
+  <a href="kontakt.html" class="active">Kontakt</a>
+</div>
 
   <main class="contact">
 
   <div class="contact-grid-fullwidth">
-    <!-- Linke Spalte: Text + Formular -->
     <section class="contact-form">
       <p class="contact-intro">
         Du möchtest mit mir arbeiten oder hast eine Frage zu meinen Projekten?  
         Dann schreib mir gerne – ich freue mich auf deine Nachricht!
       </p>
 
-      <form id="contactForm" data-netlify="true" name="kontakt">
+      <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="40bd3c17-59ac-4004-be8c-94680870521c">
+        <input type="hidden" name="subject" value="Neue Anfrage über nicisinger.de">
+        <input type="hidden" name="redirect" value="false">
+
         <label for="name">Name</label>
         <input type="text" id="name" name="name" placeholder="Dein Name" required>
 
@@ -106,7 +119,6 @@
       </form>
     </section>
 
-    <!-- Rechte Spalte: Portrait -->
     <div class="contact-photo-large">
       <img src="assets/nici-singer.jpg" alt="Porträt von Nici Singer">
     </div>
@@ -115,7 +127,6 @@
 </main>
 
 
-  <!-- Modal -->
   <div class="modal-overlay" id="thankYouModal">
     <div class="modal">
       <button class="close-btn" id="closeModal">&times;</button>
@@ -130,79 +141,54 @@
   const closeModal = document.getElementById('closeModal');
 
   form.addEventListener('submit', function(e) {
-    e.preventDefault(); // Verhindert das Neuladen der Seite
-
+    e.preventDefault();
     const formData = new FormData(form);
 
-    // Schickt die Daten im Hintergrund an Netlify
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: formData
     })
-    .then(() => {
-      // Wenn das Senden geklappt hat -> Modal zeigen
-      modal.style.display = 'flex';
-      form.reset();
+    .then(res => res.json())
+    .then(data => {
+      if (data.success) {
+        modal.style.display = 'flex';
+        form.reset();
+      } else {
+        alert('Fehler beim Senden. Bitte versuche es erneut.');
+      }
     })
-    .catch((error) => alert("Fehler beim Senden: " + error));
+    .catch(() => alert('Fehler beim Senden. Bitte versuche es erneut.'));
   });
 
-  closeModal.addEventListener('click', function() {
-    modal.style.display = 'none';
-  });
-
+  closeModal.addEventListener('click', function() { modal.style.display = 'none'; });
   modal.addEventListener('click', function(e) {
-    if (e.target === modal) {
-      modal.style.display = 'none';
-    }
+    if (e.target === modal) { modal.style.display = 'none'; }
   });
 </script>
 
 <script>
   const header = document.querySelector("header");
-
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 10) {
-      header.classList.add("scrolled");
-    } else {
-      header.classList.remove("scrolled");
-    }
+    if (window.scrollY > 10) { header.classList.add("scrolled"); }
+    else { header.classList.remove("scrolled"); }
   });
 </script>
 
 <footer class="site-footer fade-in-section">
   <div class="footer-inner">
-
-    <!-- Linke Seite -->
     <div class="footer-brand">
-
-      <a href="index.html" class="footer-name">
-        Nici Singer – Videografin
-      </a>
-
-      <!-- Mailadresse -->
-      <a href="mailto:nicisinger.media@gmail.com" class="footer-mail">
-        nicisinger.media@gmail.com
-      </a>
-
-      <!-- Social Icons -->
+      <a href="index.html" class="footer-name">Nici Singer – Videografin</a>
+      <a href="/cdn-cgi/l/email-protection#6e00070d071d0700090b1c40030b0a070f2e09030f0702400d0103" class="footer-mail"><span class="__cf_email__" data-cfemail="57393e343e243e39303225793a32333e3617303a363e3b7934383a">[email&#160;protected]</span></a>
       <div class="footer-icons">
         <a href="https://www.instagram.com/nicisinger/" target="_blank" aria-label="Instagram">
           <img src="assets/icons/instagram.svg" alt="Instagram">
         </a>
-
-        <a href="mailto:nicisinger.media@gmail.com" aria-label="E-Mail">
+        <a href="/cdn-cgi/l/email-protection#c5abaca6acb6acaba2a0b7eba8a0a1aca485a2a8a4aca9eba6aaa8" aria-label="E-Mail">
           <img src="assets/icons/mail.svg" alt="E-Mail">
         </a>
       </div>
-
     </div>
-
-    <!-- Rechte Seite -->
     <div class="footer-links">
-
-      <!-- Hauptnavigation -->
       <nav class="footer-nav-main">
         <a href="index.html">Home</a>
         <a href="portfolio.html">Portfolio</a>
@@ -210,34 +196,31 @@
         <a href="ueber-mich.html">Über mich</a>
         <a href="kontakt.html">Kontakt</a>
       </nav>
-
-      <!-- Rechtliches -->
       <nav class="footer-nav-legal">
         <a href="impressum.html">Impressum</a>
         <a href="datenschutz.html">Datenschutz</a>
       </nav>
-
     </div>
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 const fadeElements = document.querySelectorAll('.fade-in, .fade-in-section');
-
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      // observer.unobserve(entry.target); // Optional: animiere jedes Mal, wenn sichtbar
-    }
+    if (entry.isIntersecting) { entry.target.classList.add('visible'); }
   });
-}, {
-  threshold: 0.2
-});
-
+}, { threshold: 0.2 });
 fadeElements.forEach(el => observer.observe(el));
-
 </script>
 
-</body>
-</html>
+<script>
+  // Hamburger Menü
+  (function() {
+    var hamburger = document.getElementById('hamburger');
+    var mobileNav  = document.getElementById('mobileNav');
+    if (!hamburger || !mobileNav) return;
+    hamburger.addEventListener('click', function() {
+      hamburger.classList.toggle('open');
+      mobileNav.classList.toggle('open');
+      document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '
