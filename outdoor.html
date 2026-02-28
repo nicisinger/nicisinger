@@ -186,6 +186,17 @@ const observer = new IntersectionObserver(entries => {
 
 fadeElements.forEach(el => observer.observe(el));
 
+// Klick-Logik für alle YouTube-Vorschaubilder
+    document.querySelectorAll('.youtube-preview').forEach(item => {
+        item.addEventListener('click', e => {
+            e.preventDefault(); // Verhindert, dass die Seite nach oben springt
+            const videoId = item.dataset.video;
+            // YouTube URL mit Autoplay setzen
+            videoIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+            videoModal.style.display = 'flex'; // Modal anzeigen
+        });
+    });
+
 </script>
 
 </body>
