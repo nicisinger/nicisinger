@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Retreats – Nici Singer | Retreat Videografin aus Köln</title>
+  <meta name="description" content="Portfolio von Nici Singer, Videografin aus Köln. Branding, Events, Weddings und Outdoor – nationale und internationale Projekte.">
+  <meta name="keywords" content="Videografin Köln, Branding Video, Event Videografie, Hochzeiten Video, Travel Video, Retreat Video, internationale Videografin">
+  <meta name="robots" content="index, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .preview-video {
+      width: 100vw;
+      height: 60vh;
+      object-fit: cover;
+      display: block;
+      margin-left: calc(-50vw + 50%);
+      margin-bottom: 2rem;
+    }
+  /* Media Query für Mobilgeräte */
+@media (max-width: 768px) {
+  /* Erzwingt, dass die Controls immer sichtbar sind */
+  .video-controls {
+    opacity: 1 !important;
+    visibility: visible !important;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.5)); /* Dezenter Schatten für bessere Lesbarkeit */
+    padding-bottom: 15px;
+  }
+
+  /* Icons auf Mobile etwas vergrößern für bessere Bedienbarkeit */
+  .control-btn {
+    width: 35px;
+    height: 35px;
+  }
+
+  /* Sicherstellen, dass die Timeline auf Mobile gut greifbar ist */
+  .video-timeline {
+    height: 8px;
+  }
+}
+  </style>
+</head>
+<body>
+
+<header>
+  <h1 class="logo">
+    <span class="name">NICI SINGER</span>
+    <span class="role">VIDEOGRAFIN</span>
+  </h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="portfolio.html" class="active">Portfolio</a>
+    <a href="studio.html">Studio</a>
+    <a href="ueber-mich.html">Über mich</a>
+    <a href="kontakt.html">Kontakt</a>
+  </nav>
+</header>
+
+<main>
+  <nav class="categories">
+    <button onclick="window.location.href='portfolio.html'">Alle</button>
+    <button onclick="window.location.href='brands.html'">Brands</button>
+    <button onclick="window.location.href='events.html'">Events</button>
+    <button class="active" onclick="window.location.href='retreats.html'">Retreats</button>
+    <button onclick="window.location.href='weddings.html'">Weddings</button>
+    <button onclick="window.location.href='outdoor.html'">Outdoor</button>
+    <button onclick="window.location.href='drohne.html'">Drohne</button>
+  </nav>
+
+  <video class="preview-video" src="assets/video-retreats.mp4" autoplay muted loop playsinline></video>
+
+  <section class="portfolio-detail">
+    <div class="detail-intro">
+      <h2>Marmeladenglasmomente eingefangen in Bewegtbild.</h2>
+      <p>
+        Retreats können Pause, Regeneration, Neustart, neue Verbindungen und so 
+        vieles mehr bedeuten. Egal was es ist, mit visuellen Erinnerungen 
+        denkt jede:r gerne wieder daran zurück oder bekommt Lust auf 
+        genau dieses einmalige Erlebnis. Mit einem ruhigen, authentischen 
+        Stil und Gespür für Ästhetik halte ich die Atmosphäre sowie die großen 
+        und kleinen Dinge fest. Jede Art von Retreat ist willkommen.
+      </p>
+    </div>
+  </section>
+
+  <section class="video-showcase">
+    <div class="video-grid">
+      
+      <a href="https://www.instagram.com/reel/DMvWJnjsAD0/" target="_blank" class="video-item instagram-preview">
+        <img src="assets/thumbnails/retreats-aftermovie.jpg" alt="Festival Aftermovie">
+        <div class="video-text-overlay">
+          <h3>The Aftermovie</h3>
+          <p>High On Love Festival</p>
+        </div>
+      </a>
+
+      <a href="https://www.instagram.com/reel/DMc2_SAsren/" target="_blank" class="video-item instagram-preview">
+        <img src="assets/thumbnails/retreats-testimonial.jpg" alt="Retreat Testimonial">
+        <div class="video-text-overlay">
+          <h3>The Experience</h3>
+          <p>Testimonial Video</p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+</main>
+
+<section class="bts-equipment fade-in-section">
+  <div class="bts-container">
+    
+<div class="bts-video-wrapper">
+  <div class="custom-video-container" id="videoContainer">
+    <video id="btsVideo" src="assets/video-equipment-festival.mp4" autoplay muted loop playsinline></video>
+    
+    <div class="video-controls">
+  <div class="control-buttons">
+    <button id="playPauseBtn" class="control-btn" aria-label="Play/Pause">
+      <svg id="playIcon" viewBox="0 0 24 24" style="display:none;"><path fill="white" d="M8 5v14l11-7z"/></svg>
+      <svg id="pauseIcon" viewBox="0 0 24 24"><path fill="white" d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+    </button>
+
+    <button id="muteBtn" class="control-btn" aria-label="Ton">
+      <svg id="speakerOff" viewBox="0 0 24 24" style="display:block;">
+        <path fill="white" d="M3 9v6h4l5 5V4L7 9H3z"/>
+      </svg>
+      <svg id="speakerOn" viewBox="0 0 24 24" style="display:none;">
+        <path fill="white" d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+      </svg>
+    </button>
+  </div>
+      
+      <div class="timeline-container">
+        <input type="range" id="timeline" class="video-timeline" min="0" max="100" value="0">
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="bts-text">
+      <span class="subtitle">Behind the Scenes</span>
+      <h2>Mein "Run & Gun" Setup</h2>
+      <p>
+        Auf Festivals und Retreats bin ich meistens unauffällig und mobil unterwegs. 
+        So fange ich die echten, ungestellten Momente ein, ohne die Atmosphäre zu stören.
+        So sieht ein Run & Gun Setup von mir aus, wenn ich unterwegs am Filmen bin.
+        Für alle anderen Fälle habe ich zusätzlich weiteres Equipment dabei:
+      </p>
+      <ul class="equipment-list">
+        <li><strong>Gimbal:</strong> Für ruhige Kamerafahrten und situative Interviews.</li>
+        <li><strong>Drohne:</strong> Für ganz besondere Blickwinkel.</li>
+        <li><strong>Licht & Stative:</strong> Wenn nötig, zum Einleuchten von z.B. gesetzten Interviewsituationen.</li>
+      </ul>
+      <p class="equipment-note">Minimalistisches Auftreten. Maximale Qualität.</p>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer fade-in-section">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="footer-name">Nici Singer – Videografin</a>
+      <a href="mailto:nicisinger.media@gmail.com" class="footer-mail">nicisinger.media@gmail.com</a>
+      <div class="footer-icons">
+        <a href="https://www.instagram.com/nicisinger/" target="_blank" aria-label="Instagram">
+          <img src="assets/icons/instagram.svg" alt="Instagram">
+        </a>
+        <a href="mailto:nicisinger.media@gmail.com" aria-label="E-Mail">
+          <img src="assets/icons/mail.svg" alt="E-Mail">
+        </a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <nav class="footer-nav-main">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="studio.html">Studio</a>
+        <a href="ueber-mich.html">Über mich</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+      <nav class="footer-nav-legal">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Header-Scroll Effekt
+  const header = document.querySelector("header");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 10) { header.classList.add("scrolled"); } 
+    else { header.classList.remove("scrolled"); }
+  });
+
+  // Fade-In Effekt
+  const fadeElements = document.querySelectorAll('.fade-in, .fade-in-section');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.classList.add('visible'); }
+    });
+  }, { threshold: 0.2 });
+  fadeElements.forEach(el => observer.observe(el));
+
+const video = document.getElementById('btsVideo');
+const playPauseBtn = document.getElementById('playPauseBtn');
+const muteBtn = document.getElementById('muteBtn');
+const timeline = document.getElementById('timeline');
+
+const playIcon = document.getElementById('playIcon');
+const pauseIcon = document.getElementById('pauseIcon');
+const speakerOn = document.getElementById('speakerOn');
+const speakerOff = document.getElementById('speakerOff');
+
+// Play / Pause Logik
+playPauseBtn.addEventListener('click', () => {
+  if (video.paused) {
+    video.play();
+    playIcon.style.display = 'none';
+    pauseIcon.style.display = 'block';
+  } else {
+    video.pause();
+    playIcon.style.display = 'block';
+    pauseIcon.style.display = 'none';
+  }
+});
+
+// Mute / Unmute Logik
+muteBtn.addEventListener('click', () => {
+  video.muted = !video.muted;
+  if (video.muted) {
+    speakerOn.style.display = 'none';
+    speakerOff.style.display = 'block';
+  } else {
+    speakerOn.style.display = 'block';
+    speakerOff.style.display = 'none';
+  }
+});
+
+// Timeline Sync
+video.addEventListener('timeupdate', () => {
+  const percentage = (video.currentTime / video.duration) * 100;
+  timeline.value = percentage;
+});
+
+timeline.addEventListener('input', () => {
+  video.currentTime = (timeline.value / 100) * video.duration;
+});
+
+
+</script>
+
+
+
+</body>
+</html>

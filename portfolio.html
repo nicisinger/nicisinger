@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio – Nici Singer | Videografin aus Köln</title>
+  <meta name="description" content="Portfolio von Nici Singer, Videografin aus Köln. Branding, Events, Weddings und Outdoor – nationale und internationale Projekte.">
+  <meta name="keywords" content="Videografin Köln, Branding Video, Event Videografie, Hochzeiten Video, Travel Video, internationale Videografin">
+  <meta name="robots" content="index, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1 class="logo">
+    <span class="name">NICI SINGER</span>
+    <span class="role">VIDEOGRAFIN</span>
+  </h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="portfolio.html" class="active">Portfolio</a>
+    <a href="studio.html">Studio</a>
+    <a href="ueber-mich.html">Über mich</a>
+    <a href="kontakt.html">Kontakt</a>
+  </nav>
+</header>
+
+<main>
+
+  <nav class="categories">
+    <button class="active" data-filter="all">Alle</button>
+    <button data-filter="brands">Brands</button>
+    <button data-filter="events">Events</button>
+    <button data-filter="retreats">Retreats</button>
+    <button data-filter="weddings">Weddings</button>
+    <button data-filter="outdoor">Outdoor</button>
+    <button data-filter="drohne" onclick="window.location.href='drohne.html'">Drohne</button>
+  </nav>
+
+
+<section class="projects">
+
+  <a href="brands.html" class="project-link">
+    <div class="project" data-category="brands">
+      <video src="assets/video-brands.mp4" muted loop playsinline></video>
+      <div class="project-title">Brands</div>
+    </div>
+  </a>
+
+  <a href="events.html" class="project-link">
+    <div class="project" data-category="events">
+      <video src="assets/video-events.mp4" muted loop playsinline></video>
+      <div class="project-title">Events</div>
+    </div>
+  </a>
+
+  <a href="retreats.html" class="project-link">
+    <div class="project" data-category="retreats">
+      <video src="assets/video-retreats.mp4" muted loop playsinline></video>
+      <div class="project-title">Retreats</div>
+    </div>
+  </a>
+
+  <a href="weddings.html" class="project-link">
+    <div class="project" data-category="weddings">
+      <video src="assets/video-weddings.mp4" muted loop playsinline></video>
+      <div class="project-title">Weddings</div>
+    </div>
+  </a>
+
+  <a href="outdoor.html" class="project-link">
+    <div class="project" data-category="outdoor">
+      <video src="assets/video-outdoor.mp4" muted loop playsinline></video>
+      <div class="project-title">Outdoor</div>
+    </div>
+  </a>
+
+  <a href="drohne.html" class="project-link">
+  <div class="project" data-category="drohne">
+    <video src="assets/video-drohne.mp4" muted loop playsinline></video>
+    <div class="project-title">Drohne</div>
+  </div>
+</a>
+
+</section>
+
+</main>
+
+<script>
+const buttons = document.querySelectorAll('.categories button');
+const projects = document.querySelectorAll('.project');
+
+// Kategorie-Navigation
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    const filter = button.getAttribute('data-filter');
+
+    // 👉 Weiterleitungen zu Detailseiten
+    if (filter === 'events') {
+      window.location.href = "events.html";
+      return;
+    }
+
+    if (filter === 'brands') {
+      window.location.href = "brands.html";
+      return;
+    }
+
+    if (filter === 'retreats') {
+      window.location.href = "retreats.html";
+      return;
+    }
+
+    if (filter === 'weddings') {
+      window.location.href = "weddings.html";
+      return;
+    }
+
+    if (filter === 'outdoor') {
+      window.location.href = "outdoor.html";
+      return;
+    }
+
+    if (filter === 'drohne') {
+  window.location.href = "drohne.html";
+  return;
+}
+
+    // 👉 Nur "Alle" nutzt noch den Filter
+    buttons.forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+
+    projects.forEach(project => {
+      project.classList.remove('hide');
+    });
+  });
+});
+
+// Hover-Video abspielen
+projects.forEach(projectDiv => {
+  const video = projectDiv.querySelector('video');
+  projectDiv.addEventListener('mouseenter', () => video.play());
+  projectDiv.addEventListener('mouseleave', () => {
+    video.pause();
+    video.currentTime = 0;
+  });
+});
+</script>
+
+<script>
+  const header = document.querySelector("header");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 10) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  });
+
+</script>
+
+<footer class="site-footer fade-in-section">
+  <div class="footer-inner">
+
+    <!-- Linke Seite -->
+    <div class="footer-brand">
+
+      <a href="index.html" class="footer-name">
+        Nici Singer – Videografin
+      </a>
+
+      <!-- Mailadresse -->
+      <a href="mailto:nicisinger.media@gmail.com" class="footer-mail">
+        nicisinger.media@gmail.com
+      </a>
+
+      <!-- Social Icons -->
+      <div class="footer-icons">
+        <a href="https://www.instagram.com/nicisinger/" target="_blank" aria-label="Instagram">
+          <img src="assets/icons/instagram.svg" alt="Instagram">
+        </a>
+
+        <a href="mailto:nicisinger.media@gmail.com" aria-label="E-Mail">
+          <img src="assets/icons/mail.svg" alt="E-Mail">
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Rechte Seite -->
+    <div class="footer-links">
+
+      <!-- Hauptnavigation -->
+      <nav class="footer-nav-main">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="studio.html">Studio</a>
+        <a href="ueber-mich.html">Über mich</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+
+      <!-- Rechtliches -->
+      <nav class="footer-nav-legal">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </nav>
+
+    </div>
+  </div>
+</footer>
+
+<script>
+const fadeElements = document.querySelectorAll('.fade-in, .fade-in-section');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      // observer.unobserve(entry.target); // Optional: animiere jedes Mal, wenn sichtbar
+    }
+  });
+}, {
+  threshold: 0.2
+});
+
+fadeElements.forEach(el => observer.observe(el));
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Über mich – Nici Singer | Videografin aus Köln</title>
+
+  <meta name="description" content="Ich bin Nici Singer, Videografin aus Köln. Erfahre mehr über meine Arbeit, meine Arbeitsweise und meine Vision für Branding, Events, Weddings und Retreats.">
+  <meta name="keywords" content="Videografin Köln, Branding Video, Event Videografie, Hochzeiten Video, Retreat Videografie, internationale Videografin">
+  <meta name="robots" content="index, follow">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Die neue dunkle Full-Width Sektion */
+    .about-hero-section {
+      background-color: #000; /* Dunkler Hintergrund */
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+      color: #fff; /* Alles darin wird weiß */
+      margin-bottom: 80px;
+      margin-top: -80px;
+    }
+
+    /* Container innerhalb der dunklen Sektion, um das Grid zu halten */
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 80px;
+      align-items: center;
+      padding: 0 100px;
+    }
+
+    .hero-photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+      /* Kein Border-Radius, damit das PNG/Bild im Schwarz verschwindet */
+    }
+
+    .hero-text h2 {
+      font-size: 26px;
+      margin-bottom: 24px;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #fff; /* Explizit weiß */
+    }
+
+    .hero-text p {
+      font-size: 16px;
+      line-height: 1.8;
+      font-weight: 300;
+      color: #ccc; /* Leichtes Grau für bessere Lesbarkeit auf Schwarz */
+    }
+
+    .hero-text strong {
+      color: #fff; /* Highlights in purem Weiß */
+      font-weight: 400;
+    }
+
+    /* Responsive Anpassung für Mobile */
+    @media (max-width: 900px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+      }
+      .hero-text p {
+        margin: 0 auto;
+      }
+    }
+
+
+  </style>
+</head>
+<body class="ueber-mich-page">
+
+<header>
+  <h1 class="logo">
+    <span class="name">NICI SINGER</span>
+    <span class="role">VIDEOGRAFIN</span>
+  </h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="studio.html">Studio</a>
+    <a href="ueber-mich.html" class="active">Über mich</a>
+    <a href="kontakt.html">Kontakt</a>
+  </nav>
+</header>
+
+
+<main class="about">
+
+  <section class="about-hero-section">
+    <div class="hero-inner">
+      <div class="hero-photo">
+        <img src="assets/nici-portrait.png" alt="Nici Singer, Videografin aus Köln">
+      </div>
+      <div class="hero-text fade-in">
+        <h2>Hi, ich bin Nici</h2>
+        <p>
+          Ich bin Nici, freiberufliche gelernte <strong> Videografin </strong> und vor 6 Jahren hat es mich ins schöne <strong> Köln </strong> verschlagen. 
+          Täglich habe ich mit Bewegtbild zu tun und filme in ganz unterschiedlichen Bereichen. </p>
+          
+          <p>
+          Ob <strong>Firmenveranstaltungen </strong> oder <strong> Imagefilme für Unternehmen, Retreats, Hochzeiten, Studioproduktionen </strong> in unserem <strong>Atelier</strong>
+          oder generell <strong>Content Creation für Social Media</strong>.  
+          Ich arbeite lokal in Köln sowie international und liebe es, besondere Momente authentisch und atmosphärisch festzuhalten.</p>
+        </p>
+      </div>
+    </div>
+  </section>
+
+<section class="bts-carousel-section fade-in-section">
+    <div class="carousel-container">
+        <div class="carousel-track">
+            <div class="carousel-slide active">
+                <img src="assets/bts/construction-videography.JPG" alt="BTS 1">
+            </div>
+            <div class="carousel-slide">
+                <img src="assets/bts/adobe-talk.JPG" alt="BTS 2">
+            </div>
+            <div class="carousel-slide">
+                <img src="assets/bts/wedding-videography.jpg" alt="BTS 3">
+            </div>
+            <div class="carousel-slide">
+                <img src="assets/bts/travel-videography.JPG" alt="BTS 4">
+            </div>
+        </div>
+    </div>
+
+    <div class="carousel-dots">
+        <span class="dot active" onclick="currentSlide(0)"></span>
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+</section>
+
+</section>
+
+  <section class="personal-approach fade-in">
+    <div class="approach-container">
+      <div class="approach-text">
+        <span class="category-label">Behind the Lens</span>
+        <h3>Meine Arbeitsweise</h3>
+        <p>
+          Für mich ist Videografie mehr als nur Technik. Es geht darum, die echte Energie eines Moments einzufangen. 
+          Dabei ist mir wichtig, dass am Drehort eine entspannte und positive Atmosphäre herrscht.
+        </p>
+        <p>
+          Ich liebe es, während der Drehs gemeinsam mit meinen Kunden Spaß zu haben. Denn genau diese Leichtigkeit sieht man später im fertigen Film. Authentisch, mit vielen Emotionen und dem Gespür für die kleinen, echten Details.
+        </p>
+      </div>
+      <div class="approach-image">
+        <img src="assets/bts/event-videography.JPG" alt="Nici am Set">
+      </div>
+    </div>
+  </section>
+
+   <!-- CTA -->
+  <section class="ueber-mich-cta-container fade-in"> 
+    <a href="kontakt.html" class="ueber-mich-cta-button">Projekt anfragen</a>
+</section>
+
+  <section class="personal-approach equipment-travel fade-in">
+  <div class="approach-container">
+    <div class="approach-text">
+      <span class="category-label">My Equipment</span>
+      <h3>Immer mit dabei</h3>
+      <p>
+        Meine Arbeit führt mich an die spannendsten Orte – nicht nur in Köln, sondern weltweit. 
+        Dabei muss ich oft flexibel sein, was die Größe meines Equipments angeht. Egal, ob großes oder kleines Setup, am Ende kommt es auf die Skripte, 
+        Gegebenheiten vor Ort und die Geschichten an.
+      </p>
+      <p>
+        Kameras, Objektive und Drohne sind immer dabei, um die perfekte Perspektive für eure Geschichte zu finden. 
+        Authentisch, mit viel Gepäck und noch mehr Leidenschaft für den nächsten Shot!
+      </p>
+    </div>
+    <div class="approach-image portrait-format">
+      <img src="assets/bts/equipment-travel.JPG" alt="Nici Singer mit Equipment auf Reisen">
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer fade-in-section">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="footer-name">Nici Singer – Videografin</a>
+      <a href="mailto:nicisinger.media@gmail.com" class="footer-mail">nicisinger.media@gmail.com</a>
+      <div class="footer-icons">
+        <a href="https://www.instagram.com/nicisinger/" target="_blank" aria-label="Instagram">
+          <img src="assets/icons/instagram.svg" alt="Instagram">
+        </a>
+        <a href="mailto:nicisinger.media@gmail.com" aria-label="E-Mail">
+          <img src="assets/icons/mail.svg" alt="E-Mail">
+        </a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <nav class="footer-nav-main">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="studio.html">Studio</a>
+        <a href="ueber-mich.html">Über mich</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+      <nav class="footer-nav-legal">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const header = document.querySelector("header");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 10) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  });
+
+  const fadeElements = document.querySelectorAll(".fade-in, .fade-in-section");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, { threshold: 0.2 });
+
+  fadeElements.forEach(el => observer.observe(el));
+</script>
+
+<script>
+let currentIdx = 0;
+const slides = document.querySelectorAll('.carousel-slide');
+const dots = document.querySelectorAll('.dot');
+const track = document.querySelector('.carousel-track');
+
+function updateSlider(index) {
+    // Bewege den Track
+    track.style.transform = `translateX(-${index * 100}%)`;
+    
+    // Update Dots
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[index].classList.add('active');
+    
+    currentIdx = index;
+}
+
+function currentSlide(index) {
+    updateSlider(index);
+}
+
+// Optional: Automatischer Wechsel alle 5 Sekunden
+setInterval(() => {
+    currentIdx = (currentIdx + 1) % slides.length;
+    updateSlider(currentIdx);
+}, 5000);
+</script>
+
+<body class="ueber-mich-page">
+</html>
+

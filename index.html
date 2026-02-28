@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nici Singer – Videografin aus Köln | Branding, Events & Retreats</title>
+  <meta name="description" content="Ich bin Nici Singer, freiberufliche Videografin aus Köln. Ich erstelle hochwertige Videos für Branding, Events, Weddings und Retreats – national und international.">
+  <meta name="keywords" content="Videografin Köln, Event Videografie, Branding Video, Hochzeiten Video, Retreat Videografie, internationale Videografin">
+  <meta name="robots" content="index, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1 class="logo">
+    <span class="name">NICI SINGER</span>
+    <span class="role">VIDEOGRAFIN</span>
+  </h1>
+  <nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="studio.html">Studio</a>
+    <a href="ueber-mich.html">Über mich</a>
+    <a href="kontakt.html">Kontakt</a>
+  </nav>
+</header>
+
+<main class="start">
+
+  <!-- Hero Video / Platzhalter -->
+
+  <section class="hero-video">
+  <video class="preview-video" 
+         src="assets/intro.mp4" 
+         autoplay 
+         muted 
+         loop 
+         playsinline>
+  </video>
+  <div class="video-overlay-content">
+    <h2>VISUELLE GESCHICHTEN IN BEWEGUNG | VIDEOGRAFIE AUS KÖLN
+</h2>
+    <a href="portfolio.html" class="studio-button overlay-button">Zu meinem Portfolio</a>
+  </div>
+</section>
+
+  <!-- Kurze Vorstellung -->
+<section class="portfolio-detail fade-in-section">
+    <div class="detail-intro">
+        <h1 class="intro-category-h1">Content Creation | Videografie aus Köln</h1>
+        
+        <h2>Ich bin <strong>Nici Singer</strong>, freiberufliche <strong>Videografin aus Köln</strong>.</h2>
+        
+        <p>
+            Ich begleite Branding-Projekte, Events, Hochzeiten und Retreats filmisch – national und international. 
+            Meine Arbeit zeichnet sich durch einen ruhigen, minimalistischen Stil aus, der besondere Momente 
+            ästhetisch und atmosphärisch einfängt.
+        </p>
+    </div>
+</section>
+
+
+<section class="team-showcase fade-in-section">
+    <div class="team-container">
+        <div class="bts-video-wrapper">
+      <div class="custom-video-container" id="teamVideoContainer">
+        <video id="teamVideo" src="assets/video-team.mp4" autoplay muted loop playsinline></video>
+        
+        <div class="video-controls only-timeline">
+          <div class="timeline-container">
+            <input type="range" id="teamTimeline" class="video-timeline" min="0" max="100" value="0">
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <div class="team-content">
+            <span class="category-label">Meet the Team</span>
+            <h2>Das Team</h2>
+            <p>
+                Wer meine Produktionen bucht, bekommt das volle Paket. 
+                Vom Licht-Setup bis zum Entertainment am Set. 
+                In meinem Workflow vereine ich alle Rollen einer klassischen Produktion.
+            </p>
+            <p class="equipment-note">Always a one woman show.</p>
+        </div>
+    </div>
+
+    
+</section>
+
+</main>
+
+<script>
+  const header = document.querySelector("header");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 10) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  });
+
+  const teamVideo = document.getElementById('teamVideo');
+const teamTimeline = document.getElementById('teamTimeline');
+
+// Balken aktualisieren, während das Video läuft
+teamVideo.addEventListener('timeupdate', () => {
+  if (!isNaN(teamVideo.duration)) {
+    const progress = (teamVideo.currentTime / teamVideo.duration) * 100;
+    teamTimeline.value = progress;
+  }
+});
+
+// Video springen lassen, wenn man den Balken zieht
+teamTimeline.addEventListener('input', () => {
+  const time = (teamTimeline.value / 100) * teamVideo.duration;
+  teamVideo.currentTime = time;
+});
+</script>
+
+
+<section class="home-cta fade-in">
+    <a href="kontakt.html" class="studio-button">Projekt anfragen</a>
+  </section>
+
+
+<footer class="site-footer fade-in-section">
+  <div class="footer-inner">
+
+    <!-- Linke Seite -->
+    <div class="footer-brand">
+
+      <a href="index.html" class="footer-name">
+        Nici Singer – Videografin
+      </a>
+
+      <!-- Mailadresse -->
+      <a href="mailto:nicisinger.media@gmail.com" class="footer-mail">
+        nicisinger.media@gmail.com
+      </a>
+
+      <!-- Social Icons -->
+      <div class="footer-icons">
+        <a href="https://www.instagram.com/nicisinger/" target="_blank" aria-label="Instagram">
+          <img src="assets/icons/instagram.svg" alt="Instagram">
+        </a>
+
+        <a href="mailto:nicisinger.media@gmail.com" aria-label="E-Mail">
+          <img src="assets/icons/mail.svg" alt="E-Mail">
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Rechte Seite -->
+    <div class="footer-links">
+
+      <!-- Hauptnavigation -->
+      <nav class="footer-nav-main">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="studio.html">Studio</a>
+        <a href="ueber-mich.html">Über mich</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+
+      <!-- Rechtliches -->
+      <nav class="footer-nav-legal">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </nav>
+
+    </div>
+  </div>
+</footer>
+
+<script>
+const fadeElements = document.querySelectorAll('.fade-in, .fade-in-section, .typing');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      // observer.unobserve(entry.target); // Optional: animiere jedes Mal, wenn sichtbar
+    }
+  });
+}, {
+  threshold: 0.2
+});
+
+fadeElements.forEach(el => observer.observe(el));
+
+</script>
+
+</body>
+</html>
+
