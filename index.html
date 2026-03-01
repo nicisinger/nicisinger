@@ -11,8 +11,31 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Mobile Nav */
+    .mobile-nav a { font-size: 13px !important; letter-spacing: 0.2em !important; font-weight: 300 !important; text-transform: uppercase !important; }
+    .mobile-nav a.active { font-weight: 500 !important; }
+    /* Hamburger */
+    #hamburger-fixed { display: none; position: fixed; top: 18px; right: 20px; z-index: 99999; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    #hamburger-fixed span { display: block; width: 24px; height: 2px; background-color: #111; transition: all 0.3s ease; transform-origin: center; }
+    #hamburger-fixed.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    #hamburger-fixed.open span:nth-child(2) { opacity: 0; }
+    #hamburger-fixed.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .mobile-nav { z-index: 9000 !important; }
+    @media (max-width: 768px) {
+      #hamburger-fixed { display: flex; }
+      .hamburger { display: none !important; }
+    }
+  </style>
 </head>
 <body>
+
+<!-- Hamburger außerhalb des Headers -->
+<button id="hamburger-fixed" aria-label="Menü öffnen">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
 
 <header>
   <h1 class="logo">
@@ -27,6 +50,15 @@
     <a href="kontakt.html">Kontakt</a>
   </nav>
 </header>
+
+<!-- Mobile Navigation Overlay -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html" class="active">Home</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="studio.html">Studio</a>
+  <a href="ueber-mich.html">Über mich</a>
+  <a href="kontakt.html">Kontakt</a>
+</div>
 
 <main class="start">
 
@@ -195,6 +227,26 @@ const observer = new IntersectionObserver(entries => {
 
 fadeElements.forEach(el => observer.observe(el));
 
+</script>
+
+<script>
+  (function() {
+    var hamburger = document.getElementById('hamburger-fixed');
+    var mobileNav = document.getElementById('mobileNav');
+    if (!hamburger || !mobileNav) return;
+    hamburger.addEventListener('click', function() {
+      hamburger.classList.toggle('open');
+      mobileNav.classList.toggle('open');
+      document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+    });
+    mobileNav.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        hamburger.classList.remove('open');
+        mobileNav.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  })();
 </script>
 
 </body>
