@@ -66,12 +66,25 @@
       z-index: 9000 !important;
     }
 
+    /* Line break nur auf Mobile zeigen */
+    .mobile-break {
+      display: none;
+    }
+
     @media (max-width: 768px) {
       #hamburger-fixed {
         display: flex;
       }
       .hamburger {
         display: none !important;
+      }
+      .mobile-break {
+        display: inline;
+      }
+      .atelier-floating {
+        font-size: clamp(3.5rem, 16vw, 7rem);
+        line-height: 1.05;
+        letter-spacing: 0.04em;
       }
     }
   </style>
@@ -112,7 +125,7 @@
 <main class="studio">
 
   <!-- Floating Titel -->
-  <div class="atelier-floating">Unser Atelier</div>
+  <div class="atelier-floating">Unser<br class="mobile-break"> Atelier</div>
 
   <!-- Galerie -->
   <section class="studio-gallery">
