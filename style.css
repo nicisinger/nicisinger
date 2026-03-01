@@ -2497,6 +2497,16 @@ main.about {
   }
 
   /* Studio Galerie – voll-deaktivieren auf Mobile (Bilder übereinander) */
+  .image-row {
+    flex-direction: column;
+    gap: 6vw;
+  }
+
+  .image-row .gallery-image {
+    width: 90vw;
+    margin: 0 auto;
+  }
+
   .staggered-row,
   .third-row {
     flex-direction: column;
