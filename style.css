@@ -2011,13 +2011,20 @@ main > section:last-of-type {
 @media (max-width: 768px) {
   .references-masonry {
     column-count: 2;
-    column-gap: 15px;
+    column-gap: 10px;
+  }
+  .references-section {
+    padding: 40px 0;
   }
 }
 
 @media (max-width: 480px) {
   .references-masonry {
     column-count: 2;
+    column-gap: 10px;
+  }
+  .references-section {
+    padding: 40px 0;
   }
 }
 
