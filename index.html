@@ -25,6 +25,11 @@
     @media (max-width: 768px) {
       #hamburger-fixed { display: flex; }
       .hamburger { display: none !important; }
+      .home-cta {
+        margin-top: -40px !important;
+        padding: 0 !important;
+        margin-bottom: 20px !important;
+      }
     }
   </style>
 </head>
@@ -156,9 +161,21 @@ teamTimeline.addEventListener('input', () => {
 </script>
 
 
-<section class="home-cta fade-in">
+<section class="home-cta fade-in" id="home-cta-btn">
     <a href="kontakt.html" class="studio-button">Projekt anfragen</a>
   </section>
+<script>
+  (function() {
+    if (window.innerWidth <= 768) {
+      var el = document.getElementById('home-cta-btn');
+      if (el) {
+        el.style.marginTop = '-40px';
+        el.style.padding = '0';
+        el.style.marginBottom = '20px';
+      }
+    }
+  })();
+</script>
 
 
 <footer class="site-footer fade-in-section">
