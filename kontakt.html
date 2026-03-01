@@ -58,6 +58,26 @@
       border: none;
       cursor: pointer;
     }
+
+    /* Footer mobile: alles linksbündig */
+    @media (max-width: 768px) {
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .footer-brand {
+        align-items: flex-start;
+        text-align: left;
+        margin-bottom: 24px;
+      }
+      .footer-links {
+        align-items: flex-start;
+        text-align: left;
+      }
+      .footer-icons {
+        justify-content: flex-start;
+      }
+    }
   </style>
 </head>
 <body>
@@ -67,7 +87,6 @@
       <span class="name">NICI SINGER</span>
       <span class="role">VIDEOGRAFIN</span>
     </h1>
-
     <nav>
       <a href="index.html">Home</a>
       <a href="portfolio.html">Portfolio</a>
@@ -93,39 +112,36 @@
 </div>
 
   <main class="contact">
+    <div class="contact-grid-fullwidth">
+      <section class="contact-form">
+        <p class="contact-intro">
+          Du möchtest mit mir arbeiten oder hast eine Frage zu meinen Projekten?  
+          Dann schreib mir gerne – ich freue mich auf deine Nachricht!
+        </p>
 
-  <div class="contact-grid-fullwidth">
-    <section class="contact-form">
-      <p class="contact-intro">
-        Du möchtest mit mir arbeiten oder hast eine Frage zu meinen Projekten?  
-        Dann schreib mir gerne – ich freue mich auf deine Nachricht!
-      </p>
+        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="40bd3c17-59ac-4004-be8c-94680870521c">
+          <input type="hidden" name="subject" value="Neue Anfrage über nicisinger.de">
+          <input type="hidden" name="redirect" value="false">
 
-      <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-        <input type="hidden" name="access_key" value="40bd3c17-59ac-4004-be8c-94680870521c">
-        <input type="hidden" name="subject" value="Neue Anfrage über nicisinger.de">
-        <input type="hidden" name="redirect" value="false">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Dein Name" required>
 
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Dein Name" required>
+          <label for="email">E-Mail</label>
+          <input type="email" id="email" name="email" placeholder="Deine E-Mail" required>
 
-        <label for="email">E-Mail</label>
-        <input type="email" id="email" name="email" placeholder="Deine E-Mail" required>
+          <label for="message">Nachricht</label>
+          <textarea id="message" name="message" placeholder="Deine Nachricht" rows="6" required></textarea>
 
-        <label for="message">Nachricht</label>
-        <textarea id="message" name="message" placeholder="Deine Nachricht" rows="6" required></textarea>
+          <button type="submit">Absenden</button>
+        </form>
+      </section>
 
-        <button type="submit">Absenden</button>
-      </form>
-    </section>
-
-    <div class="contact-photo-large">
-      <img src="assets/nici-singer.jpg" alt="Porträt von Nici Singer">
+      <div class="contact-photo-large">
+        <img src="assets/nici-singer.jpg" alt="Porträt von Nici Singer">
+      </div>
     </div>
-  </div>
-
-</main>
-
+  </main>
 
   <div class="modal-overlay" id="thankYouModal">
     <div class="modal">
@@ -135,7 +151,37 @@
     </div>
   </div>
 
-  <script>
+<footer class="site-footer fade-in-section">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="footer-name">Nici Singer – Videografin</a>
+      <a href="mailto:nicisinger.media@gmail.com" class="footer-mail">nicisinger.media@gmail.com</a>
+      <div class="footer-icons">
+        <a href="https://www.instagram.com/nicisinger/" target="_blank" aria-label="Instagram">
+          <img src="assets/icons/instagram.svg" alt="Instagram">
+        </a>
+        <a href="mailto:nicisinger.media@gmail.com" aria-label="E-Mail">
+          <img src="assets/icons/mail.svg" alt="E-Mail">
+        </a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <nav class="footer-nav-main">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="studio.html">Studio</a>
+        <a href="ueber-mich.html">Über mich</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+      <nav class="footer-nav-legal">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script>
   const form = document.getElementById('contactForm');
   const modal = document.getElementById('thankYouModal');
   const closeModal = document.getElementById('closeModal');
@@ -143,7 +189,6 @@
   form.addEventListener('submit', function(e) {
     e.preventDefault();
     const formData = new FormData(form);
-
     fetch('https://api.web3forms.com/submit', {
       method: 'POST',
       body: formData
@@ -174,57 +219,14 @@
   });
 </script>
 
-<footer class="site-footer fade-in-section">
-   <div class="footer-inner">
-
-    <!-- Linke Seite -->
-    <div class="footer-brand">
-
-      <a href="index.html" class="footer-name">
-        Nici Singer – Videografin
-      </a>
-
-      <!-- Mailadresse -->
-      <a href="mailto:nicisinger.media@gmail.com" class="footer-mail">
-        nicisinger.media@gmail.com
-      </a>
-
-      <!-- Social Icons -->
-      <div class="footer-icons">
-        <a href="https://www.instagram.com/nicisinger/" target="_blank" aria-label="Instagram">
-          <img src="assets/icons/instagram.svg" alt="Instagram">
-        </a>
-
-        <a href="mailto:nicisinger.media@gmail.com" aria-label="E-Mail">
-          <img src="assets/icons/mail.svg" alt="E-Mail">
-        </a>
-      </div>
-
-    </div>
-    <div class="footer-links">
-      <nav class="footer-nav-main">
-        <a href="index.html">Home</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="studio.html">Studio</a>
-        <a href="ueber-mich.html">Über mich</a>
-        <a href="kontakt.html">Kontakt</a>
-      </nav>
-      <nav class="footer-nav-legal">
-        <a href="impressum.html">Impressum</a>
-        <a href="datenschutz.html">Datenschutz</a>
-      </nav>
-    </div>
-  </div>
-</footer>
-
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-const fadeElements = document.querySelectorAll('.fade-in, .fade-in-section');
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) { entry.target.classList.add('visible'); }
-  });
-}, { threshold: 0.2 });
-fadeElements.forEach(el => observer.observe(el));
+<script>
+  const fadeElements = document.querySelectorAll('.fade-in, .fade-in-section');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.classList.add('visible'); }
+    });
+  }, { threshold: 0.2 });
+  fadeElements.forEach(el => observer.observe(el));
 </script>
 
 <script>
@@ -236,4 +238,17 @@ fadeElements.forEach(el => observer.observe(el));
     hamburger.addEventListener('click', function() {
       hamburger.classList.toggle('open');
       mobileNav.classList.toggle('open');
-      document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '
+      document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+    });
+    mobileNav.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        hamburger.classList.remove('open');
+        mobileNav.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>
