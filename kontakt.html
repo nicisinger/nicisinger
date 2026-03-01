@@ -67,11 +67,18 @@
       text-transform: uppercase !important;
     }
 
-    /* Hamburger bleibt sichtbar und klickbar wenn Menü offen */
-    .hamburger.open {
-      position: fixed !important;
-      top: 20px !important;
-      right: 20px !important;
+    /* Aktive Seite bleibt dicker */
+    .mobile-nav a.active {
+      font-weight: 500 !important;
+    }
+
+    /* Hamburger immer über dem Overlay */
+    .hamburger {
+      z-index: 1002 !important;
+    }
+
+    /* Mobile Nav Overlay unter dem Hamburger */
+    .mobile-nav {
       z-index: 1001 !important;
     }
 
