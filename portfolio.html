@@ -114,42 +114,42 @@
 
   <a href="brands.html" class="project-link">
     <div class="project" data-category="brands">
-      <video src="assets/video-brands.mp4" muted loop playsinline></video>
+      <video src="assets/video-brands.mp4" muted loop playsinline preload="metadata"></video>
       <div class="project-title">Brands</div>
     </div>
   </a>
 
   <a href="events.html" class="project-link">
     <div class="project" data-category="events">
-      <video src="assets/video-events.mp4" muted loop playsinline></video>
+      <video src="assets/video-events.mp4" muted loop playsinline preload="metadata"></video>
       <div class="project-title">Events</div>
     </div>
   </a>
 
   <a href="retreats.html" class="project-link">
     <div class="project" data-category="retreats">
-      <video src="assets/video-retreats.mp4" muted loop playsinline></video>
+      <video src="assets/video-retreats.mp4" muted loop playsinline preload="metadata"></video>
       <div class="project-title">Retreats</div>
     </div>
   </a>
 
   <a href="weddings.html" class="project-link">
     <div class="project" data-category="weddings">
-      <video src="assets/video-weddings.mp4" muted loop playsinline></video>
+      <video src="assets/video-weddings.mp4" muted loop playsinline preload="metadata"></video>
       <div class="project-title">Weddings</div>
     </div>
   </a>
 
   <a href="outdoor.html" class="project-link">
     <div class="project" data-category="outdoor">
-      <video src="assets/video-outdoor.mp4" muted loop playsinline></video>
+      <video src="assets/video-outdoor.mp4" muted loop playsinline preload="metadata"></video>
       <div class="project-title">Outdoor</div>
     </div>
   </a>
 
   <a href="drohne.html" class="project-link">
   <div class="project" data-category="drohne">
-    <video src="assets/video-drohne.mp4" muted loop playsinline></video>
+    <video src="assets/video-drohne.mp4" muted loop playsinline preload="metadata"></video>
     <div class="project-title">Drohne</div>
   </div>
 </a>
@@ -222,6 +222,12 @@ projects.forEach(projectDiv => {
 if ('ontouchstart' in window) {
   projects.forEach(projectDiv => {
     const video = projectDiv.querySelector('video');
+
+    // Erstes Frame als Thumbnail anzeigen
+    video.play().then(() => {
+      video.pause();
+      video.currentTime = 0;
+    }).catch(() => {});
 
     projectDiv.addEventListener('touchstart', () => {
       projectDiv.classList.add('touch-active');
