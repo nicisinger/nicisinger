@@ -2413,6 +2413,8 @@ main.about {
 
   /* Hero Video auf Mobile */
   .start .hero-video {
+    width: calc(100% + 40px);
+    margin-left: -20px;
     height: 55vh;
     transform: translateY(-30px);
   }
@@ -2424,12 +2426,12 @@ main.about {
 
   /* Home CTA Position anpassen */
   .home-cta {
-    margin: -120px 0 80px;
+    margin: 0 0 40px;
   }
 
   /* Start Sektion */
   .start {
-    padding-bottom: 60px;
+    padding-bottom: 0;
   }
 
   /* Detail Intro */
