@@ -11,6 +11,23 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .preview-video {
+      width: 100vw;
+      height: 60vh;
+      object-fit: cover;
+      display: block;
+      margin-left: calc(-50vw + 50%);
+      margin-bottom: 2rem;
+    }
+    @media (max-width: 768px) {
+      .preview-video {
+        margin-left: 0;
+        width: 100%;
+        height: 40vh;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -122,12 +139,12 @@
   <div class="footer-inner">
     <div class="footer-brand">
       <a href="index.html" class="footer-name">Nici Singer – Videografin</a>
-      <a href="mailto:nicisinger.media@gmail.com" class="footer-mail">nicisinger.media@gmail.com</a>
+      <a href="/cdn-cgi/l/email-protection#abc5c2c8c2d8c2c5ccced985c6cecfc2caebccc6cac2c785c8c4c6" class="footer-mail"><span class="__cf_email__" data-cfemail="aac4c3c9c3d9c3c4cdcfd884c7cfcec3cbeacdc7cbc3c684c9c5c7">[email&#160;protected]</span></a>
       <div class="footer-icons">
         <a href="https://www.instagram.com/nicisinger/" target="_blank" aria-label="Instagram">
           <img src="assets/icons/instagram.svg" alt="Instagram">
         </a>
-        <a href="mailto:nicisinger.media@gmail.com" aria-label="E-Mail">
+        <a href="/cdn-cgi/l/email-protection#2846414b415b41464f4d5a06454d4c4149684f45494144064b4745" aria-label="E-Mail">
           <img src="assets/icons/mail.svg" alt="E-Mail">
         </a>
       </div>
@@ -148,7 +165,7 @@
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   const header = document.querySelector("header");
   window.addEventListener("scroll", () => {
     if (window.scrollY > 10) { header.classList.add("scrolled"); }
@@ -197,17 +214,4 @@
     hamburger.addEventListener('click', function() {
       hamburger.classList.toggle('open');
       mobileNav.classList.toggle('open');
-      document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
-    });
-    mobileNav.querySelectorAll('a').forEach(function(link) {
-      link.addEventListener('click', function() {
-        hamburger.classList.remove('open');
-        mobileNav.classList.remove('open');
-        document.body.style.overflow = '';
-      });
-    });
-  })();
-</script>
-
-</body>
-</html>
+      document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '
