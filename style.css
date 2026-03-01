@@ -2166,6 +2166,15 @@ main > section:last-of-type {
   width: 100%;
 }
 
+@media (max-width: 768px) {
+  .map-wrapper-full {
+    width: calc(100% + 40px);
+    left: -20px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
 .address-footer-info {
   padding: 40px 20px;
   text-align: center;
