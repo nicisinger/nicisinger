@@ -218,8 +218,10 @@ projects.forEach(projectDiv => {
   });
 });
 
-// Touch-Video abspielen (Mobile) – wie mouseenter/mouseleave
+// Touch-Video abspielen (Mobile) – Tap zum Starten/Stoppen
 if ('ontouchstart' in window) {
+  let activeProject = null;
+
   projects.forEach(projectDiv => {
     const video = projectDiv.querySelector('video');
 
@@ -230,21 +232,28 @@ if ('ontouchstart' in window) {
     }).catch(() => {});
 
     projectDiv.addEventListener('touchstart', () => {
-      projectDiv.classList.add('touch-active');
-      video.play();
+      if (activeProject && activeProject !== projectDiv) {
+        // Anderes aktives Video stoppen
+        const prevVideo = activeProject.querySelector('video');
+        prevVideo.pause();
+        prevVideo.currentTime = 0;
+        activeProject.classList.remove('touch-active');
+        activeProject = null;
+      }
+
+      if (projectDiv.classList.contains('touch-active')) {
+        // Läuft bereits – stoppen
+        video.pause();
+        video.currentTime = 0;
+        projectDiv.classList.remove('touch-active');
+        activeProject = null;
+      } else {
+        // Starten
+        projectDiv.classList.add('touch-active');
+        video.play();
+        activeProject = projectDiv;
+      }
     }, { passive: true });
-
-    projectDiv.addEventListener('touchend', () => {
-      projectDiv.classList.remove('touch-active');
-      video.pause();
-      video.currentTime = 0;
-    });
-
-    projectDiv.addEventListener('touchcancel', () => {
-      projectDiv.classList.remove('touch-active');
-      video.pause();
-      video.currentTime = 0;
-    });
   });
 }
 </script>
