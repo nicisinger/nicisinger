@@ -1098,7 +1098,7 @@ main {
     gap: 6vw;
   }
   .image-row .gallery-image {
-    width: 90vw;
+    width: 100%;
     margin: 0 auto;
   }
 }
@@ -2173,6 +2173,9 @@ main > section:last-of-type {
     margin-left: 0;
     margin-right: 0;
   }
+  .map-wrapper-full iframe {
+    height: 280px;
+  }
 }
 
 .address-footer-info {
@@ -2510,17 +2513,18 @@ main.about {
     margin-top: 0 !important;
   }
 
-  /* Studio Atelier Text kleiner */
+  /* Studio Atelier Text auf Mobile */
   .atelier-floating {
-    font-size: clamp(1.8rem, 8vw, 3.5rem);
-    bottom: 20px;
+    font-size: clamp(2.6rem, 11vw, 5rem);
+    letter-spacing: 0.06em;
+    bottom: 24px;
   }
 
   /* Studio Logo */
   .studio-logo img {
     width: 200px;
     max-width: 60vw;
-    margin-top: 0;
+    margin-top: -30px;
   }
 
   /* Kontakt Grid */
