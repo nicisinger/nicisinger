@@ -67,22 +67,63 @@
       text-transform: uppercase !important;
     }
 
-    /* Aktive Seite bleibt dicker */
     .mobile-nav a.active {
       font-weight: 500 !important;
     }
 
-    /* Hamburger immer über dem Overlay */
-    .hamburger {
-      z-index: 1002 !important;
+    /* Hamburger komplett außerhalb des Headers – eigener fixed Layer */
+    #hamburger-fixed {
+      display: none;
+      position: fixed;
+      top: 18px;
+      right: 20px;
+      z-index: 99999;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
     }
 
-    /* Mobile Nav Overlay unter dem Hamburger */
+    #hamburger-fixed span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background-color: #111;
+      transition: all 0.3s ease;
+      transform-origin: center;
+    }
+
+    #hamburger-fixed.open span {
+      background-color: #111;
+    }
+
+    #hamburger-fixed.open span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+    #hamburger-fixed.open span:nth-child(2) {
+      opacity: 0;
+    }
+    #hamburger-fixed.open span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
     .mobile-nav {
-      z-index: 1001 !important;
+      z-index: 9000 !important;
     }
 
-    /* Footer mobile: alles linksbündig */
+    @media (max-width: 768px) {
+      #hamburger-fixed {
+        display: flex;
+      }
+      /* Original Hamburger im Header verstecken */
+      .hamburger {
+        display: none !important;
+      }
+    }
+
+    /* Footer mobile */
     @media (max-width: 768px) {
       .footer-inner {
         flex-direction: column;
@@ -105,6 +146,13 @@
 </head>
 <body>
 
+  <!-- Hamburger außerhalb des Headers, eigener fixed Layer -->
+  <button id="hamburger-fixed" aria-label="Menü öffnen">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
   <header>
     <h1 class="logo">
       <span class="name">NICI SINGER</span>
@@ -117,12 +165,6 @@
       <a href="ueber-mich.html">Über mich</a>
       <a href="kontakt.html" class="active">Kontakt</a>
     </nav>
-    <!-- Hamburger Button (nur Mobile) -->
-    <button class="hamburger" id="hamburger" aria-label="Menü öffnen">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
   </header>
 
 <!-- Mobile Navigation Overlay -->
@@ -253,9 +295,9 @@
 </script>
 
 <script>
-  // Hamburger Menü
+  // Hamburger Menü – neuer Button außerhalb des Headers
   (function() {
-    var hamburger = document.getElementById('hamburger');
+    var hamburger = document.getElementById('hamburger-fixed');
     var mobileNav  = document.getElementById('mobileNav');
     if (!hamburger || !mobileNav) return;
     hamburger.addEventListener('click', function() {
