@@ -339,6 +339,26 @@
     currentIdx = (currentIdx + 1) % slides.length;
     updateSlider(currentIdx);
   }, 5000);
+
+  // Swipe-Unterstützung für Mobile
+  let touchStartX = 0;
+  const carouselContainer = document.querySelector('.carousel-container');
+
+  carouselContainer.addEventListener('touchstart', (e) => {
+    touchStartX = e.touches[0].clientX;
+  }, { passive: true });
+
+  carouselContainer.addEventListener('touchend', (e) => {
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) < 40) return; // zu kurzer Wisch → ignorieren
+    if (diff > 0) {
+      // Wisch nach links → nächstes Bild
+      updateSlider((currentIdx + 1) % slides.length);
+    } else {
+      // Wisch nach rechts → vorheriges Bild
+      updateSlider((currentIdx - 1 + slides.length) % slides.length);
+    }
+  }, { passive: true });
 </script>
 
 <script>
