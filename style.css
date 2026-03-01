@@ -1232,6 +1232,9 @@ body.studio-page {
 }
 
 @media (max-width: 768px) {
+  .studio-intro {
+    padding-top: 180px;
+  }
   .studio-intro-text {
     margin-top: 50px;
     margin-bottom: 60px;
