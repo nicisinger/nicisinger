@@ -71,6 +71,27 @@
       display: none;
     }
 
+    /* Instagram Link unter CTA */
+    .studio-intro-text {
+      padding-bottom: 0 !important;
+    }
+    .studio-insta-link {
+      display: block;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .studio-insta-link img {
+      width: 22px;
+      height: 22px;
+      opacity: 0.7;
+      filter: invert(1);
+      transition: opacity 0.2s ease;
+    }
+    .studio-insta-link:hover img {
+      opacity: 1;
+    }
+
     @media (max-width: 768px) {
       #hamburger-fixed {
         display: flex;
@@ -192,6 +213,10 @@
       Produktaufnahmen und Social Content ausgerichtet.
     </p>
   </section>
+
+  <a href="https://www.instagram.com/zweiraumatelier/" target="_blank" rel="noopener" aria-label="Zweiraum Atelier auf Instagram" class="studio-insta-link">
+    <img src="assets/icons/instagram.svg" alt="Instagram">
+  </a>
 
   <!-- Möglichkeiten -->
   <section class="studio-uses fade-in">
