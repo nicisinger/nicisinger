@@ -2017,7 +2017,7 @@ main > section:last-of-type {
 
 @media (max-width: 480px) {
   .references-masonry {
-    column-count: 1;
+    column-count: 2;
   }
 }
 
