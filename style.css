@@ -2067,11 +2067,22 @@ main > section:last-of-type {
   object-fit: cover;
 }
 
+.team-content {
+  align-self: center;
+}
+
 .team-content h2 {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: 26px;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   margin-bottom: 20px;
+}
+
+.team-content p {
+  font-size: 15px;
+  line-height: 1.8;
+  font-weight: 300;
 }
 
 .category-label {
@@ -2113,10 +2124,13 @@ main > section:last-of-type {
 @media (max-width: 768px) {
   .team-container {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 8px;
   }
   .team-showcase {
     padding: 60px 20px;
+  }
+  .team-content {
+    text-align: center;
   }
 }
 
