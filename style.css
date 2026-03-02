@@ -2546,6 +2546,13 @@ main.about {
     height: 40vh;
   }
 
+  /* Home-Hero-Video: Section übernimmt das Sizing, Video füllt sie */
+  .start .preview-video {
+    width: 100% !important;
+    margin-left: 0 !important;
+    height: 100% !important;
+  }
+
   /* Content Video – volle Breite auf Mobile */
   .content-video {
     width: 100vw;
