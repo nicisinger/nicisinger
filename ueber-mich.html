@@ -152,8 +152,14 @@
 </head>
 <body class="ueber-mich-page">
 
+<div id="lang-fixed">
+  <button class="lang-btn" data-lang="de">DE</button>
+  <span class="lang-divider">|</span>
+  <button class="lang-btn" data-lang="en">EN</button>
+</div>
+
   <!-- Hamburger außerhalb des Headers -->
-  <button id="hamburger-fixed" aria-label="Menü öffnen">
+  <button id="hamburger-fixed" aria-label="Menü öffnen" data-i18n-aria="aria.hamburger">
     <span></span>
     <span></span>
     <span></span>
@@ -162,14 +168,19 @@
 <header>
   <h1 class="logo">
     <span class="name">NICI SINGER</span>
-    <span class="role">VIDEOGRAFIN</span>
+    <span class="role" data-i18n="role">VIDEOGRAFIN</span>
   </h1>
   <nav>
+    <div class="lang-switcher lang-switcher-header">
+      <button class="lang-btn" data-lang="de">DE</button>
+      <span class="lang-divider">|</span>
+      <button class="lang-btn" data-lang="en">EN</button>
+    </div>
     <a href="index.html">Home</a>
     <a href="portfolio.html">Portfolio</a>
     <a href="studio.html">Studio</a>
-    <a href="ueber-mich.html" class="active">Über mich</a>
-    <a href="kontakt.html">Kontakt</a>
+    <a href="ueber-mich.html" class="active" data-i18n="nav.about">Über mich</a>
+    <a href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
   </nav>
 </header>
 
@@ -178,8 +189,8 @@
   <a href="index.html">Home</a>
   <a href="portfolio.html">Portfolio</a>
   <a href="studio.html">Studio</a>
-  <a href="ueber-mich.html" class="active">Über mich</a>
-  <a href="kontakt.html">Kontakt</a>
+  <a href="ueber-mich.html" class="active" data-i18n="nav.about">Über mich</a>
+  <a href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
 </div>
 
 <main class="about">
@@ -190,14 +201,14 @@
         <img src="assets/nici-portrait.png" alt="Nici Singer, Videografin aus Köln">
       </div>
       <div class="hero-text fade-in">
-        <h2>Hi, ich bin Nici</h2>
-        <p>
-          Ich bin Nici, freiberufliche gelernte <strong>Videografin</strong> und vor 6 Jahren hat es mich ins schöne <strong>Köln</strong> verschlagen. 
+        <h2 data-i18n="about.hero.h2">Hi, ich bin Nici</h2>
+        <p data-i18n-html="about.hero.p1">
+          Ich bin Nici, freiberufliche gelernte <strong>Videografin</strong> und vor 6 Jahren hat es mich ins schöne <strong>Köln</strong> verschlagen.
           Täglich habe ich mit Bewegtbild zu tun und filme in ganz unterschiedlichen Bereichen.
         </p>
-        <p>
+        <p data-i18n-html="about.hero.p2">
           Ob <strong>Firmenveranstaltungen</strong> oder <strong>Imagefilme für Unternehmen, Retreats, Hochzeiten, Studioproduktionen</strong> in unserem <strong>Atelier</strong>
-          oder generell <strong>Content Creation für Social Media</strong>.  
+          oder generell <strong>Content Creation für Social Media</strong>.
           Ich arbeite lokal in Köln sowie international und liebe es, besondere Momente authentisch und atmosphärisch festzuhalten.
         </p>
       </div>
@@ -233,12 +244,12 @@
     <div class="approach-container">
       <div class="approach-text">
         <span class="category-label">Behind the Lens</span>
-        <h3>Meine Arbeitsweise</h3>
-        <p>
-          Für mich ist Videografie mehr als nur Technik. Es geht darum, die echte Energie eines Moments einzufangen. 
+        <h3 data-i18n="about.approach.h3">Meine Arbeitsweise</h3>
+        <p data-i18n="about.approach.p1">
+          Für mich ist Videografie mehr als nur Technik. Es geht darum, die echte Energie eines Moments einzufangen.
           Dabei ist mir wichtig, dass am Drehort eine entspannte und positive Atmosphäre herrscht.
         </p>
-        <p>
+        <p data-i18n="about.approach.p2">
           Ich liebe es, während der Drehs gemeinsam mit meinen Kunden Spaß zu haben. Denn genau diese Leichtigkeit sieht man später im fertigen Film. Authentisch, mit vielen Emotionen und dem Gespür für die kleinen, echten Details.
         </p>
       </div>
@@ -249,21 +260,21 @@
   </section>
 
   <section class="ueber-mich-cta-container fade-in"> 
-    <a href="kontakt.html" class="ueber-mich-cta-button">Projekt anfragen</a>
+    <a href="kontakt.html" class="ueber-mich-cta-button" data-i18n="btn.inquire">Projekt anfragen</a>
   </section>
 
   <section class="personal-approach equipment-travel fade-in">
     <div class="approach-container">
       <div class="approach-text">
         <span class="category-label">My Gear</span>
-        <h3>Immer mit dabei</h3>
-        <p>
-          Meine Arbeit führt mich an die spannendsten Orte – nicht nur in Köln, sondern weltweit. 
-          Dabei muss ich oft flexibel sein, was die Größe meines Equipments angeht. Egal, ob großes oder kleines Setup, am Ende kommt es auf die Skripte, 
+        <h3 data-i18n="about.gear.h3">Immer mit dabei</h3>
+        <p data-i18n="about.gear.p1">
+          Meine Arbeit führt mich an die spannendsten Orte – nicht nur in Köln, sondern weltweit.
+          Dabei muss ich oft flexibel sein, was die Größe meines Equipments angeht. Egal, ob großes oder kleines Setup, am Ende kommt es auf die Skripte,
           Gegebenheiten vor Ort und die Geschichten an.
         </p>
-        <p>
-          Kameras, Objektive und Drohne sind immer dabei, um die perfekte Perspektive für eure Geschichte zu finden. 
+        <p data-i18n="about.gear.p2">
+          Kameras, Objektive und Drohne sind immer dabei, um die perfekte Perspektive für eure Geschichte zu finden.
           Authentisch, mit viel Gepäck und noch mehr Leidenschaft für den nächsten Shot!
         </p>
       </div>
@@ -278,7 +289,7 @@
 <footer class="site-footer fade-in-section">
   <div class="footer-inner">
     <div class="footer-brand">
-      <a href="index.html" class="footer-name">Nici Singer – Videografin</a>
+      <a href="index.html" class="footer-name" data-i18n="footer.name">Nici Singer – Videografin</a>
       <a href="mailto:nicisinger.media@gmail.com" class="footer-mail">nicisinger.media@gmail.com</a>
       <div class="footer-icons">
         <a href="https://www.instagram.com/nicisinger/" target="_blank" aria-label="Instagram">
@@ -294,12 +305,12 @@
         <a href="index.html">Home</a>
         <a href="portfolio.html">Portfolio</a>
         <a href="studio.html">Studio</a>
-        <a href="ueber-mich.html">Über mich</a>
-        <a href="kontakt.html">Kontakt</a>
+        <a href="ueber-mich.html" data-i18n="nav.about">Über mich</a>
+        <a href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
       </nav>
       <nav class="footer-nav-legal">
-        <a href="impressum.html">Impressum</a>
-        <a href="datenschutz.html">Datenschutz</a>
+        <a href="impressum.html" data-i18n="footer.impressum">Impressum</a>
+        <a href="datenschutz.html" data-i18n="footer.datenschutz">Datenschutz</a>
       </nav>
     </div>
   </div>
@@ -385,5 +396,6 @@
   })();
 </script>
 
+<script src="assets/lang.js"></script>
 </body>
 </html>

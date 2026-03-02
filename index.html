@@ -30,8 +30,14 @@
 </head>
 <body>
 
+<div id="lang-fixed">
+  <button class="lang-btn" data-lang="de">DE</button>
+  <span class="lang-divider">|</span>
+  <button class="lang-btn" data-lang="en">EN</button>
+</div>
+
 <!-- Hamburger außerhalb des Headers -->
-<button id="hamburger-fixed" aria-label="Menü öffnen">
+<button id="hamburger-fixed" aria-label="Menü öffnen" data-i18n-aria="aria.hamburger">
   <span></span>
   <span></span>
   <span></span>
@@ -40,14 +46,19 @@
 <header>
   <h1 class="logo">
     <span class="name">NICI SINGER</span>
-    <span class="role">VIDEOGRAFIN</span>
+    <span class="role" data-i18n="role">VIDEOGRAFIN</span>
   </h1>
   <nav>
+    <div class="lang-switcher lang-switcher-header">
+      <button class="lang-btn" data-lang="de">DE</button>
+      <span class="lang-divider">|</span>
+      <button class="lang-btn" data-lang="en">EN</button>
+    </div>
     <a href="index.html" class="active">Home</a>
     <a href="portfolio.html">Portfolio</a>
     <a href="studio.html">Studio</a>
-    <a href="ueber-mich.html">Über mich</a>
-    <a href="kontakt.html">Kontakt</a>
+    <a href="ueber-mich.html" data-i18n="nav.about">Über mich</a>
+    <a href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
   </nav>
 </header>
 
@@ -56,8 +67,8 @@
   <a href="index.html" class="active">Home</a>
   <a href="portfolio.html">Portfolio</a>
   <a href="studio.html">Studio</a>
-  <a href="ueber-mich.html">Über mich</a>
-  <a href="kontakt.html">Kontakt</a>
+  <a href="ueber-mich.html" data-i18n="nav.about">Über mich</a>
+  <a href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
 </div>
 
 <main class="start">
@@ -73,31 +84,30 @@
          playsinline>
   </video>
   <div class="video-overlay-content">
-    <h2>VISUELLE GESCHICHTEN IN BEWEGUNG | VIDEOGRAFIE AUS KÖLN
-</h2>
-    <a href="portfolio.html" class="studio-button overlay-button">Zu meinem Portfolio</a>
+    <h2 data-i18n="index.hero.title">VISUELLE GESCHICHTEN IN BEWEGUNG | VIDEOGRAFIE AUS KÖLN</h2>
+    <a href="portfolio.html" class="studio-button overlay-button" data-i18n="index.hero.btn">Zu meinem Portfolio</a>
   </div>
 </section>
 
   <!-- Kurze Vorstellung -->
 <section class="portfolio-detail fade-in-section">
     <div class="detail-intro">
-        <h1 class="intro-category-h1">Content Creation | Videografie aus Köln</h1>
+        <h1 class="intro-category-h1" data-i18n="index.cat.h1">Content Creation | Videografie aus Köln</h1>
 
         <img class="home-intro-image" src="assets/bts/studio-videography.jpg" alt="Studio Videografie – Nici Singer">
 
-        <h2>Ich bin <strong>Nici Singer</strong>, freiberufliche <strong>Videografin aus Köln</strong>.</h2>
-        
-        <p>
-            Ich begleite Branding-Projekte, Events, Hochzeiten und Retreats filmisch – national und international. 
-            Meine Arbeit zeichnet sich durch einen ruhigen, minimalistischen Stil aus, der besondere Momente 
+        <h2 data-i18n-html="index.intro.h2">Ich bin <strong>Nici Singer</strong>, freiberufliche <strong>Videografin aus Köln</strong>.</h2>
+
+        <p data-i18n="index.intro.p">
+            Ich begleite Branding-Projekte, Events, Hochzeiten und Retreats filmisch – national und international.
+            Meine Arbeit zeichnet sich durch einen ruhigen, minimalistischen Stil aus, der besondere Momente
             ästhetisch und atmosphärisch einfängt.
         </p>
     </div>
 </section>
 
 <section class="home-cta fade-in">
-    <a href="kontakt.html" class="studio-button">Projekt anfragen</a>
+    <a href="kontakt.html" class="studio-button" data-i18n="btn.inquire">Projekt anfragen</a>
 </section>
 
 <section class="team-showcase">
@@ -116,10 +126,10 @@
 
         <div class="team-content">
             <span class="category-label">Meet the Team</span>
-            <h2>Das Team</h2>
-            <p>
-                Wer meine Produktionen bucht, bekommt das volle Paket. 
-                Vom Licht-Setup bis zum Entertainment am Set. 
+            <h2 data-i18n="index.team.h2">Das Team</h2>
+            <p data-i18n="index.team.p1">
+                Wer meine Produktionen bucht, bekommt das volle Paket.
+                Vom Licht-Setup bis zum Entertainment am Set.
                 In meinem Workflow vereine ich alle Rollen einer klassischen Produktion.
             </p>
             <p class="equipment-note">Always a one woman show.</p>
@@ -167,7 +177,7 @@ teamTimeline.addEventListener('input', () => {
     <!-- Linke Seite -->
     <div class="footer-brand">
 
-      <a href="index.html" class="footer-name">
+      <a href="index.html" class="footer-name" data-i18n="footer.name">
         Nici Singer – Videografin
       </a>
 
@@ -197,14 +207,14 @@ teamTimeline.addEventListener('input', () => {
         <a href="index.html">Home</a>
         <a href="portfolio.html">Portfolio</a>
         <a href="studio.html">Studio</a>
-        <a href="ueber-mich.html">Über mich</a>
-        <a href="kontakt.html">Kontakt</a>
+        <a href="ueber-mich.html" data-i18n="nav.about">Über mich</a>
+        <a href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
       </nav>
 
       <!-- Rechtliches -->
       <nav class="footer-nav-legal">
-        <a href="impressum.html">Impressum</a>
-        <a href="datenschutz.html">Datenschutz</a>
+        <a href="impressum.html" data-i18n="footer.impressum">Impressum</a>
+        <a href="datenschutz.html" data-i18n="footer.datenschutz">Datenschutz</a>
       </nav>
 
     </div>
@@ -247,6 +257,8 @@ fadeElements.forEach(el => observer.observe(el));
   })();
 </script>
 
+
+<script src="assets/lang.js"></script>
 </body>
 </html>
 

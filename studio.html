@@ -113,8 +113,14 @@
 
 <body class="studio-page">
 
+<div id="lang-fixed">
+  <button class="lang-btn" data-lang="de">DE</button>
+  <span class="lang-divider">|</span>
+  <button class="lang-btn" data-lang="en">EN</button>
+</div>
+
   <!-- Hamburger außerhalb des Headers -->
-  <button id="hamburger-fixed" aria-label="Menü öffnen">
+  <button id="hamburger-fixed" aria-label="Menü öffnen" data-i18n-aria="aria.hamburger">
     <span></span>
     <span></span>
     <span></span>
@@ -123,14 +129,19 @@
 <header>
   <h1 class="logo">
     <span class="name">NICI SINGER</span>
-    <span class="role">VIDEOGRAFIN</span>
+    <span class="role" data-i18n="role">VIDEOGRAFIN</span>
   </h1>
   <nav>
+    <div class="lang-switcher lang-switcher-header">
+      <button class="lang-btn" data-lang="de">DE</button>
+      <span class="lang-divider">|</span>
+      <button class="lang-btn" data-lang="en">EN</button>
+    </div>
     <a href="index.html">Home</a>
     <a href="portfolio.html">Portfolio</a>
     <a href="studio.html" class="active">Studio</a>
-    <a href="ueber-mich.html">Über mich</a>
-    <a href="kontakt.html">Kontakt</a>
+    <a href="ueber-mich.html" data-i18n="nav.about">Über mich</a>
+    <a href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
   </nav>
 </header>
 
@@ -139,14 +150,14 @@
   <a href="index.html">Home</a>
   <a href="portfolio.html">Portfolio</a>
   <a href="studio.html" class="active">Studio</a>
-  <a href="ueber-mich.html">Über mich</a>
-  <a href="kontakt.html">Kontakt</a>
+  <a href="ueber-mich.html" data-i18n="nav.about">Über mich</a>
+  <a href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
 </div>
 
 <main class="studio">
 
   <!-- Floating Titel -->
-  <div class="atelier-floating">Unser<br class="mobile-break"> Atelier</div>
+  <div class="atelier-floating" data-i18n-html="studio.floating">Unser<br class="mobile-break"> Atelier</div>
 
   <!-- Galerie -->
   <section class="studio-gallery">
@@ -207,8 +218,8 @@
 
   <!-- Intro -->
   <section class="studio-intro fade-in">
-    <p class="studio-intro-text">
-      Kreativität braucht Raum und Ruhe. In unserem Atelier in Köln Kalk darf kreativer und hochwertiger Video- und Fotocontent in 
+    <p class="studio-intro-text" data-i18n="studio.intro.p">
+      Kreativität braucht Raum und Ruhe. In unserem Atelier in Köln Kalk darf kreativer und hochwertiger Video- und Fotocontent in
       persönlicher Atmosphäre entstehen. Die Räumlichkeiten sind speziell für kleine Sets, Portraits, Familienshootings,
       Produktaufnahmen und Social Content ausgerichtet.
     </p>
@@ -220,20 +231,20 @@
 
   <!-- Möglichkeiten -->
   <section class="studio-uses fade-in">
-    <h3>Mögliche Shootings im Studio</h3>
+    <h3 data-i18n="studio.uses.h3">Mögliche Shootings im Studio</h3>
     <ul>
       <li>Corporate & Personal Branding Shootings</li>
       <li>Family | Couple, Baby</li>
       <li>Interviews & Talking Heads</li>
-      <li>Produktaufnahmen</li>
-      <li>Greenscreen Produktionen</li>
+      <li data-i18n="studio.uses.products">Produktaufnahmen</li>
+      <li data-i18n="studio.uses.green">Greenscreen Produktionen</li>
     </ul>
   </section>
 
   <!-- CTA -->
   <section class="studio-cta fade-in">
-    <p>Du hast eine Idee oder möchtest das Studio für ein Projekt nutzen?</p>
-    <a href="kontakt.html" class="studio-button">Projekt anfragen</a>
+    <p data-i18n="studio.cta.p">Du hast eine Idee oder möchtest das Studio für ein Projekt nutzen?</p>
+    <a href="kontakt.html" class="studio-button" data-i18n="btn.inquire">Projekt anfragen</a>
   </section>
 
 <section class="references-section">
@@ -288,7 +299,7 @@
     <!-- Linke Seite -->
     <div class="footer-brand">
 
-      <a href="index.html" class="footer-name">
+      <a href="index.html" class="footer-name" data-i18n="footer.name">
         Nici Singer – Videografin
       </a>
 
@@ -318,14 +329,14 @@
         <a href="index.html">Home</a>
         <a href="portfolio.html">Portfolio</a>
         <a href="studio.html">Studio</a>
-        <a href="ueber-mich.html">Über mich</a>
-        <a href="kontakt.html">Kontakt</a>
+        <a href="ueber-mich.html" data-i18n="nav.about">Über mich</a>
+        <a href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
       </nav>
 
       <!-- Rechtliches -->
       <nav class="footer-nav-legal">
-        <a href="impressum.html">Impressum</a>
-        <a href="datenschutz.html">Datenschutz</a>
+        <a href="impressum.html" data-i18n="footer.impressum">Impressum</a>
+        <a href="datenschutz.html" data-i18n="footer.datenschutz">Datenschutz</a>
       </nav>
 
     </div>
@@ -404,5 +415,6 @@ updateFloating();
   })();
 </script>
 
+<script src="assets/lang.js"></script>
 </body>
 </html>

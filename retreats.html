@@ -60,8 +60,14 @@
 </head>
 <body>
 
+<div id="lang-fixed">
+  <button class="lang-btn" data-lang="de">DE</button>
+  <span class="lang-divider">|</span>
+  <button class="lang-btn" data-lang="en">EN</button>
+</div>
+
 <!-- Hamburger außerhalb des Headers -->
-<button id="hamburger-fixed" aria-label="Menü öffnen">
+<button id="hamburger-fixed" aria-label="Menü öffnen" data-i18n-aria="aria.hamburger">
   <span></span>
   <span></span>
   <span></span>
@@ -70,14 +76,19 @@
 <header>
   <h1 class="logo">
     <span class="name">NICI SINGER</span>
-    <span class="role">VIDEOGRAFIN</span>
+    <span class="role" data-i18n="role">VIDEOGRAFIN</span>
   </h1>
   <nav>
+    <div class="lang-switcher lang-switcher-header">
+      <button class="lang-btn" data-lang="de">DE</button>
+      <span class="lang-divider">|</span>
+      <button class="lang-btn" data-lang="en">EN</button>
+    </div>
     <a href="index.html">Home</a>
     <a href="portfolio.html" class="active">Portfolio</a>
     <a href="studio.html">Studio</a>
-    <a href="ueber-mich.html">Über mich</a>
-    <a href="kontakt.html">Kontakt</a>
+    <a href="ueber-mich.html" data-i18n="nav.about">Über mich</a>
+    <a href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
   </nav>
 </header>
 
@@ -86,32 +97,32 @@
   <a href="index.html">Home</a>
   <a href="portfolio.html" class="active">Portfolio</a>
   <a href="studio.html">Studio</a>
-  <a href="ueber-mich.html">Über mich</a>
-  <a href="kontakt.html">Kontakt</a>
+  <a href="ueber-mich.html" data-i18n="nav.about">Über mich</a>
+  <a href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
 </div>
 
 <main>
   <nav class="categories">
-    <button onclick="window.location.href='portfolio.html'">Alle</button>
+    <button onclick="window.location.href='portfolio.html'" data-i18n="portfolio.filter.all">Alle</button>
     <button onclick="window.location.href='brands.html'">Brands</button>
     <button onclick="window.location.href='events.html'">Events</button>
     <button class="active" onclick="window.location.href='retreats.html'">Retreats</button>
     <button onclick="window.location.href='weddings.html'">Weddings</button>
     <button onclick="window.location.href='outdoor.html'">Outdoor</button>
-    <button onclick="window.location.href='drohne.html'">Drohne</button>
+    <button onclick="window.location.href='drohne.html'" data-i18n="portfolio.filter.drone">Drohne</button>
   </nav>
 
   <video class="preview-video" src="assets/video-retreats.mp4" autoplay muted loop playsinline></video>
 
   <section class="portfolio-detail">
     <div class="detail-intro">
-      <h2>Marmeladenglasmomente eingefangen in Bewegtbild.</h2>
-      <p>
-        Retreats können Pause, Regeneration, Neustart, neue Verbindungen und so 
-        vieles mehr bedeuten. Egal was es ist, mit visuellen Erinnerungen 
-        denkt jede:r gerne wieder daran zurück oder bekommt Lust auf 
-        genau dieses einmalige Erlebnis. Mit einem ruhigen, authentischen 
-        Stil und Gespür für Ästhetik halte ich die Atmosphäre sowie die großen 
+      <h2 data-i18n="retreats.detail.h2">Marmeladenglasmomente eingefangen in Bewegtbild.</h2>
+      <p data-i18n="retreats.detail.p">
+        Retreats können Pause, Regeneration, Neustart, neue Verbindungen und so
+        vieles mehr bedeuten. Egal was es ist, mit visuellen Erinnerungen
+        denkt jede:r gerne wieder daran zurück oder bekommt Lust auf
+        genau dieses einmalige Erlebnis. Mit einem ruhigen, authentischen
+        Stil und Gespür für Ästhetik halte ich die Atmosphäre sowie die großen
         und kleinen Dinge fest. Jede Art von Retreat ist willkommen.
       </p>
     </div>
@@ -173,19 +184,19 @@
 
     <div class="bts-text">
       <span class="subtitle">Behind the Scenes</span>
-      <h2>Mein "Run & Gun" Setup</h2>
-      <p>
-        Auf Festivals und Retreats bin ich meistens unauffällig und mobil unterwegs. 
+      <h2 data-i18n="retreats.bts.h2">Mein "Run & Gun" Setup</h2>
+      <p data-i18n="retreats.bts.p">
+        Auf Festivals und Retreats bin ich meistens unauffällig und mobil unterwegs.
         So fange ich die echten, ungestellten Momente ein, ohne die Atmosphäre zu stören.
         So sieht ein Run & Gun Setup von mir aus, wenn ich unterwegs am Filmen bin.
         Für alle anderen Fälle habe ich zusätzlich weiteres Equipment dabei:
       </p>
       <ul class="equipment-list">
-        <li><strong>Gimbal:</strong> Für ruhige Kamerafahrten und situative Interviews.</li>
-        <li><strong>Drohne:</strong> Für ganz besondere Blickwinkel.</li>
-        <li><strong>Licht & Stative:</strong> Wenn nötig, zum Einleuchten von z.B. gesetzten Interviewsituationen.</li>
+        <li data-i18n-html="retreats.eq.gimbal"><strong>Gimbal:</strong> Für ruhige Kamerafahrten und situative Interviews.</li>
+        <li data-i18n-html="retreats.eq.drone"><strong>Drohne:</strong> Für ganz besondere Blickwinkel.</li>
+        <li data-i18n-html="retreats.eq.light"><strong>Licht & Stative:</strong> Wenn nötig, zum Einleuchten von z.B. gesetzten Interviewsituationen.</li>
       </ul>
-      <p class="equipment-note">Minimalistisches Auftreten. Maximale Qualität.</p>
+      <p class="equipment-note" data-i18n="retreats.eq.note">Minimalistisches Auftreten. Maximale Qualität.</p>
     </div>
 
   </div>
@@ -194,7 +205,7 @@
 <footer class="site-footer fade-in-section">
   <div class="footer-inner">
     <div class="footer-brand">
-      <a href="index.html" class="footer-name">Nici Singer – Videografin</a>
+      <a href="index.html" class="footer-name" data-i18n="footer.name">Nici Singer – Videografin</a>
       <a href="mailto:nicisinger.media@gmail.com" class="footer-mail">nicisinger.media@gmail.com</a>
       <div class="footer-icons">
         <a href="https://www.instagram.com/nicisinger/" target="_blank" aria-label="Instagram">
@@ -210,12 +221,12 @@
         <a href="index.html">Home</a>
         <a href="portfolio.html">Portfolio</a>
         <a href="studio.html">Studio</a>
-        <a href="ueber-mich.html">Über mich</a>
-        <a href="kontakt.html">Kontakt</a>
+        <a href="ueber-mich.html" data-i18n="nav.about">Über mich</a>
+        <a href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
       </nav>
       <nav class="footer-nav-legal">
-        <a href="impressum.html">Impressum</a>
-        <a href="datenschutz.html">Datenschutz</a>
+        <a href="impressum.html" data-i18n="footer.impressum">Impressum</a>
+        <a href="datenschutz.html" data-i18n="footer.datenschutz">Datenschutz</a>
       </nav>
     </div>
   </div>
@@ -308,5 +319,6 @@ timeline.addEventListener('input', () => {
   })();
 </script>
 
+<script src="assets/lang.js"></script>
 </body>
 </html>

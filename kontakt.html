@@ -123,31 +123,18 @@
       }
     }
 
-    /* Footer mobile */
-    @media (max-width: 768px) {
-      .footer-inner {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .footer-brand {
-        align-items: flex-start;
-        text-align: left;
-        margin-bottom: 24px;
-      }
-      .footer-links {
-        align-items: flex-start;
-        text-align: left;
-      }
-      .footer-icons {
-        justify-content: flex-start;
-      }
-    }
   </style>
 </head>
 <body>
 
+<div id="lang-fixed">
+  <button class="lang-btn" data-lang="de">DE</button>
+  <span class="lang-divider">|</span>
+  <button class="lang-btn" data-lang="en">EN</button>
+</div>
+
   <!-- Hamburger außerhalb des Headers, eigener fixed Layer -->
-  <button id="hamburger-fixed" aria-label="Menü öffnen">
+  <button id="hamburger-fixed" aria-label="Menü öffnen" data-i18n-aria="aria.hamburger">
     <span></span>
     <span></span>
     <span></span>
@@ -156,14 +143,19 @@
   <header>
     <h1 class="logo">
       <span class="name">NICI SINGER</span>
-      <span class="role">VIDEOGRAFIN</span>
+      <span class="role" data-i18n="role">VIDEOGRAFIN</span>
     </h1>
     <nav>
+      <div class="lang-switcher lang-switcher-header">
+        <button class="lang-btn" data-lang="de">DE</button>
+        <span class="lang-divider">|</span>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
       <a href="index.html">Home</a>
       <a href="portfolio.html">Portfolio</a>
       <a href="studio.html">Studio</a>
-      <a href="ueber-mich.html">Über mich</a>
-      <a href="kontakt.html" class="active">Kontakt</a>
+      <a href="ueber-mich.html" data-i18n="nav.about">Über mich</a>
+      <a href="kontakt.html" class="active" data-i18n="nav.contact">Kontakt</a>
     </nav>
   </header>
 
@@ -172,15 +164,15 @@
   <a href="index.html">Home</a>
   <a href="portfolio.html">Portfolio</a>
   <a href="studio.html">Studio</a>
-  <a href="ueber-mich.html">Über mich</a>
-  <a href="kontakt.html" class="active">Kontakt</a>
+  <a href="ueber-mich.html" data-i18n="nav.about">Über mich</a>
+  <a href="kontakt.html" class="active" data-i18n="nav.contact">Kontakt</a>
 </div>
 
   <main class="contact">
     <div class="contact-grid-fullwidth">
       <section class="contact-form">
-        <p class="contact-intro">
-          Du möchtest mit mir arbeiten oder hast eine Frage zu meinen Projekten?  
+        <p class="contact-intro" data-i18n="contact.intro">
+          Du möchtest mit mir arbeiten oder hast eine Frage zu meinen Projekten?
           Dann schreib mir gerne – ich freue mich auf deine Nachricht!
         </p>
 
@@ -190,15 +182,15 @@
           <input type="hidden" name="redirect" value="false">
 
           <label for="name">Name</label>
-          <input type="text" id="name" name="name" placeholder="Dein Name" required>
+          <input type="text" id="name" name="name" placeholder="Dein Name" data-i18n-placeholder="contact.placeholder.name" required>
 
           <label for="email">E-Mail</label>
-          <input type="email" id="email" name="email" placeholder="Deine E-Mail" required>
+          <input type="email" id="email" name="email" placeholder="Deine E-Mail" data-i18n-placeholder="contact.placeholder.email" required>
 
-          <label for="message">Nachricht</label>
-          <textarea id="message" name="message" placeholder="Deine Nachricht" rows="6" required></textarea>
+          <label for="message" data-i18n="contact.label.message">Nachricht</label>
+          <textarea id="message" name="message" placeholder="Deine Nachricht" data-i18n-placeholder="contact.placeholder.msg" rows="6" required></textarea>
 
-          <button type="submit">Absenden</button>
+          <button type="submit" data-i18n="contact.btn.send">Absenden</button>
         </form>
       </section>
 
@@ -211,15 +203,15 @@
   <div class="modal-overlay" id="thankYouModal">
     <div class="modal">
       <button class="close-btn" id="closeModal">&times;</button>
-      <h3>Danke für deine Anfrage 💫</h3>
-      <p>Ich melde mich so schnell wie möglich bei dir!</p>
+      <h3 data-i18n="contact.modal.h3">Danke für deine Anfrage 💫</h3>
+      <p data-i18n="contact.modal.p">Ich melde mich so schnell wie möglich bei dir!</p>
     </div>
   </div>
 
 <footer class="site-footer fade-in-section">
   <div class="footer-inner">
     <div class="footer-brand">
-      <a href="index.html" class="footer-name">Nici Singer – Videografin</a>
+      <a href="index.html" class="footer-name" data-i18n="footer.name">Nici Singer – Videografin</a>
       <a href="mailto:nicisinger.media@gmail.com" class="footer-mail">nicisinger.media@gmail.com</a>
       <div class="footer-icons">
         <a href="https://www.instagram.com/nicisinger/" target="_blank" aria-label="Instagram">
@@ -235,12 +227,12 @@
         <a href="index.html">Home</a>
         <a href="portfolio.html">Portfolio</a>
         <a href="studio.html">Studio</a>
-        <a href="ueber-mich.html">Über mich</a>
-        <a href="kontakt.html">Kontakt</a>
+        <a href="ueber-mich.html" data-i18n="nav.about">Über mich</a>
+        <a href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
       </nav>
       <nav class="footer-nav-legal">
-        <a href="impressum.html">Impressum</a>
-        <a href="datenschutz.html">Datenschutz</a>
+        <a href="impressum.html" data-i18n="footer.impressum">Impressum</a>
+        <a href="datenschutz.html" data-i18n="footer.datenschutz">Datenschutz</a>
       </nav>
     </div>
   </div>
@@ -264,10 +256,14 @@
         modal.style.display = 'flex';
         form.reset();
       } else {
-        alert('Fehler beim Senden. Bitte versuche es erneut.');
+        var lang = window.getCurrentLang ? window.getCurrentLang() : 'de';
+        alert(lang === 'en' ? 'Error sending. Please try again.' : 'Fehler beim Senden. Bitte versuche es erneut.');
       }
     })
-    .catch(() => alert('Fehler beim Senden. Bitte versuche es erneut.'));
+    .catch(function() {
+      var lang = window.getCurrentLang ? window.getCurrentLang() : 'de';
+      alert(lang === 'en' ? 'Error sending. Please try again.' : 'Fehler beim Senden. Bitte versuche es erneut.');
+    });
   });
 
   closeModal.addEventListener('click', function() { modal.style.display = 'none'; });
@@ -315,5 +311,6 @@
   })();
 </script>
 
+<script src="assets/lang.js"></script>
 </body>
 </html>

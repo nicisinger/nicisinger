@@ -28,8 +28,14 @@
 
 <body>
 
+<div id="lang-fixed">
+  <button class="lang-btn" data-lang="de">DE</button>
+  <span class="lang-divider">|</span>
+  <button class="lang-btn" data-lang="en">EN</button>
+</div>
+
 <!-- Hamburger außerhalb des Headers -->
-<button id="hamburger-fixed" aria-label="Menü öffnen">
+<button id="hamburger-fixed" aria-label="Menü öffnen" data-i18n-aria="aria.hamburger">
   <span></span>
   <span></span>
   <span></span>
@@ -38,14 +44,19 @@
 <header>
   <h1 class="logo">
     <span class="name">NICI SINGER</span>
-    <span class="role">VIDEOGRAFIN</span>
+    <span class="role" data-i18n="role">VIDEOGRAFIN</span>
   </h1>
   <nav>
+    <div class="lang-switcher lang-switcher-header">
+      <button class="lang-btn" data-lang="de">DE</button>
+      <span class="lang-divider">|</span>
+      <button class="lang-btn" data-lang="en">EN</button>
+    </div>
     <a href="index.html">Home</a>
     <a href="portfolio.html">Portfolio</a>
     <a href="studio.html">Studio</a>
-    <a href="ueber-mich.html">Über mich</a>
-    <a href="kontakt.html">Kontakt</a>
+    <a href="ueber-mich.html" data-i18n="nav.about">Über mich</a>
+    <a href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
   </nav>
 </header>
 
@@ -54,8 +65,8 @@
   <a href="index.html">Home</a>
   <a href="portfolio.html">Portfolio</a>
   <a href="studio.html">Studio</a>
-  <a href="ueber-mich.html">Über mich</a>
-  <a href="kontakt.html">Kontakt</a>
+  <a href="ueber-mich.html" data-i18n="nav.about">Über mich</a>
+  <a href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
 </div>
 
 <main class="legal-page">
@@ -281,7 +292,7 @@ Personenbezogene Daten werden gelöscht, sobald der Zweck der Verarbeitung entf�
     <!-- Linke Seite -->
     <div class="footer-brand">
 
-      <a href="index.html" class="footer-name">
+      <a href="index.html" class="footer-name" data-i18n="footer.name">
         Nici Singer – Videografin
       </a>
 
@@ -311,14 +322,14 @@ Personenbezogene Daten werden gelöscht, sobald der Zweck der Verarbeitung entf�
         <a href="index.html">Home</a>
         <a href="portfolio.html">Portfolio</a>
         <a href="studio.html">Studio</a>
-        <a href="ueber-mich.html">Über mich</a>
-        <a href="kontakt.html">Kontakt</a>
+        <a href="ueber-mich.html" data-i18n="nav.about">Über mich</a>
+        <a href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
       </nav>
 
       <!-- Rechtliches -->
       <nav class="footer-nav-legal">
-        <a href="impressum.html">Impressum</a>
-        <a href="datenschutz.html">Datenschutz</a>
+        <a href="impressum.html" data-i18n="footer.impressum">Impressum</a>
+        <a href="datenschutz.html" data-i18n="footer.datenschutz">Datenschutz</a>
       </nav>
 
     </div>
@@ -365,5 +376,6 @@ fadeElements.forEach(el => observer.observe(el));
   })();
 </script>
 
+<script src="assets/lang.js"></script>
 </body>
 </html>

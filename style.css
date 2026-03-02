@@ -2607,3 +2607,64 @@ main.about {
     font-size: 0.7rem;
   }
 }
+/* ------------------------------
+   Language Switcher
+------------------------------ */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Header instance – inline, to the left of "Home" in the header nav */
+.lang-switcher-header {
+  display: inline-flex;
+}
+
+/* Fixed mobile instance – to the left of the hamburger button */
+#lang-fixed {
+  display: none;
+  position: fixed;
+  top: 22px;
+  right: 64px;
+  z-index: 99999;
+  align-items: center;
+  gap: 4px;
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  color: #111;
+  cursor: pointer;
+  padding: 0;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.lang-btn.active {
+  font-weight: 500;
+}
+
+.lang-btn:hover {
+  opacity: 0.55;
+}
+
+.lang-divider {
+  color: #bbb;
+  font-size: 11px;
+  line-height: 1;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  /* Show fixed switcher next to hamburger on mobile */
+  #lang-fixed {
+    display: flex;
+  }
+
+}

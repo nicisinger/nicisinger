@@ -43,8 +43,14 @@
 </head>
 <body>
 
+<div id="lang-fixed">
+  <button class="lang-btn" data-lang="de">DE</button>
+  <span class="lang-divider">|</span>
+  <button class="lang-btn" data-lang="en">EN</button>
+</div>
+
 <!-- Hamburger außerhalb des Headers -->
-<button id="hamburger-fixed" aria-label="Menü öffnen">
+<button id="hamburger-fixed" aria-label="Menü öffnen" data-i18n-aria="aria.hamburger">
   <span></span>
   <span></span>
   <span></span>
@@ -53,14 +59,19 @@
 <header>
   <h1 class="logo">
     <span class="name">NICI SINGER</span>
-    <span class="role">VIDEOGRAFIN</span>
+    <span class="role" data-i18n="role">VIDEOGRAFIN</span>
   </h1>
   <nav>
+    <div class="lang-switcher lang-switcher-header">
+      <button class="lang-btn" data-lang="de">DE</button>
+      <span class="lang-divider">|</span>
+      <button class="lang-btn" data-lang="en">EN</button>
+    </div>
     <a href="index.html">Home</a>
     <a href="portfolio.html" class="active">Portfolio</a>
     <a href="studio.html">Studio</a>
-    <a href="ueber-mich.html">Über mich</a>
-    <a href="kontakt.html">Kontakt</a>
+    <a href="ueber-mich.html" data-i18n="nav.about">Über mich</a>
+    <a href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
   </nav>
 
 </header>
@@ -70,20 +81,20 @@
   <a href="index.html">Home</a>
   <a href="portfolio.html" class="active">Portfolio</a>
   <a href="studio.html">Studio</a>
-  <a href="ueber-mich.html">Über mich</a>
-  <a href="kontakt.html">Kontakt</a>
+  <a href="ueber-mich.html" data-i18n="nav.about">Über mich</a>
+  <a href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
 </div>
 
 <main>
 
   <nav class="categories">
-    <button onclick="window.location.href='portfolio.html'">Alle</button>
+    <button onclick="window.location.href='portfolio.html'" data-i18n="portfolio.filter.all">Alle</button>
     <button onclick="window.location.href='brands.html'">Brands</button>
     <button onclick="window.location.href='events.html'">Events</button>
     <button onclick="window.location.href='retreats.html'">Retreats</button>
     <button onclick="window.location.href='weddings.html'">Weddings</button>
     <button class="active" onclick="window.location.href='outdoor.html'">Outdoor</button>
-    <button onclick="window.location.href='drohne.html'">Drohne</button>
+    <button onclick="window.location.href='drohne.html'" data-i18n="portfolio.filter.drone">Drohne</button>
   </nav>
 
   <video class="preview-video" src="assets/video-outdoor.mp4" autoplay muted loop playsinline></video>
@@ -91,8 +102,8 @@
   <section class="portfolio-detail">
     <div class="detail-intro">
       <h2>The best shooting locations are probably out there.</h2>
-      <p>
-        Wenn ich verreise, habe ich selten nur mich, sondern auch 
+      <p data-i18n="outdoor.detail.p">
+        Wenn ich verreise, habe ich selten nur mich, sondern auch
         Kameras, Drohne und Objektive im Gepäck. Vielleicht nehme ich 
         ja bald deinen Schmuck, Sportschuh, Rucksack oder neue Pieces 
         aus deiner Clothing Brand mit und kreiere einzigartigen Content 
@@ -155,7 +166,7 @@
     <!-- Linke Seite -->
     <div class="footer-brand">
 
-      <a href="index.html" class="footer-name">
+      <a href="index.html" class="footer-name" data-i18n="footer.name">
         Nici Singer – Videografin
       </a>
 
@@ -181,12 +192,12 @@
         <a href="index.html">Home</a>
         <a href="portfolio.html">Portfolio</a>
         <a href="studio.html">Studio</a>
-        <a href="ueber-mich.html">Über mich</a>
-        <a href="kontakt.html">Kontakt</a>
+        <a href="ueber-mich.html" data-i18n="nav.about">Über mich</a>
+        <a href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
       </nav>
       <nav class="footer-nav-legal">
-        <a href="impressum.html">Impressum</a>
-        <a href="datenschutz.html">Datenschutz</a>
+        <a href="impressum.html" data-i18n="footer.impressum">Impressum</a>
+        <a href="datenschutz.html" data-i18n="footer.datenschutz">Datenschutz</a>
       </nav>
     </div>
   </div>
@@ -251,5 +262,6 @@
   })();
 </script>
 
+<script src="assets/lang.js"></script>
 </body>
 </html>
