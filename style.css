@@ -2503,7 +2503,18 @@ main.about {
   }
 
   .footer-inner {
-    gap: 30px;
+    display: block;
+  }
+
+  .footer-brand {
+    margin-bottom: 30px;
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
   }
 
   /* Studio Galerie – voll-deaktivieren auf Mobile (Bilder übereinander) */
