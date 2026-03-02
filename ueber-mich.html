@@ -15,73 +15,44 @@
 
   <link rel="stylesheet" href="style.css">
   <style>
-    .about-hero-section {
-      background-color: #000;
+    .about-intro-video-section {
       width: 100vw;
       margin-left: calc(-50vw + 50%);
-      color: #fff;
-      margin-bottom: 80px;
       margin-top: -80px;
+      margin-bottom: 60px;
     }
 
-    .hero-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 340px 1fr;
-      gap: 80px;
-      align-items: center;
-      padding: 0 100px;
-    }
-
-    .hero-photo img {
+    .about-intro-video {
       width: 100%;
-      height: auto;
+      height: 80vh;
+      object-fit: cover;
       display: block;
     }
 
-    .hero-text h2 {
-      font-size: 26px;
-      margin-bottom: 24px;
-      font-weight: 400;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
+    .about-intro-text {
       color: #fff;
+      text-align: center;
+      padding-bottom: 0;
     }
 
-    .hero-text p {
-      font-size: 16px;
-      line-height: 1.8;
-      font-weight: 300;
-      color: #ccc;
+    .about-intro-text .detail-intro {
+      margin-bottom: 40px;
+      text-align: center;
     }
 
-    .hero-text strong {
-      color: #fff;
-      font-weight: 400;
-    }
-
-    @media (max-width: 900px) {
-      .hero-inner {
-        grid-template-columns: 1fr;
-        gap: 30px;
-        text-align: center;
-        padding: 40px 20px;
-      }
-      .hero-photo img {
-        max-width: 240px;
-        margin: 0 auto;
-      }
-      .hero-text p {
-        margin: 0 auto;
-      }
+    .about-intro-text p {
+      margin-left: auto;
+      margin-right: auto;
     }
 
     @media (max-width: 768px) {
-      .about-hero-section {
+      .about-intro-video-section {
         width: calc(100% + 40px);
         margin-left: -20px;
-        margin-bottom: 0;
+        margin-bottom: 30px;
+      }
+      .about-intro-video {
+        height: 55vh;
       }
     }
 
@@ -195,23 +166,22 @@
 
 <main class="about">
 
-  <section class="about-hero-section">
-    <div class="hero-inner">
-      <div class="hero-photo">
-        <img src="assets/nici-portrait.png" alt="Nici Singer, Videografin aus Köln">
-      </div>
-      <div class="hero-text fade-in">
-        <h2 data-i18n="about.hero.h2">Hi, ich bin Nici</h2>
-        <p data-i18n-html="about.hero.p1">
-          Ich bin Nici, freiberufliche gelernte <strong>Videografin</strong> und vor 6 Jahren hat es mich ins schöne <strong>Köln</strong> verschlagen.
-          Täglich habe ich mit Bewegtbild zu tun und filme in ganz unterschiedlichen Bereichen.
-        </p>
-        <p data-i18n-html="about.hero.p2">
-          Ob <strong>Firmenveranstaltungen</strong> oder <strong>Imagefilme für Unternehmen, Retreats, Hochzeiten, Studioproduktionen</strong> in unserem <strong>Atelier</strong>
-          oder generell <strong>Content Creation für Social Media</strong>.
-          Ich arbeite lokal in Köln sowie international und liebe es, besondere Momente authentisch und atmosphärisch festzuhalten.
-        </p>
-      </div>
+  <section class="about-intro-video-section">
+    <video class="about-intro-video" src="assets/bts/nici-introduction.mp4" autoplay muted loop playsinline></video>
+  </section>
+
+  <section class="portfolio-detail about-intro-text fade-in-section">
+    <div class="detail-intro">
+      <h2 data-i18n="about.hero.h2">Hi, ich bin Nici</h2>
+      <p data-i18n-html="about.hero.p1">
+        Ich bin Nici, freiberufliche gelernte <strong>Videografin</strong> und vor 6 Jahren hat es mich ins schöne <strong>Köln</strong> verschlagen.
+        Täglich habe ich mit Bewegtbild zu tun und filme in ganz unterschiedlichen Bereichen.
+      </p>
+      <p data-i18n-html="about.hero.p2">
+        Ob <strong>Firmenveranstaltungen</strong> oder <strong>Imagefilme für Unternehmen, Retreats, Hochzeiten, Studioproduktionen</strong> in unserem <strong>Atelier</strong>
+        oder generell <strong>Content Creation für Social Media</strong>.
+        Ich arbeite lokal in Köln sowie international und liebe es, besondere Momente authentisch und atmosphärisch festzuhalten.
+      </p>
     </div>
   </section>
 
@@ -228,7 +198,10 @@
           <img src="assets/bts/wedding-videography.jpg" alt="BTS 3">
         </div>
         <div class="carousel-slide">
-          <img src="assets/bts/travel-videography.JPG" alt="BTS 4">
+          <img src="assets/nici-portrait.png" alt="BTS 4">
+        </div>
+        <div class="carousel-slide">
+          <img src="assets/bts/travel-videography.JPG" alt="BTS 5">
         </div>
       </div>
     </div>
@@ -237,6 +210,7 @@
       <span class="dot" onclick="currentSlide(1)"></span>
       <span class="dot" onclick="currentSlide(2)"></span>
       <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
     </div>
   </section>
 
