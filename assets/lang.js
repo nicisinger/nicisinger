@@ -156,6 +156,168 @@
     'drone.detail.p': {
       de: 'Mit der Drohne fange ich besondere Perspektiven ein, die am Boden nicht möglich sind: von beeindruckenden Eventlocations und weitläufigen Baustellen bis hin zu atemberaubenden Landschaften und Gruppenaufnahmen aus der Luft. Dynamische Kamerafahrten und außergewöhnliche Blickwinkel machen jedes Video besonders und setzen jede Art von Projekt wirkungsvoll in Szene. Als zertifizierte Drohnenpilotin mit dem großen A2-Drohnenführerschein fliege ich sicher, verantwortungsvoll und regelkonform.',
       en: 'With the drone I capture unique perspectives that are impossible from the ground: from impressive event venues and sprawling construction sites to breathtaking landscapes and aerial group shots. Dynamic camera movements and extraordinary angles make every video special and stage any kind of project to powerful effect. As a certified drone pilot with the full A2 drone licence, I fly safely, responsibly and in compliance with regulations.'
+    },
+
+    /* ── impressum.html ─────────────────────────────────────── */
+    'impressum.h2':            { de: 'Impressum',                                         en: 'Legal Notice' },
+    'impressum.s1.h3':         { de: 'Angaben gemäß § 5 DDG',                             en: 'Information according to § 5 DDG' },
+    'impressum.s2.h3':         { de: 'Kontaktmöglichkeiten',                               en: 'Contact' },
+    'impressum.s3.h3':         { de: 'Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV', en: 'Responsible for Content (§ 55 para. 2 RStV)' },
+    'impressum.disclaimer.h2': { de: 'Haftungsausschluss',                                 en: 'Disclaimer' },
+    'impressum.content.h3':    { de: 'Haftung für Inhalte',                                en: 'Liability for Content' },
+    'impressum.content.p': {
+      de: 'Die Inhalte meiner Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann ich jedoch keine Gewähr übernehmen. Als Diensteanbieter bin ich gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG bin ich als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werde ich diese Inhalte umgehend entfernen.',
+      en: 'The contents of my pages were created with the greatest care. However, I cannot guarantee the accuracy, completeness or up-to-dateness of the content. As a service provider, I am responsible for my own content on these pages in accordance with § 7 para. 1 TMG and the general laws. Under §§ 8 to 10 TMG, however, I am not obligated as a service provider to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity. Obligations to remove or block the use of information under general law remain unaffected. Liability in this regard is only possible from the time of knowledge of a specific infringement. Upon becoming aware of such infringements, I will remove this content immediately.'
+    },
+    'impressum.links.h3': { de: 'Haftung für Links', en: 'Liability for Links' },
+    'impressum.links.p': {
+      de: 'Mein Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte ich keinen Einfluss habe. Deshalb kann ich für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werde ich derartige Links umgehend entfernen.',
+      en: 'My website contains links to external third-party websites over whose content I have no influence. I therefore accept no liability for this third-party content. The respective provider or operator of the pages is always responsible for the content of the linked pages. The linked pages were checked for possible legal violations at the time of linking. Illegal content was not recognisable at the time of linking. Permanent monitoring of the linked pages is not reasonable without concrete evidence of an infringement. Upon becoming aware of legal violations, I will remove such links immediately.'
+    },
+    'impressum.copyright.h3': { de: 'Haftung für Urheberrechte', en: 'Copyright' },
+    'impressum.copyright.p': {
+      de: 'Die durch den Seitenbearbeiter erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitte ich um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werde ich derartige Inhalte umgehend entfernen.',
+      en: 'The content and works created by the site operator on these pages are subject to German copyright law. Reproduction, editing, distribution and any kind of exploitation outside the limits of copyright require the written consent of the respective author or creator. Downloads and copies of this page are only permitted for private, non-commercial use. Insofar as the content on this page was not created by the operator, the copyrights of third parties are respected. In particular, third-party content is identified as such. Should you nevertheless become aware of a copyright infringement, please notify me accordingly. Upon becoming aware of legal violations, I will remove such content immediately.'
+    },
+
+    /* ── datenschutz.html ───────────────────────────────────── */
+    'datenschutz.h2':              { de: 'Datenschutzerklärung',                  en: 'Privacy Policy' },
+    'datenschutz.intro.h3':        { de: 'Einleitung',                             en: 'Introduction' },
+    'datenschutz.intro.p1': {
+      de: 'Mit der folgenden Datenschutzerklärung möchten wir Sie darüber aufklären, welche Arten Ihrer personenbezogenen Daten (nachfolgend auch kurz als „Daten" bezeichnet) wir zu welchen Zwecken und in welchem Umfang verarbeiten.',
+      en: 'With the following privacy policy, we would like to inform you about the types of your personal data (hereinafter also referred to as "data") that we process, for what purposes and to what extent.'
+    },
+    'datenschutz.intro.p2': {
+      de: 'Die Datenschutzerklärung gilt für alle von uns durchgeführten Verarbeitungen personenbezogener Daten, sowohl im Rahmen der Erbringung unserer Leistungen als auch insbesondere auf unseren Webseiten, in mobilen Applikationen sowie innerhalb externer Onlinepräsenzen, wie z.B. unserer Social-Media-Profile (nachfolgend zusammenfassend bezeichnet als „Onlineangebot").',
+      en: 'This privacy policy applies to all processing of personal data carried out by us, both in the context of providing our services and in particular on our websites, in mobile applications and within external online presences, such as our social media profiles (hereinafter collectively referred to as the "online offering").'
+    },
+    'datenschutz.intro.p3':        { de: 'Die verwendeten Begriffe sind nicht geschlechtsspezifisch.', en: 'The terms used are not gender-specific.' },
+    'datenschutz.intro.p4': {
+      de: '<strong>Stand:</strong> 29. September 2020',
+      en: '<strong>As of:</strong> 29 September 2020'
+    },
+    'datenschutz.responsible.h3':  { de: 'Verantwortliche',                        en: 'Controller' },
+    'datenschutz.overview.h3':     { de: 'Übersicht der Verarbeitungen',            en: 'Overview of Processing' },
+    'datenschutz.overview.p': {
+      de: 'Die nachfolgende Übersicht fasst die Arten der verarbeiteten Daten und die Zwecke ihrer Verarbeitung zusammen und verweist auf die betroffenen Personen.',
+      en: 'The following overview summarises the types of data processed and the purposes of their processing and refers to the data subjects concerned.'
+    },
+    'datenschutz.dataTypes.h4':    { de: 'Arten der verarbeiteten Daten',           en: 'Types of Processed Data' },
+    'datenschutz.dataTypes.li1':   { de: 'Bestandsdaten (z.B. Namen, Adressen)',                             en: 'Master data (e.g. names, addresses)' },
+    'datenschutz.dataTypes.li2':   { de: 'Inhaltsdaten (z.B. Texteingaben, Fotografien, Videos)',            en: 'Content data (e.g. text entries, photographs, videos)' },
+    'datenschutz.dataTypes.li3':   { de: 'Kontaktdaten (z.B. E-Mail, Telefonnummern)',                       en: 'Contact data (e.g. email, phone numbers)' },
+    'datenschutz.dataTypes.li4':   { de: 'Meta-/Kommunikationsdaten (z.B. Geräte-Informationen, IP-Adressen)', en: 'Meta/communication data (e.g. device information, IP addresses)' },
+    'datenschutz.dataTypes.li5':   { de: 'Nutzungsdaten (z.B. besuchte Webseiten, Zugriffszeiten)',          en: 'Usage data (e.g. visited websites, access times)' },
+    'datenschutz.persons.h4':      { de: 'Kategorien betroffener Personen',         en: 'Categories of Data Subjects' },
+    'datenschutz.persons.li1':     { de: 'Kommunikationspartner',                   en: 'Communication partners' },
+    'datenschutz.persons.li2':     { de: 'Nutzer (z.B. Webseitenbesucher)',         en: 'Users (e.g. website visitors)' },
+    'datenschutz.purposes.h4':     { de: 'Zwecke der Verarbeitung',                 en: 'Purposes of Processing' },
+    'datenschutz.purposes.li1':    { de: 'Bereitstellung unseres Onlineangebotes',  en: 'Provision of our online services' },
+    'datenschutz.purposes.li2':    { de: 'Kontaktanfragen und Kommunikation',       en: 'Contact requests and communication' },
+    'datenschutz.purposes.li3':    { de: 'Remarketing',                             en: 'Remarketing' },
+    'datenschutz.purposes.li4':    { de: 'Sicherheitsmaßnahmen',                    en: 'Security measures' },
+    'datenschutz.purposes.li5':    { de: 'Tracking',                                en: 'Tracking' },
+    'datenschutz.purposes.li6':    { de: 'Vertragliche Leistungen',                 en: 'Contractual services' },
+    'datenschutz.purposes.li7':    { de: 'Verwaltung von Anfragen',                 en: 'Management of enquiries' },
+    'datenschutz.legal.h3':        { de: 'Maßgebliche Rechtsgrundlagen',            en: 'Applicable Legal Bases' },
+    'datenschutz.legal.p': {
+      de: 'Im Folgenden teilen wir die Rechtsgrundlagen der Datenschutzgrundverordnung (DSGVO), auf deren Basis wir die personenbezogenen Daten verarbeiten, mit.',
+      en: 'Below we share the legal bases of the General Data Protection Regulation (GDPR) on the basis of which we process personal data.'
+    },
+    'datenschutz.legal.li1': {
+      de: '<strong>Einwilligung (Art. 6 Abs. 1 lit. a DSGVO)</strong> – Verarbeitung auf Grundlage einer Einwilligung.',
+      en: '<strong>Consent (Art. 6 para. 1 lit. a GDPR)</strong> – Processing on the basis of consent.'
+    },
+    'datenschutz.legal.li2': {
+      de: '<strong>Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO)</strong> – Verarbeitung zur Vertragserfüllung oder vorvertraglichen Maßnahmen.',
+      en: '<strong>Contract performance (Art. 6 para. 1 lit. b GDPR)</strong> – Processing for the performance of a contract or pre-contractual measures.'
+    },
+    'datenschutz.legal.li3': {
+      de: '<strong>Berechtigte Interessen (Art. 6 Abs. 1 lit. f DSGVO)</strong> – Verarbeitung zur Wahrung berechtigter Interessen.',
+      en: '<strong>Legitimate interests (Art. 6 para. 1 lit. f GDPR)</strong> – Processing to protect legitimate interests.'
+    },
+    'datenschutz.national.h3':     { de: 'Nationale Datenschutzregelungen in Deutschland', en: 'National Data Protection Regulations in Germany' },
+    'datenschutz.national.p1': {
+      de: 'Zusätzlich zu den Datenschutzregelungen der DSGVO gelten nationale Regelungen zum Datenschutz in Deutschland, insbesondere das Bundesdatenschutzgesetz (BDSG).',
+      en: 'In addition to the data protection regulations of the GDPR, national data protection regulations apply in Germany, in particular the Federal Data Protection Act (BDSG).'
+    },
+    'datenschutz.national.p2': {
+      de: 'Das BDSG enthält Spezialregelungen u.a. zum Auskunftsrecht, Löschung, Widerspruchsrecht und zur Verarbeitung besonderer Daten.',
+      en: 'The BDSG contains special provisions on, among other things, the right to information, deletion, the right to object and the processing of special categories of data.'
+    },
+    'datenschutz.security.h3':     { de: 'Sicherheitsmaßnahmen',                   en: 'Security Measures' },
+    'datenschutz.security.p1': {
+      de: 'Wir treffen geeignete technische und organisatorische Maßnahmen, um ein dem Risiko angemessenes Schutzniveau zu gewährleisten.',
+      en: 'We take appropriate technical and organisational measures to ensure a level of protection appropriate to the risk.'
+    },
+    'datenschutz.security.p2': {
+      de: 'Dazu gehören insbesondere Maßnahmen zur Sicherung der Vertraulichkeit, Integrität und Verfügbarkeit von Daten.',
+      en: 'These include in particular measures to ensure the confidentiality, integrity and availability of data.'
+    },
+    'datenschutz.transmission.h3': { de: 'Übermittlung und Offenbarung von personenbezogenen Daten', en: 'Transfer and Disclosure of Personal Data' },
+    'datenschutz.transmission.p1': {
+      de: 'Im Rahmen unserer Verarbeitung kann es vorkommen, dass Daten an andere Stellen oder Dienstleister übermittelt werden.',
+      en: 'In the course of our processing, it may happen that data is transferred to other bodies or service providers.'
+    },
+    'datenschutz.transmission.p2': {
+      de: 'Dabei beachten wir die gesetzlichen Vorgaben und schließen entsprechende Verträge zum Schutz Ihrer Daten ab.',
+      en: 'We comply with legal requirements and conclude appropriate contracts to protect your data.'
+    },
+    'datenschutz.third.h3':        { de: 'Datenverarbeitung in Drittländern',       en: 'Data Processing in Third Countries' },
+    'datenschutz.third.p1': {
+      de: 'Sofern Daten außerhalb der EU verarbeitet werden, erfolgt dies nur im Einklang mit den gesetzlichen Vorgaben.',
+      en: 'If data is processed outside the EU, this only takes place in accordance with legal requirements.'
+    },
+    'datenschutz.third.p2':        { de: 'Es gelten insbesondere die Art. 44 bis 49 DSGVO.', en: 'In particular, Arts. 44 to 49 GDPR apply.' },
+    'datenschutz.cookies.h3':      { de: 'Einsatz von Cookies',                     en: 'Use of Cookies' },
+    'datenschutz.cookies.p1':      { de: 'Cookies sind Textdateien, die Informationen über einen Benutzer speichern.', en: 'Cookies are text files that store information about a user.' },
+    'datenschutz.cookieTypes.h4':  { de: 'Cookie-Typen',                             en: 'Cookie Types' },
+    'datenschutz.cookieTypes.li1': { de: 'Temporäre Cookies',                        en: 'Temporary cookies' },
+    'datenschutz.cookieTypes.li2': { de: 'Permanente Cookies',                       en: 'Permanent cookies' },
+    'datenschutz.cookieTypes.li3': { de: 'First-Party-Cookies',                      en: 'First-party cookies' },
+    'datenschutz.cookieTypes.li4': { de: 'Third-Party-Cookies',                      en: 'Third-party cookies' },
+    'datenschutz.cookieTypes.li5': { de: 'Notwendige Cookies',                       en: 'Necessary cookies' },
+    'datenschutz.cookieTypes.li6': { de: 'Marketing- und Statistik-Cookies',          en: 'Marketing and statistics cookies' },
+    'datenschutz.cookies.p2': {
+      de: 'Die Verarbeitung erfolgt je nach Cookie auf Basis von Einwilligung oder berechtigtem Interesse.',
+      en: 'Processing takes place depending on the cookie on the basis of consent or legitimate interest.'
+    },
+    'datenschutz.hosting.h3':      { de: 'Bereitstellung des Onlineangebotes und Webhosting', en: 'Provision of Online Services and Web Hosting' },
+    'datenschutz.hosting.p1':      { de: 'Zur Bereitstellung unserer Website nutzen wir Hosting-Dienstleister.', en: 'We use hosting service providers to operate our website.' },
+    'datenschutz.hosting.p2':      { de: 'Dabei werden u.a. IP-Adressen und Serverlogfiles verarbeitet.', en: 'In this context, IP addresses and server log files are processed, among other things.' },
+    'datenschutz.hosting.provider': {
+      de: '<strong>Dienstanbieter:</strong> Wix.com Ltd.',
+      en: '<strong>Service provider:</strong> Wix.com Ltd.'
+    },
+    'datenschutz.contact.h3':      { de: 'Kontaktaufnahme',                          en: 'Contact' },
+    'datenschutz.contact.p':       { de: 'Bei der Kontaktaufnahme werden personenbezogene Daten verarbeitet, um Anfragen zu beantworten.', en: 'When you get in touch, personal data is processed in order to respond to enquiries.' },
+    'datenschutz.social.h3':       { de: 'Präsenzen in sozialen Netzwerken',         en: 'Presence on Social Networks' },
+    'datenschutz.social.p1':       { de: 'Wir betreiben Profile auf sozialen Netzwerken wie Instagram.', en: 'We operate profiles on social networks such as Instagram.' },
+    'datenschutz.social.p2':       { de: 'Dabei kann eine Datenverarbeitung außerhalb der EU stattfinden.', en: 'Data processing may take place outside the EU in this context.' },
+    'datenschutz.plugins.h3':      { de: 'Plugins und eingebettete Inhalte',         en: 'Plugins and Embedded Content' },
+    'datenschutz.plugins.p':       { de: 'Unsere Website bindet Inhalte von Drittanbietern wie YouTube ein.', en: 'Our website embeds content from third-party providers such as YouTube.' },
+    'datenschutz.deletion.h3':     { de: 'Löschung von Daten',                       en: 'Deletion of Data' },
+    'datenschutz.deletion.p':      { de: 'Personenbezogene Daten werden gelöscht, sobald der Zweck der Verarbeitung entfällt.', en: 'Personal data is deleted as soon as the purpose of the processing ceases to apply.' },
+    'datenschutz.rights.h3':       { de: 'Rechte der betroffenen Personen',          en: 'Rights of Data Subjects' },
+    'datenschutz.rights.li1':      { de: 'Widerspruchsrecht',                        en: 'Right to object' },
+    'datenschutz.rights.li2':      { de: 'Widerrufsrecht',                           en: 'Right to withdraw consent' },
+    'datenschutz.rights.li3':      { de: 'Auskunftsrecht',                           en: 'Right of access' },
+    'datenschutz.rights.li4':      { de: 'Recht auf Berichtigung',                   en: 'Right to rectification' },
+    'datenschutz.rights.li5':      { de: 'Recht auf Löschung',                       en: 'Right to erasure' },
+    'datenschutz.rights.li6':      { de: 'Recht auf Datenübertragbarkeit',            en: 'Right to data portability' },
+    'datenschutz.rights.li7':      { de: 'Beschwerderecht',                          en: 'Right to lodge a complaint' },
+    'datenschutz.defs.h3':         { de: 'Begriffsdefinitionen',                      en: 'Definitions' },
+    'datenschutz.defs.p1': {
+      de: '<strong>Personenbezogene Daten:</strong> Informationen, die einer Person zugeordnet werden können.',
+      en: '<strong>Personal data:</strong> Information that can be attributed to a person.'
+    },
+    'datenschutz.defs.p2': {
+      de: '<strong>Tracking:</strong> Nachverfolgung des Nutzerverhaltens.',
+      en: '<strong>Tracking:</strong> Tracking of user behaviour.'
+    },
+    'datenschutz.defs.p3': {
+      de: '<strong>Verarbeitung:</strong> Jeder Umgang mit personenbezogenen Daten.',
+      en: '<strong>Processing:</strong> Any operation performed on personal data.'
     }
   };
 
