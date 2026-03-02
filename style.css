@@ -957,7 +957,6 @@ main {
 /* Carousel */
 .carousel-wrapper {
   position: relative;
-  overflow: hidden;
 }
 
 .carousel {
@@ -2586,6 +2585,23 @@ main.about {
     font-size: 24px;
   }
 
+  /* Carousel Wedding – Pfeile außerhalb des Thumbnails */
+  .carousel-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .carousel-viewport {
+    flex: 1;
+    min-width: 0;
+  }
+  .carousel-btn {
+    position: static;
+    transform: none;
+    flex-shrink: 0;
+    margin-bottom: 24px;
+  }
+
   /* Carousel Über mich */
   .bts-carousel-section {
     padding-top: 30px;
@@ -2602,6 +2618,20 @@ main.about {
   }
 
   .footer-brand {
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-nav-main {
+    display: none;
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-nav-legal {
     align-items: center;
     text-align: center;
   }

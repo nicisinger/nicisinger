@@ -124,10 +124,9 @@
 
 
   <div class="carousel-wrapper">
+    <button class="carousel-btn prev">&#10094;</button>
 
   <div class="carousel-viewport">
-    <button class="carousel-btn prev">&#10094;</button>
-    <button class="carousel-btn next">&#10095;</button>
 
     <div class="carousel">
 
@@ -196,6 +195,7 @@
     </div>  <!-- Ende carousel -->
 
   </div>  <!-- Ende carousel-viewport -->
+    <button class="carousel-btn next">&#10095;</button>
 </div>  <!-- Ende carousel-wrapper -->
 
 </section> <!-- Ende wedding-references -->
@@ -317,39 +317,63 @@
     }
   });
 
-  // Carousel
-  const carousel = document.querySelector('.carousel');
-  const prevBtn = document.querySelector('.carousel-btn.prev');
-  const nextBtn = document.querySelector('.carousel-btn.next');
-  let scrollAmount = 0;
-  const scrollStep = 320;
-
-  prevBtn.addEventListener('click', () => {
-    scrollAmount -= scrollStep;
-    if (scrollAmount < 0) scrollAmount = 0;
-    carousel.style.transform = `translateX(-${scrollAmount}px)`;
-  });
-
-  nextBtn.addEventListener('click', () => {
-    scrollAmount += scrollStep;
-    const maxScroll = carousel.scrollWidth - carousel.clientWidth;
-    if (scrollAmount > maxScroll) scrollAmount = maxScroll;
-    carousel.style.transform = `translateX(-${scrollAmount}px)`;
-  });
-
   // Modal Video
   const videoModal = document.getElementById('videoModal');
   const videoIframe = document.getElementById('videoIframe');
   const closeVideoModal = document.getElementById('closeVideoModal');
 
-  // Klick auf Thumbnail
-  document.querySelectorAll('.carousel-item img').forEach(item => {
-    item.addEventListener('click', () => {
-      const videoId = item.dataset.video;
-      console.log("Klick erkannt, ID:", videoId);
-      videoIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&showinfo=0`;
+  // Carousel – Infinite Loop
+  const carousel = document.querySelector('.carousel');
+  const prevBtn = document.querySelector('.carousel-btn.prev');
+  const nextBtn = document.querySelector('.carousel-btn.next');
+
+  // Items klonen für Endlosschleife
+  const origItems = Array.from(carousel.querySelectorAll('.carousel-item'));
+  origItems.forEach(item => carousel.appendChild(item.cloneNode(true)));
+  origItems.forEach(item => carousel.insertBefore(item.cloneNode(true), carousel.firstChild));
+
+  // Dimensionen dynamisch berechnen
+  const firstItem = carousel.querySelector('.carousel-item');
+  const carouselGap = parseInt(getComputedStyle(carousel).gap) || 20;
+  const ITEM_WIDTH = firstItem.offsetWidth + carouselGap;
+  const LOOP_WIDTH = origItems.length * ITEM_WIDTH;
+
+  let scrollAmount = LOOP_WIDTH; // Start bei den Original-Items
+  let isTransitioning = false;
+
+  carousel.style.transition = 'none';
+  carousel.style.transform = `translateX(-${scrollAmount}px)`;
+
+  function moveCarousel(delta) {
+    if (isTransitioning) return;
+    isTransitioning = true;
+    scrollAmount += delta;
+    carousel.style.transition = 'transform 0.3s ease';
+    carousel.style.transform = `translateX(-${scrollAmount}px)`;
+    setTimeout(() => {
+      if (scrollAmount < ITEM_WIDTH) {
+        carousel.style.transition = 'none';
+        scrollAmount += LOOP_WIDTH;
+        carousel.style.transform = `translateX(-${scrollAmount}px)`;
+      } else if (scrollAmount >= 2 * LOOP_WIDTH) {
+        carousel.style.transition = 'none';
+        scrollAmount -= LOOP_WIDTH;
+        carousel.style.transform = `translateX(-${scrollAmount}px)`;
+      }
+      isTransitioning = false;
+    }, 310);
+  }
+
+  prevBtn.addEventListener('click', () => moveCarousel(-ITEM_WIDTH));
+  nextBtn.addEventListener('click', () => moveCarousel(ITEM_WIDTH));
+
+  // Klick auf Thumbnail – Event Delegation (funktioniert auch für Klone)
+  carousel.addEventListener('click', e => {
+    const img = e.target.closest('img');
+    if (img && img.dataset.video) {
+      videoIframe.src = `https://www.youtube.com/embed/${img.dataset.video}?autoplay=1&rel=0&modestbranding=1&showinfo=0`;
       videoModal.style.display = 'flex';
-    });
+    }
   });
 
   // Modal schließen
