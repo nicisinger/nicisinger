@@ -112,12 +112,21 @@
       en: "I've had the pleasure of shooting for a number of companies, diving into the most diverse fields – from IT companies and hairdressers to jewellery brands, craft businesses and much more. As exciting as each field is in its own right, so too should the external presentation be uniquely its own. I love creating individually tailored content that carries the company's vision outward, with an aesthetic eye and clear visual language. Whether elaborate brand films, social media campaigns or short reels."
     },
 
+    'brands.v1.p':  { de: 'Vorstellungsreel · Lizi',                    en: 'Introduction Reel · Lizi' },
+    'brands.v2.p':  { de: 'Imagefilm',                                  en: 'Brand Film' },
+    'brands.v3.p':  { de: 'III. Symposium des Digitalen Friedhofes',    en: 'III. Symposium of the Digital Cemetery' },
+    'brands.v5.p':  { de: 'JGA Begleitung',                             en: 'Bachelorette Party Coverage' },
+
     /* ── events.html ─────────────────────────────────────────── */
     'events.detail.h2': { de: 'Die Erinnerung, wenn du keine mehr hast.', en: 'The memory, when you no longer have one.' },
     'events.detail.p': {
       de: 'Events sind eine meiner Lieblingsjobs, die ich festhalten darf. Echte Momente, Emotionen und Verbindungen. Alle Details festhalten zu können bedeutet auch oft, im Hintergrund zu sein, aber dennoch Teil der Gesellschaft zu werden. Abgestimmt auf den Vibe der Veranstaltung, egal ob Corporate Event oder Party, kreiere ich eine Erinnerung aus einem Blickwinkel, mit der man den Tag immer wieder aufs Neue erlebt.',
       en: 'Events are one of my favourite jobs to capture. Real moments, emotions and connections. Being able to capture every detail often means staying in the background, yet still becoming part of the community. Tuned in to the vibe of the event – whether a corporate event or a party – I create a memory from a perspective that lets you relive the day again and again.'
     },
+
+    'events.v2.p':  { de: '60 Jahre Firmenjubiläum',        en: '60th Company Anniversary' },
+    'events.v4.p':  { de: 'Messe Reel',                     en: 'Trade Fair Reel' },
+    'events.v6.p':  { de: 'Club Debüt im Nachtigall',       en: 'Club Debut at Nachtigall' },
 
     /* ── retreats.html ───────────────────────────────────────── */
     'retreats.detail.h2': { de: 'Marmeladenglasmomente eingefangen in Bewegtbild.', en: 'Jam jar moments captured in moving image.' },
