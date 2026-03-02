@@ -84,13 +84,18 @@
 <main>
 
   <nav class="categories">
-    <button onclick="window.location.href='portfolio.html'" data-i18n="portfolio.filter.all">Alle</button>
-    <button onclick="window.location.href='brands.html'">Brands</button>
-    <button class="active" onclick="window.location.href='events.html'">Events</button>
-    <button onclick="window.location.href='retreats.html'">Retreats</button>
-    <button onclick="window.location.href='weddings.html'">Weddings</button>
-    <button onclick="window.location.href='outdoor.html'">Outdoor</button>
-    <button onclick="window.location.href='drohne.html'" data-i18n="portfolio.filter.drone">Drohne</button>
+    <div class="cat-header">
+      <button onclick="window.location.href='portfolio.html'" data-i18n="portfolio.filter.all">Alle</button>
+      <button class="cat-toggle-btn" id="catToggle" aria-label="Kategorien">+</button>
+    </div>
+    <div class="cat-sub" id="catSub">
+      <button onclick="window.location.href='brands.html'">Brands</button>
+      <button class="active" onclick="window.location.href='events.html'">Events</button>
+      <button onclick="window.location.href='retreats.html'">Retreats</button>
+      <button onclick="window.location.href='weddings.html'">Weddings</button>
+      <button onclick="window.location.href='outdoor.html'">Outdoor</button>
+      <button onclick="window.location.href='drohne.html'" data-i18n="portfolio.filter.drone">Drohne</button>
+    </div>
   </nav>
 
   <!-- Vorschauvideo unter den Kategorien -->
@@ -324,5 +329,13 @@ fadeElements.forEach(el => observer.observe(el));
 </script>
 
 <script src="assets/lang.js"></script>
+<script>
+(function() {
+  var t = document.getElementById('catToggle'), s = document.getElementById('catSub');
+  if (!t || !s) return;
+  t.addEventListener('click', function() { t.classList.toggle('open'); s.classList.toggle('open'); });
+  if (s.querySelector('.active')) { t.classList.add('open'); s.classList.add('open'); }
+})();
+</script>
 </body>
 </html>

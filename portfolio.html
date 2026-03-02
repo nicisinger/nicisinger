@@ -111,13 +111,18 @@
 <main>
 
   <nav class="categories">
-    <button class="active" data-filter="all" data-i18n="portfolio.filter.all">Alle</button>
-    <button data-filter="brands">Brands</button>
-    <button data-filter="events">Events</button>
-    <button data-filter="retreats">Retreats</button>
-    <button data-filter="weddings">Weddings</button>
-    <button data-filter="outdoor">Outdoor</button>
-    <button data-filter="drohne" onclick="window.location.href='drohne.html'" data-i18n="portfolio.filter.drone">Drohne</button>
+    <div class="cat-header">
+      <button class="active" data-filter="all" data-i18n="portfolio.filter.all">Alle</button>
+      <button class="cat-toggle-btn" id="catToggle" aria-label="Kategorien">+</button>
+    </div>
+    <div class="cat-sub" id="catSub">
+      <button data-filter="brands">Brands</button>
+      <button data-filter="events">Events</button>
+      <button data-filter="retreats">Retreats</button>
+      <button data-filter="weddings">Weddings</button>
+      <button data-filter="outdoor">Outdoor</button>
+      <button data-filter="drohne" onclick="window.location.href='drohne.html'" data-i18n="portfolio.filter.drone">Drohne</button>
+    </div>
   </nav>
 
 
@@ -170,7 +175,12 @@
 </main>
 
 <script>
-const buttons = document.querySelectorAll('.categories button');
+const buttons = document.querySelectorAll('.categories button[data-filter]');
+const catToggle = document.getElementById('catToggle');
+const catSub = document.getElementById('catSub');
+if (catToggle) catToggle.addEventListener('click', function() {
+  catToggle.classList.toggle('open'); catSub.classList.toggle('open');
+});
 const projects = document.querySelectorAll('.project');
 
 // Kategorie-Navigation

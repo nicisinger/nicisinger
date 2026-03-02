@@ -147,41 +147,89 @@ nav a.active {
   padding: 0;
 }
 
-@media (max-width: 768px) {
-    .categories {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 10px 5px;
-        width: 100%;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    .categories button {
-        text-align: center;
-        box-sizing: border-box;
-        padding: 10px 5px;
-        font-size: 0.8rem;
-        white-space: nowrap;
-    }
-    .categories button:nth-child(1) {
-        flex: 0 0 100%;
-    }
-    .categories button:nth-child(2),
-    .categories button:nth-child(3),
-    .categories button:nth-child(4) {
-        flex: 0 1 calc(33.33% - 5px);
-    }
-    .categories button:nth-child(5),
-    .categories button:nth-child(6),
-    .categories button:nth-child(7) {
-        flex: 0 1 calc(33.33% - 5px);
-    }
-}
+/* Accordion-Nav: Desktop – cat-header/cat-sub unsichtbar machen */
+.cat-header { display: contents; }
+.cat-toggle-btn { display: none; }
+.cat-sub { display: contents; }
 
 .categories button.active {
   color: #111;
+}
+
+/* Accordion-Nav: Mobile */
+@media (max-width: 768px) {
+  .categories {
+    display: block;
+    margin-bottom: 32px;
+  }
+  .cat-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 14px;
+    border-bottom: 1px solid rgba(17,17,17,0.12);
+  }
+  .cat-header > button:first-child {
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    font-weight: 300;
+    color: #999;
+    padding: 0;
+  }
+  .cat-header > button:first-child.active {
+    color: #111;
+    font-weight: 500;
+  }
+  .cat-toggle-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #111;
+    background: none;
+    cursor: pointer;
+    font-size: 22px;
+    line-height: 1;
+    transition: transform 0.3s ease;
+    user-select: none;
+    color: #111;
+    font-family: 'Inter', sans-serif;
+  }
+  .cat-toggle-btn.open {
+    transform: rotate(45deg);
+  }
+  .cat-sub {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    padding: 0;
+  }
+  .cat-sub.open {
+    max-height: 300px;
+    padding: 16px 0 4px;
+  }
+  .cat-sub button {
+    padding: 12px 8px;
+    border: 1px solid rgba(17,17,17,0.2);
+    background: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #888;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .cat-sub button.active {
+    border-color: #111;
+    color: #111;
+    font-weight: 500;
+  }
 }
 
 /* ------------------------------
@@ -2623,7 +2671,7 @@ main.about {
     font-size: 14px;
   }
 
-  .categories button {
+  .cat-sub button {
     font-size: 0.7rem;
   }
 }
