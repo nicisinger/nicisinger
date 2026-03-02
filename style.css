@@ -2071,6 +2071,10 @@ main > section:last-of-type {
   align-self: center;
 }
 
+.team-container .bts-video-wrapper {
+  margin-bottom: 0;
+}
+
 .team-content h2 {
   font-size: 26px;
   font-weight: 600;

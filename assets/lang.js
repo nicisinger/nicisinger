@@ -31,6 +31,7 @@
       de: 'Wer meine Produktionen bucht, bekommt das volle Paket. Vom Licht-Setup bis zum Entertainment am Set. In meinem Workflow vereine ich alle Rollen einer klassischen Produktion.',
       en: 'Whoever books my productions gets the full package. From lighting setup to on-set entertainment. In my workflow, I combine all the roles of a classic production.'
     },
+    'index.team.btn': { de: 'Mehr zu mir', en: 'More about me' },
 
     /* ── portfolio.html ─────────────────────────────────────── */
     'portfolio.filter.all':   { de: 'Alle',   en: 'All' },
