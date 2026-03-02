@@ -565,7 +565,7 @@ main {
    Portfolio Detail
 ------------------------------ */
 .portfolio-detail {
-  margin-top: 80px;
+  margin-top: 10px;
   padding-bottom: 200px;
 }
 
@@ -673,6 +673,15 @@ main {
 
 @keyframes blink {
   50% { border-color: transparent; }
+}
+
+.home-intro-image {
+  display: block;
+  max-width: 420px;
+  width: 100%;
+  height: auto;
+  margin: 32px auto;
+  object-fit: cover;
 }
 
 /* Home CTA */
@@ -2447,13 +2456,18 @@ main.about {
     margin-bottom: -60px;
   }
 
+  .home-intro-image {
+    max-width: 260px;
+    margin: 24px auto;
+  }
+
   .detail-intro h2 {
     font-size: 18px;
   }
 
   /* Portfolio Detail */
   .portfolio-detail {
-    margin-top: 40px;
+    margin-top: 0;
     padding-bottom: 80px;
   }
 
