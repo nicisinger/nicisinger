@@ -335,10 +335,12 @@
 
   function currentSlide(index) { updateSlider(index); }
 
-  setInterval(() => {
-    currentIdx = (currentIdx + 1) % slides.length;
-    updateSlider(currentIdx);
-  }, 5000);
+  if (window.innerWidth > 768) {
+    setInterval(() => {
+      currentIdx = (currentIdx + 1) % slides.length;
+      updateSlider(currentIdx);
+    }, 5000);
+  }
 
   // Swipe-Unterstützung für Mobile
   let touchStartX = 0;
