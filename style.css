@@ -2509,7 +2509,19 @@ main.about {
   }
 
   .footer-inner {
+    display: flex;
+    flex-direction: column;
     gap: 30px;
+  }
+
+  .footer-brand {
+    order: 2;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-links {
+    order: 1;
   }
 
   /* Studio Galerie – voll-deaktivieren auf Mobile (Bilder übereinander) */
