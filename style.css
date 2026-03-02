@@ -2539,17 +2539,17 @@ main.about {
     padding-bottom: 80px;
   }
 
-  /* Preview Video – kein horizontales Überlaufen */
+  /* Preview Video – volle Breite auf Mobile */
   .preview-video {
-    width: 100% !important;
-    margin-left: 0 !important;
-    height: 240px;
+    width: 100vw !important;
+    margin-left: calc(-50vw + 50%) !important;
+    height: 40vh;
   }
 
-  /* Content Video */
+  /* Content Video – volle Breite auf Mobile */
   .content-video {
-    width: 100%;
-    margin-left: 0;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
     height: 50vw;
     min-height: 200px;
   }
