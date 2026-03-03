@@ -2434,6 +2434,10 @@ main.about {
   .equipment-travel .approach-image {
     display: none;
   }
+
+  .equipment-travel {
+    padding-bottom: 30px;
+  }
 }
 
 /* Über Mich CTA */
