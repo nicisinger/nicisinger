@@ -2723,6 +2723,20 @@ main.about {
     margin-top: 60px;
   }
 
+  .carousel-item {
+    min-width: 220px;
+  }
+
+  .carousel-item-img-wrapper {
+    width: 220px;
+    height: 150px;
+  }
+
+  .carousel-item p {
+    font-size: 12px;
+    margin-top: 7px;
+  }
+
   /* Team Showcase */
   .team-showcase {
     padding: 40px 0 0;
