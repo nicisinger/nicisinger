@@ -25,35 +25,40 @@
 
     .modal {
       background: #F7F4EA;
-      padding: 40px 30px;
-      border-radius: 8px;
+      padding: 32px 28px;
+      border-radius: 4px;
       text-align: center;
-      max-width: 500px;
+      max-width: 360px;
       width: 90%;
       position: relative;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      border: 1px solid rgba(17,17,17,0.12);
       font-family: 'Inter', sans-serif;
     }
 
     .modal h3 {
-      font-size: 20px;
-      margin-bottom: 20px;
+      font-size: 13px;
+      font-weight: 300;
+      margin-bottom: 10px;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.2em;
       color: #111;
     }
 
     .modal p {
-      font-size: 16px;
+      font-size: 13px;
+      font-weight: 300;
       color: #111;
+      opacity: 0.7;
+      letter-spacing: 0.04em;
     }
 
     .modal .close-btn {
       position: absolute;
-      top: 12px; right: 12px;
-      font-size: 18px;
-      font-weight: bold;
+      top: 10px; right: 12px;
+      font-size: 16px;
+      font-weight: 300;
       color: #111;
+      opacity: 0.5;
       background: none;
       border: none;
       cursor: pointer;
@@ -203,7 +208,7 @@
   <div class="modal-overlay" id="thankYouModal">
     <div class="modal">
       <button class="close-btn" id="closeModal">&times;</button>
-      <h3 data-i18n="contact.modal.h3">Danke für deine Anfrage 💫</h3>
+      <h3 data-i18n="contact.modal.h3">Danke für deine Anfrage</h3>
       <p data-i18n="contact.modal.p">Ich melde mich so schnell wie möglich bei dir!</p>
     </div>
   </div>

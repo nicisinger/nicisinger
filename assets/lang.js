@@ -90,7 +90,7 @@
     'contact.placeholder.email': { de: 'Deine E-Mail',    en: 'Your Email' },
     'contact.placeholder.msg':   { de: 'Deine Nachricht', en: 'Your Message' },
     'contact.btn.send':          { de: 'Absenden',         en: 'Send' },
-    'contact.modal.h3':          { de: 'Danke für deine Anfrage 💫', en: 'Thank you for your inquiry 💫' },
+    'contact.modal.h3':          { de: 'Danke für deine Anfrage', en: 'Thank you for your inquiry' },
     'contact.modal.p':           { de: 'Ich melde mich so schnell wie möglich bei dir!', en: "I'll get back to you as soon as possible!" },
     'contact.error':             { de: 'Fehler beim Senden. Bitte versuche es erneut.', en: 'Error sending. Please try again.' },
 
