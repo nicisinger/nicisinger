@@ -2415,10 +2415,24 @@ main.about {
   object-fit: cover;
 }
 
+.approach-image-mobile {
+  display: none;
+}
+
 @media (max-width: 900px) {
   .portrait-format img {
     max-width: 100%;
     margin: 0 auto;
+  }
+
+  .approach-image-mobile {
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .equipment-travel .approach-image {
+    display: none;
   }
 }
 
@@ -2629,11 +2643,15 @@ main.about {
   .footer-links {
     display: flex;
     justify-content: center;
+    width: 100%;
   }
 
   .footer-nav-legal {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     text-align: center;
+    width: 100%;
   }
 
   /* Studio Galerie – voll-deaktivieren auf Mobile (Bilder übereinander) */
