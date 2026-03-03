@@ -403,6 +403,33 @@ const observer = new IntersectionObserver(entries => {
 
 fadeElements.forEach(el => observer.observe(el));
 
+// Mobile: JS-Typewriter für .typing – stoppt exakt nach "Erinnerungen" (ohne Punkt)
+if (window.innerWidth <= 768) {
+  const typingEl = document.querySelector('.typing');
+  if (typingEl) {
+    const mobileTypewriter = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !typingEl.dataset.typed) {
+          typingEl.dataset.typed = 'true';
+          // Auf Mobile: Text bis "Erinnerungen" / "memories" kürzen und Punkt anfügen
+          let fullText = typingEl.textContent.trim();
+          const cutoffWord = fullText.includes('Erinnerungen') ? 'Erinnerungen' : 'memories';
+          const cutoff = fullText.indexOf(cutoffWord);
+          if (cutoff !== -1) fullText = fullText.slice(0, cutoff + cutoffWord.length) + '.';
+          typingEl.textContent = '';
+          typingEl.classList.add('visible');
+          let i = 0;
+          const interval = setInterval(() => {
+            typingEl.textContent = fullText.slice(0, i + 1);
+            i++;
+            if (i >= fullText.length) clearInterval(interval);
+          }, Math.round(4000 / fullText.length));
+        }
+      });
+    }, { threshold: 0.2 });
+    mobileTypewriter.observe(typingEl);
+  }
+}
 
 </script>
 

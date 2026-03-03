@@ -2740,6 +2740,18 @@ main.about {
     margin-top: 7px;
   }
 
+  /* Typewriter: auf Mobile übernimmt JS das Tippen, CSS nur Cursor-Blinken */
+  .typing {
+    font-size: 13px;
+    width: auto;
+    overflow: visible;
+    white-space: nowrap;
+  }
+
+  .typing.visible {
+    animation: blink 0.7s step-end infinite;
+  }
+
   /* Team Showcase */
   .team-showcase {
     padding: 40px 0 0;
