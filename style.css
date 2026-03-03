@@ -2727,12 +2727,12 @@ main.about {
   }
 
   .carousel-item {
-    min-width: 220px;
+    min-width: 170px;
   }
 
   .carousel-item-img-wrapper {
-    width: 220px;
-    height: 150px;
+    width: 170px;
+    height: 115px;
   }
 
   .carousel-item p {
