@@ -2742,7 +2742,7 @@ main.about {
 
   /* Typewriter: auf Mobile übernimmt JS das Tippen, CSS nur Cursor-Blinken */
   .typing {
-    font-size: 11px;
+    font-size: 10px;
     width: auto;
     overflow: visible;
     white-space: nowrap;
