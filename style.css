@@ -1879,7 +1879,10 @@ main > section:last-of-type {
 }
 
 .bts-text h2 {
-  font-size: 32px;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   margin-bottom: 25px;
 }
 
