@@ -203,8 +203,8 @@
     },
     'datenschutz.intro.p3':        { de: 'Die verwendeten Begriffe sind nicht geschlechtsspezifisch.', en: 'The terms used are not gender-specific.' },
     'datenschutz.intro.p4': {
-      de: '<strong>Stand:</strong> 29. September 2020',
-      en: '<strong>As of:</strong> 29 September 2020'
+      de: '<strong>Stand:</strong> 30. März 2026',
+      en: '<strong>As of:</strong> 30 March 2026'
     },
     'datenschutz.responsible.h3':  { de: 'Verantwortliche',                        en: 'Controller' },
     'datenschutz.overview.h3':     { de: 'Übersicht der Verarbeitungen',            en: 'Overview of Processing' },
@@ -293,19 +293,62 @@
       en: 'Processing takes place depending on the cookie on the basis of consent or legitimate interest.'
     },
     'datenschutz.hosting.h3':      { de: 'Bereitstellung des Onlineangebotes und Webhosting', en: 'Provision of Online Services and Web Hosting' },
-    'datenschutz.hosting.p1':      { de: 'Zur Bereitstellung unserer Website nutzen wir Hosting-Dienstleister.', en: 'We use hosting service providers to operate our website.' },
-    'datenschutz.hosting.p2':      { de: 'Dabei werden u.a. IP-Adressen und Serverlogfiles verarbeitet.', en: 'In this context, IP addresses and server log files are processed, among other things.' },
+    'datenschutz.hosting.p1': {
+      de: 'Zur Bereitstellung unserer Website nutzen wir GitHub Pages, einen Hosting-Dienst der GitHub, Inc. Beim Aufruf unserer Website werden dabei technisch notwendige Daten (insbesondere IP-Adresse, Browsertyp, Betriebssystem, aufgerufene Seite sowie Datum und Uhrzeit des Zugriffs) in Server-Logs verarbeitet. Dies erfolgt auf Basis unseres berechtigten Interesses (Art. 6 Abs. 1 lit. f DSGVO) an einem sicheren und funktionsfähigen Betrieb der Website.',
+      en: 'We use GitHub Pages, a hosting service by GitHub, Inc., to operate our website. When you access our website, technically necessary data (in particular IP address, browser type, operating system, page accessed, date and time of access) is processed in server logs. This is carried out on the basis of our legitimate interest (Art. 6 para. 1 lit. f GDPR) in the secure and reliable operation of the website.'
+    },
     'datenschutz.hosting.provider': {
-      de: '<strong>Dienstanbieter:</strong> Wix.com Ltd.',
-      en: '<strong>Service provider:</strong> Wix.com Ltd.'
+      de: '<strong>Dienstanbieter:</strong> GitHub, Inc., 88 Colin P Kelly Jr Street, San Francisco, CA 94107, USA. Datenschutzerklärung: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a>.',
+      en: '<strong>Service provider:</strong> GitHub, Inc., 88 Colin P Kelly Jr Street, San Francisco, CA 94107, USA. Privacy policy: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a>.'
+    },
+    'datenschutz.fonts.h3':        { de: 'Google Fonts',                             en: 'Google Fonts' },
+    'datenschutz.fonts.p1': {
+      de: 'Diese Website verwendet Google Fonts zur einheitlichen Darstellung von Schriftarten. Dabei wird beim Laden der Seite eine Verbindung zu Servern von Google in den USA hergestellt, wodurch Ihre IP-Adresse an Google übermittelt wird. Google Fonts werden nur geladen, wenn Sie der Nutzung von Cookies und externen Diensten zugestimmt haben.',
+      en: 'This website uses Google Fonts for the uniform display of fonts. When the page loads, a connection is made to Google servers in the USA, which transmits your IP address to Google. Google Fonts are only loaded if you have consented to the use of cookies and external services.'
+    },
+    'datenschutz.fonts.p2': {
+      de: '<strong>Dienstanbieter:</strong> Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA. <strong>Rechtsgrundlage:</strong> Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). <strong>Datenschutzerklärung:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.',
+      en: '<strong>Service provider:</strong> Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA. <strong>Legal basis:</strong> Consent (Art. 6 para. 1 lit. a GDPR). <strong>Privacy policy:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.'
+    },
+    'datenschutz.youtube.h3':      { de: 'YouTube-Videos',                           en: 'YouTube Videos' },
+    'datenschutz.youtube.p1': {
+      de: 'Auf einigen Seiten unseres Angebots sind Videos von YouTube eingebettet. Betreiber ist die Google LLC. Wenn Sie ein Video abspielen, wird eine Verbindung zu den Servern von YouTube hergestellt. Dabei werden Daten (u.a. Ihre IP-Adresse) an Google übermittelt, unabhängig davon, ob Sie ein Google-Konto haben. YouTube-Videos werden nur geladen, wenn Sie Ihre Einwilligung erteilt haben.',
+      en: 'Some pages of our website embed videos from YouTube, operated by Google LLC. When you play a video, a connection is established to YouTube servers, transmitting data (including your IP address) to Google, regardless of whether you have a Google account. YouTube videos are only loaded after you have given your consent.'
+    },
+    'datenschutz.youtube.p2': {
+      de: '<strong>Dienstanbieter:</strong> Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA. <strong>Rechtsgrundlage:</strong> Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). <strong>Datenschutzerklärung:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.',
+      en: '<strong>Service provider:</strong> Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA. <strong>Legal basis:</strong> Consent (Art. 6 para. 1 lit. a GDPR). <strong>Privacy policy:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.'
+    },
+    'datenschutz.maps.h3':         { de: 'Google Maps',                              en: 'Google Maps' },
+    'datenschutz.maps.p1': {
+      de: 'Auf unserer Studio-Seite binden wir Google Maps ein, um unsere Adresse zu zeigen. Beim Laden der Karte wird eine Verbindung zu Google-Servern hergestellt und Ihre IP-Adresse übermittelt. Google Maps wird nur geladen, wenn Sie Ihre Einwilligung erteilt haben.',
+      en: 'On our Studio page, we embed Google Maps to show our address. When the map loads, a connection is made to Google servers and your IP address is transmitted. Google Maps is only loaded after you have given your consent.'
+    },
+    'datenschutz.maps.p2': {
+      de: '<strong>Dienstanbieter:</strong> Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA. <strong>Rechtsgrundlage:</strong> Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). <strong>Datenschutzerklärung:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.',
+      en: '<strong>Service provider:</strong> Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA. <strong>Legal basis:</strong> Consent (Art. 6 para. 1 lit. a GDPR). <strong>Privacy policy:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.'
     },
     'datenschutz.contact.h3':      { de: 'Kontaktaufnahme',                          en: 'Contact' },
-    'datenschutz.contact.p':       { de: 'Bei der Kontaktaufnahme werden personenbezogene Daten verarbeitet, um Anfragen zu beantworten.', en: 'When you get in touch, personal data is processed in order to respond to enquiries.' },
-    'datenschutz.social.h3':       { de: 'Präsenzen in sozialen Netzwerken',         en: 'Presence on Social Networks' },
-    'datenschutz.social.p1':       { de: 'Wir betreiben Profile auf sozialen Netzwerken wie Instagram.', en: 'We operate profiles on social networks such as Instagram.' },
-    'datenschutz.social.p2':       { de: 'Dabei kann eine Datenverarbeitung außerhalb der EU stattfinden.', en: 'Data processing may take place outside the EU in this context.' },
-    'datenschutz.plugins.h3':      { de: 'Plugins und eingebettete Inhalte',         en: 'Plugins and Embedded Content' },
-    'datenschutz.plugins.p':       { de: 'Unsere Website bindet Inhalte von Drittanbietern wie YouTube ein.', en: 'Our website embeds content from third-party providers such as YouTube.' },
+    'datenschutz.contact.p': {
+      de: 'Bei der Kontaktaufnahme per E-Mail werden personenbezogene Daten (Name, E-Mail-Adresse, Nachrichteninhalt) verarbeitet, um Ihre Anfrage zu beantworten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung) bzw. Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse). Die Daten werden nicht an Dritte weitergegeben und nach Abschluss der Anfrage gelöscht, sofern keine gesetzlichen Aufbewahrungspflichten bestehen.',
+      en: 'When you contact us by email, personal data (name, email address, message content) is processed in order to respond to your enquiry. The legal basis is Art. 6 para. 1 lit. b GDPR (pre-contractual measures) or Art. 6 para. 1 lit. f GDPR (legitimate interest). The data is not passed on to third parties and is deleted after the enquiry is closed, unless statutory retention obligations apply.'
+    },
+    'datenschutz.social.h3':       { de: 'Präsenzen in sozialen Netzwerken (Instagram)', en: 'Presence on Social Networks (Instagram)' },
+    'datenschutz.social.p1': {
+      de: 'Wir betreiben ein Profil auf Instagram. Wenn Sie unsere Instagram-Seite besuchen, verarbeitet Meta Plattformen Ireland Ltd. Daten über Ihr Nutzungsverhalten. Dabei kann eine Datenübermittlung in die USA stattfinden. Wir haben keinen Einfluss auf die Datenverarbeitung durch Meta. Die auf unserer Website enthaltenen Links zu Instagram führen direkt zu Instagram – es werden dabei keine Daten von Instagram auf unserer Website geladen (außer bei erteilter Cookie-Einwilligung auf der Brands-Seite).',
+      en: 'We operate a profile on Instagram. When you visit our Instagram page, Meta Platforms Ireland Ltd processes data about your user behaviour, which may be transferred to the USA. We have no influence over this data processing. The Instagram links on our website lead directly to Instagram – no Instagram data is loaded on our website itself (except on the Brands page after cookie consent is given).'
+    },
+    'datenschutz.social.p2': {
+      de: '<strong>Dienstanbieter:</strong> Meta Platforms Ireland Ltd., 4 Grand Canal Square, Dublin 2, Irland. <strong>Datenschutzerklärung:</strong> <a href="https://help.instagram.com/519522125107875" target="_blank" rel="noopener">Instagram Datenschutzerklärung</a>.',
+      en: '<strong>Service provider:</strong> Meta Platforms Ireland Ltd., 4 Grand Canal Square, Dublin 2, Ireland. <strong>Privacy policy:</strong> <a href="https://help.instagram.com/519522125107875" target="_blank" rel="noopener">Instagram Privacy Policy</a>.'
+    },
+    'datenschutz.consentmgmt.h3':  { de: 'Cookie-Einwilligung widerrufen oder ändern', en: 'Withdraw or Change Cookie Consent' },
+    'datenschutz.consentmgmt.p': {
+      de: 'Sie können Ihre Cookie-Einwilligung jederzeit widerrufen oder ändern. Klicken Sie dazu auf die folgende Schaltfläche:',
+      en: 'You can withdraw or change your cookie consent at any time. Click the button below:'
+    },
+    'datenschutz.consentmgmt.btnAccept': { de: 'Alle akzeptieren', en: 'Accept all' },
+    'datenschutz.consentmgmt.btnDecline': { de: 'Nur notwendige', en: 'Only necessary' },
     'datenschutz.deletion.h3':     { de: 'Löschung von Daten',                       en: 'Deletion of Data' },
     'datenschutz.deletion.p':      { de: 'Personenbezogene Daten werden gelöscht, sobald der Zweck der Verarbeitung entfällt.', en: 'Personal data is deleted as soon as the purpose of the processing ceases to apply.' },
     'datenschutz.rights.h3':       { de: 'Rechte der betroffenen Personen',          en: 'Rights of Data Subjects' },
