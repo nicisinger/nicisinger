@@ -194,11 +194,11 @@
     'datenschutz.h2':              { de: 'Datenschutzerklärung',                  en: 'Privacy Policy' },
     'datenschutz.intro.h3':        { de: 'Einleitung',                             en: 'Introduction' },
     'datenschutz.intro.p1': {
-      de: 'Mit der folgenden Datenschutzerklärung möchten wir Sie darüber aufklären, welche Arten Ihrer personenbezogenen Daten (nachfolgend auch kurz als „Daten" bezeichnet) wir zu welchen Zwecken und in welchem Umfang verarbeiten.',
+      de: 'Mit der folgenden Datenschutzerklärung möchte ich Sie darüber aufklären, welche Arten Ihrer personenbezogenen Daten (nachfolgend auch kurz als „Daten" bezeichnet) ich zu welchen Zwecken und in welchem Umfang verarbeite.',
       en: 'With the following privacy policy, we would like to inform you about the types of your personal data (hereinafter also referred to as "data") that we process, for what purposes and to what extent.'
     },
     'datenschutz.intro.p2': {
-      de: 'Die Datenschutzerklärung gilt für alle von uns durchgeführten Verarbeitungen personenbezogener Daten, sowohl im Rahmen der Erbringung unserer Leistungen als auch insbesondere auf unseren Webseiten, in mobilen Applikationen sowie innerhalb externer Onlinepräsenzen, wie z.B. unserer Social-Media-Profile (nachfolgend zusammenfassend bezeichnet als „Onlineangebot").',
+      de: 'Die Datenschutzerklärung gilt für alle von mir durchgeführten Verarbeitungen personenbezogener Daten, sowohl im Rahmen der Erbringung meiner Leistungen als auch insbesondere auf meinen Webseiten, in mobilen Applikationen sowie innerhalb externer Onlinepräsenzen, wie z.B. meiner Social-Media-Profile (nachfolgend zusammenfassend bezeichnet als „Onlineangebot").',
       en: 'This privacy policy applies to all processing of personal data carried out by us, both in the context of providing our services and in particular on our websites, in mobile applications and within external online presences, such as our social media profiles (hereinafter collectively referred to as the "online offering").'
     },
     'datenschutz.intro.p3':        { de: 'Die verwendeten Begriffe sind nicht geschlechtsspezifisch.', en: 'The terms used are not gender-specific.' },
@@ -222,7 +222,7 @@
     'datenschutz.persons.li1':     { de: 'Kommunikationspartner',                   en: 'Communication partners' },
     'datenschutz.persons.li2':     { de: 'Nutzer (z.B. Webseitenbesucher)',         en: 'Users (e.g. website visitors)' },
     'datenschutz.purposes.h4':     { de: 'Zwecke der Verarbeitung',                 en: 'Purposes of Processing' },
-    'datenschutz.purposes.li1':    { de: 'Bereitstellung unseres Onlineangebotes',  en: 'Provision of our online services' },
+    'datenschutz.purposes.li1':    { de: 'Bereitstellung meines Onlineangebotes',   en: 'Provision of our online services' },
     'datenschutz.purposes.li2':    { de: 'Kontaktanfragen und Kommunikation',       en: 'Contact requests and communication' },
     'datenschutz.purposes.li3':    { de: 'Remarketing',                             en: 'Remarketing' },
     'datenschutz.purposes.li4':    { de: 'Sicherheitsmaßnahmen',                    en: 'Security measures' },
@@ -231,7 +231,7 @@
     'datenschutz.purposes.li7':    { de: 'Verwaltung von Anfragen',                 en: 'Management of enquiries' },
     'datenschutz.legal.h3':        { de: 'Maßgebliche Rechtsgrundlagen',            en: 'Applicable Legal Bases' },
     'datenschutz.legal.p': {
-      de: 'Im Folgenden teilen wir die Rechtsgrundlagen der Datenschutzgrundverordnung (DSGVO), auf deren Basis wir die personenbezogenen Daten verarbeiten, mit.',
+      de: 'Im Folgenden teile ich die Rechtsgrundlagen der Datenschutzgrundverordnung (DSGVO), auf deren Basis ich die personenbezogenen Daten verarbeite, mit.',
       en: 'Below we share the legal bases of the General Data Protection Regulation (GDPR) on the basis of which we process personal data.'
     },
     'datenschutz.legal.li1': {
@@ -257,7 +257,7 @@
     },
     'datenschutz.security.h3':     { de: 'Sicherheitsmaßnahmen',                   en: 'Security Measures' },
     'datenschutz.security.p1': {
-      de: 'Wir treffen geeignete technische und organisatorische Maßnahmen, um ein dem Risiko angemessenes Schutzniveau zu gewährleisten.',
+      de: 'Ich treffe geeignete technische und organisatorische Maßnahmen, um ein dem Risiko angemessenes Schutzniveau zu gewährleisten.',
       en: 'We take appropriate technical and organisational measures to ensure a level of protection appropriate to the risk.'
     },
     'datenschutz.security.p2': {
@@ -266,11 +266,11 @@
     },
     'datenschutz.transmission.h3': { de: 'Übermittlung und Offenbarung von personenbezogenen Daten', en: 'Transfer and Disclosure of Personal Data' },
     'datenschutz.transmission.p1': {
-      de: 'Im Rahmen unserer Verarbeitung kann es vorkommen, dass Daten an andere Stellen oder Dienstleister übermittelt werden.',
+      de: 'Im Rahmen meiner Verarbeitung kann es vorkommen, dass Daten an andere Stellen oder Dienstleister übermittelt werden.',
       en: 'In the course of our processing, it may happen that data is transferred to other bodies or service providers.'
     },
     'datenschutz.transmission.p2': {
-      de: 'Dabei beachten wir die gesetzlichen Vorgaben und schließen entsprechende Verträge zum Schutz Ihrer Daten ab.',
+      de: 'Dabei beachte ich die gesetzlichen Vorgaben und schließe entsprechende Verträge zum Schutz Ihrer Daten ab.',
       en: 'We comply with legal requirements and conclude appropriate contracts to protect your data.'
     },
     'datenschutz.third.h3':        { de: 'Datenverarbeitung in Drittländern',       en: 'Data Processing in Third Countries' },
@@ -294,7 +294,7 @@
     },
     'datenschutz.hosting.h3':      { de: 'Bereitstellung des Onlineangebotes und Webhosting', en: 'Provision of Online Services and Web Hosting' },
     'datenschutz.hosting.p1': {
-      de: 'Zur Bereitstellung unserer Website nutzen wir GitHub Pages, einen Hosting-Dienst der GitHub, Inc. Beim Aufruf unserer Website werden dabei technisch notwendige Daten (insbesondere IP-Adresse, Browsertyp, Betriebssystem, aufgerufene Seite sowie Datum und Uhrzeit des Zugriffs) in Server-Logs verarbeitet. Dies erfolgt auf Basis unseres berechtigten Interesses (Art. 6 Abs. 1 lit. f DSGVO) an einem sicheren und funktionsfähigen Betrieb der Website.',
+      de: 'Zur Bereitstellung meiner Website nutze ich GitHub Pages, einen Hosting-Dienst der GitHub, Inc. Beim Aufruf meiner Website werden dabei technisch notwendige Daten (insbesondere IP-Adresse, Browsertyp, Betriebssystem, aufgerufene Seite sowie Datum und Uhrzeit des Zugriffs) in Server-Logs verarbeitet. Dies erfolgt auf Basis meines berechtigten Interesses (Art. 6 Abs. 1 lit. f DSGVO) an einem sicheren und funktionsfähigen Betrieb der Website.',
       en: 'We use GitHub Pages, a hosting service by GitHub, Inc., to operate our website. When you access our website, technically necessary data (in particular IP address, browser type, operating system, page accessed, date and time of access) is processed in server logs. This is carried out on the basis of our legitimate interest (Art. 6 para. 1 lit. f GDPR) in the secure and reliable operation of the website.'
     },
     'datenschutz.hosting.provider': {
@@ -312,7 +312,7 @@
     },
     'datenschutz.youtube.h3':      { de: 'YouTube-Videos',                           en: 'YouTube Videos' },
     'datenschutz.youtube.p1': {
-      de: 'Auf einigen Seiten unseres Angebots sind Videos von YouTube eingebettet. Betreiber ist die Google LLC. Wenn Sie ein Video abspielen, wird eine Verbindung zu den Servern von YouTube hergestellt. Dabei werden Daten (u.a. Ihre IP-Adresse) an Google übermittelt, unabhängig davon, ob Sie ein Google-Konto haben. YouTube-Videos werden nur geladen, wenn Sie Ihre Einwilligung erteilt haben.',
+      de: 'Auf einigen Seiten meines Angebots sind Videos von YouTube eingebettet. Betreiber ist die Google LLC. Wenn Sie ein Video abspielen, wird eine Verbindung zu den Servern von YouTube hergestellt. Dabei werden Daten (u.a. Ihre IP-Adresse) an Google übermittelt, unabhängig davon, ob Sie ein Google-Konto haben. YouTube-Videos werden nur geladen, wenn Sie Ihre Einwilligung erteilt haben.',
       en: 'Some pages of our website embed videos from YouTube, operated by Google LLC. When you play a video, a connection is established to YouTube servers, transmitting data (including your IP address) to Google, regardless of whether you have a Google account. YouTube videos are only loaded after you have given your consent.'
     },
     'datenschutz.youtube.p2': {
@@ -321,7 +321,7 @@
     },
     'datenschutz.maps.h3':         { de: 'Google Maps',                              en: 'Google Maps' },
     'datenschutz.maps.p1': {
-      de: 'Auf unserer Studio-Seite binden wir Google Maps ein, um unsere Adresse zu zeigen. Beim Laden der Karte wird eine Verbindung zu Google-Servern hergestellt und Ihre IP-Adresse übermittelt. Google Maps wird nur geladen, wenn Sie Ihre Einwilligung erteilt haben.',
+      de: 'Auf meiner Studio-Seite binde ich Google Maps ein, um meine Adresse zu zeigen. Beim Laden der Karte wird eine Verbindung zu Google-Servern hergestellt und Ihre IP-Adresse übermittelt. Google Maps wird nur geladen, wenn Sie Ihre Einwilligung erteilt haben.',
       en: 'On our Studio page, we embed Google Maps to show our address. When the map loads, a connection is made to Google servers and your IP address is transmitted. Google Maps is only loaded after you have given your consent.'
     },
     'datenschutz.maps.p2': {
@@ -335,7 +335,7 @@
     },
     'datenschutz.social.h3':       { de: 'Präsenzen in sozialen Netzwerken (Instagram)', en: 'Presence on Social Networks (Instagram)' },
     'datenschutz.social.p1': {
-      de: 'Wir betreiben ein Profil auf Instagram. Wenn Sie unsere Instagram-Seite besuchen, verarbeitet Meta Plattformen Ireland Ltd. Daten über Ihr Nutzungsverhalten. Dabei kann eine Datenübermittlung in die USA stattfinden. Wir haben keinen Einfluss auf die Datenverarbeitung durch Meta. Die auf unserer Website enthaltenen Links zu Instagram führen direkt zu Instagram – es werden dabei keine Daten von Instagram auf unserer Website geladen (außer bei erteilter Cookie-Einwilligung auf der Brands-Seite).',
+      de: 'Ich betreibe ein Profil auf Instagram. Wenn Sie meine Instagram-Seite besuchen, verarbeitet Meta Plattformen Ireland Ltd. Daten über Ihr Nutzungsverhalten. Dabei kann eine Datenübermittlung in die USA stattfinden. Ich habe keinen Einfluss auf die Datenverarbeitung durch Meta. Die auf meiner Website enthaltenen Links zu Instagram führen direkt zu Instagram – es werden dabei keine Daten von Instagram auf meiner Website geladen (außer bei erteilter Cookie-Einwilligung auf der Brands-Seite).',
       en: 'We operate a profile on Instagram. When you visit our Instagram page, Meta Platforms Ireland Ltd processes data about your user behaviour, which may be transferred to the USA. We have no influence over this data processing. The Instagram links on our website lead directly to Instagram – no Instagram data is loaded on our website itself (except on the Brands page after cookie consent is given).'
     },
     'datenschutz.social.p2': {
