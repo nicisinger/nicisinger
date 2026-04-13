@@ -1592,7 +1592,41 @@ body.studio-page {
   margin-left: calc(-50vw + 50%);
   padding: 60px 60px 80px;
   background-color: #F7F4EA;
-  border-top: 1px solid #111;
+  position: relative;
+}
+
+/* Linie zieht sich von links nach rechts */
+.site-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1px;
+  background: #111;
+  width: 0;
+  transition: width 0.7s ease;
+}
+
+.site-footer.visible::before {
+  width: 100%;
+}
+
+/* Footer-eigene fade-in-section überschreiben – Linie & Inhalt separat animieren */
+.site-footer.fade-in-section {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+.site-footer .footer-inner {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease 0.6s, transform 0.8s ease 0.6s;
+}
+
+.site-footer.visible .footer-inner {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .footer-inner {
