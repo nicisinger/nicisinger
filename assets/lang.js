@@ -171,7 +171,10 @@
     /* ── impressum.html ─────────────────────────────────────── */
     'impressum.h2':            { de: 'Impressum',                                         en: 'Legal Notice' },
     'impressum.s1.h3':         { de: 'Angaben gemäß § 5 DDG',                             en: 'Information according to § 5 DDG' },
+    'impressum.vat':           { de: 'USt-IdNr.: DE435927787',                             en: 'VAT identification number according to Section 27a of the German VAT Act: DE435927787' },
     'impressum.s2.h3':         { de: 'Kontaktmöglichkeiten',                               en: 'Contact' },
+    'impressum.contact.mail':  { de: 'E-Mail-Adresse:',                                    en: 'Mail:' },
+    'impressum.contact.phone': { de: 'Telefon: 0151 55260493',                             en: 'Phone: (+49) 151 55260493' },
     'impressum.s3.h3':         { de: 'Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV', en: 'Responsible for Content (§ 55 para. 2 RStV)' },
     'impressum.disclaimer.h2': { de: 'Haftungsausschluss',                                 en: 'Disclaimer' },
     'impressum.content.h3':    { de: 'Haftung für Inhalte',                                en: 'Liability for Content' },
