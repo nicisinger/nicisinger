@@ -1777,7 +1777,7 @@ body.studio-page {
 /* Video Showcase */
 .video-showcase {
   width: 100%;
-  padding: 120px 0;
+  padding: 120px 0 60px;
 }
 
 .video-grid {
@@ -1926,7 +1926,7 @@ main > section:last-of-type {
 
 /* BTS Sektion */
 .bts-equipment {
-  padding-top: 100px;
+  padding-top: 50px;
   padding-bottom: 40px;
   background-color: #F7F4EA;
   width: 100vw;
