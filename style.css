@@ -1629,6 +1629,33 @@ body.studio-page {
   transform: translateY(0);
 }
 
+/* Studio Footer */
+.site-footer--studio {
+  background-color: #960c26;
+}
+
+.site-footer--studio::before {
+  background: #F7F4EA;
+}
+
+.site-footer--studio .footer-name,
+.site-footer--studio .footer-mail,
+.site-footer--studio .footer-nav-main a,
+.site-footer--studio .footer-nav-legal a {
+  color: #F7F4EA;
+}
+
+.site-footer--studio .footer-name:hover,
+.site-footer--studio .footer-mail:hover,
+.site-footer--studio .footer-nav-main a:hover,
+.site-footer--studio .footer-nav-legal a:hover {
+  opacity: 0.6;
+}
+
+.site-footer--studio .footer-icons img {
+  filter: invert(1);
+}
+
 /* Dunkler Footer (Über-mich-Seite) */
 .site-footer--dark {
   background-color: #000;
@@ -1901,7 +1928,7 @@ main > section:last-of-type {
 .bts-equipment {
   padding-top: 100px;
   padding-bottom: 40px;
-  background-color: #f9f9f9;
+  background-color: #F7F4EA;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
 }
