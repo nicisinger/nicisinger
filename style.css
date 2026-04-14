@@ -1621,12 +1621,39 @@ body.studio-page {
 .site-footer .footer-inner {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.8s ease 0.6s, transform 0.8s ease 0.6s;
+  transition: opacity 0.8s ease 0.3s, transform 0.8s ease 0.3s;
 }
 
 .site-footer.visible .footer-inner {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Dunkler Footer (Über-mich-Seite) */
+.site-footer--dark {
+  background-color: #000;
+}
+
+.site-footer--dark::before {
+  background: #F7F4EA;
+}
+
+.site-footer--dark .footer-name,
+.site-footer--dark .footer-mail,
+.site-footer--dark .footer-nav-main a,
+.site-footer--dark .footer-nav-legal a {
+  color: #F7F4EA;
+}
+
+.site-footer--dark .footer-name:hover,
+.site-footer--dark .footer-mail:hover,
+.site-footer--dark .footer-nav-main a:hover,
+.site-footer--dark .footer-nav-legal a:hover {
+  opacity: 0.6;
+}
+
+.site-footer--dark .footer-icons img {
+  filter: invert(1);
 }
 
 .footer-inner {
