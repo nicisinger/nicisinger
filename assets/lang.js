@@ -404,7 +404,13 @@
       if (T[key] && T[key][lang] !== undefined) {
         var newText = T[key][lang];
         el.setAttribute('data-text', newText);
-        if (el.textContent.trim() !== '') el.textContent = newText;
+        if (el.textContent.trim() !== '') {
+          if (typeof startTypewriter === 'function') {
+            startTypewriter(el);
+          } else {
+            el.textContent = newText;
+          }
+        }
       }
     });
     /* active button states */

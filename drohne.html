@@ -234,17 +234,24 @@
 
   // Perspektivwechsel Text Animation
 const perspektivwechsel = document.querySelector('.perspektivwechsel');
+let typewriterInterval = null;
+
+function startTypewriter(el) {
+  clearInterval(typewriterInterval);
+  el.innerText = '';
+  const text = el.getAttribute('data-text');
+  let i = 0;
+  typewriterInterval = setInterval(() => {
+    el.innerText += text[i];
+    i++;
+    if (i >= text.length) clearInterval(typewriterInterval);
+  }, 100); // 100ms pro Buchstabe
+}
 
 const observerText = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      const text = entry.target.getAttribute('data-text');
-      let i = 0;
-      const interval = setInterval(() => {
-        entry.target.innerText += text[i];
-        i++;
-        if (i >= text.length) clearInterval(interval);
-      }, 100); // 100ms pro Buchstabe
+      startTypewriter(entry.target);
       observerText.unobserve(entry.target);
     }
   });
