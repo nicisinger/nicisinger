@@ -38,10 +38,14 @@
   #hamburger-fixed.open span:nth-child(2) { opacity: 0; }
   #hamburger-fixed.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
   .mobile-nav { z-index: 9000 !important; }
+  .preview-video--mobile { display: none; }
+
   @media (max-width: 768px) {
     #hamburger-fixed { display: flex; }
     .hamburger { display: none !important; }
     .preview-video { width: calc(100% + 40px); margin-left: -20px; height: 40vh; }
+    .preview-video--desktop { display: none; }
+    .preview-video--mobile { display: block; }
   }
 </style>
   <script>try{if(localStorage.getItem('nicisinger-cookie-consent')==='accepted'){var _l=document.createElement('link');_l.rel='stylesheet';_l.href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap';document.head.appendChild(_l);}}catch(e){}</script>
@@ -107,7 +111,8 @@
   </nav>
 
   <!-- Vorschauvideo unter den Kategorien -->
-  <video class="preview-video" src="assets/video-drohne-titel.mp4" autoplay muted loop playsinline></video>
+  <video class="preview-video preview-video--desktop" src="assets/video-drohne-titel.mp4" autoplay muted loop playsinline></video>
+  <video class="preview-video preview-video--mobile" src="assets/video-drohne.mp4" autoplay muted loop playsinline></video>
 
   <section class="portfolio-detail">
 
