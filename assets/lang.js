@@ -11,6 +11,64 @@
     'btn.inquire.now':     { de: 'Jetzt anfragen',           en: 'Inquire Now' },
     'aria.hamburger':      { de: 'Menü öffnen',              en: 'Open menu' },
 
+    /* ── page meta (title + description) ────────────────────── */
+    'index.meta.title': {
+      de: 'Nici Singer – Videografin aus Köln | Imagefilm, Events, Hochzeitsfilm & Retreats',
+      en: 'Nici Singer – Videographer from Cologne | Corporate Films, Events, Weddings & Retreats'
+    },
+    'index.meta.description': {
+      de: 'Nici Singer – freiberufliche Videografin aus Köln für Imagefilme, Events, Hochzeitsfilme, Retreats und Drohnenaufnahmen. Ruhiger, minimalistischer Stil – national und international.',
+      en: 'Nici Singer – freelance videographer from Cologne for corporate films, events, wedding films, retreats and drone footage. Calm, minimalist style – nationally and internationally.'
+    },
+    'brands.meta.title': {
+      de: 'Imagefilm Köln – Branding Videos für Unternehmen | Nici Singer',
+      en: 'Corporate Film Cologne – Branding Videos for Companies | Nici Singer'
+    },
+    'brands.meta.description': {
+      de: 'Professionelle Imagefilme und Branding-Videos für Unternehmen in Köln – von IT bis Handwerk. Nici Singer produziert Imagefilme, Social-Media-Kampagnen und Corporate Content.',
+      en: 'Professional corporate films and branding videos for businesses in Cologne – from IT to trades. Nici Singer produces brand films, social media campaigns and corporate content.'
+    },
+    'events.meta.title': {
+      de: 'Eventfilm Köln – Event Videografin Nici Singer',
+      en: 'Event Film Cologne – Event Videographer Nici Singer'
+    },
+    'events.meta.description': {
+      de: 'Eventfilme & Event Videografie in Köln und deutschlandweit. Von Corporate Events über Firmenjubiläen bis Partys – Nici Singer hält dein Event professionell und atmosphärisch fest.',
+      en: 'Event films & event videography in Cologne and across Germany. From corporate events to company anniversaries and parties – Nici Singer captures your event professionally and atmospherically.'
+    },
+    'weddings.meta.title': {
+      de: 'Hochzeitsfilm Köln – Hochzeitsvideografin Nici Singer',
+      en: 'Wedding Film Cologne – Wedding Videographer Nici Singer'
+    },
+    'weddings.meta.description': {
+      de: 'Hochzeitsfilme & Hochzeitsvideos in Köln und NRW. Nici Singer begleitet euren besonderen Tag filmisch – emotional, minimalistisch und zeitlos. Jetzt Hochzeitsfilm anfragen.',
+      en: 'Wedding films & wedding videos in Cologne and NRW. Nici Singer captures your special day on film – emotional, minimalist and timeless. Enquire now.'
+    },
+    'retreats.meta.title': {
+      de: 'Retreat Videografie – Retreat Film & Yoga Video | Nici Singer',
+      en: 'Retreat Videography – Retreat Film & Yoga Video | Nici Singer'
+    },
+    'retreats.meta.description': {
+      de: 'Atmosphärische Retreat Videos und Yoga Retreat Videografie. Nici Singer begleitet dein Retreat filmisch – international und national. Ruhig, authentisch und inspirierend.',
+      en: 'Atmospheric retreat videos and yoga retreat videography. Nici Singer captures your retreat on film – nationally and internationally. Calm, authentic and inspiring.'
+    },
+    'drohne.meta.title': {
+      de: 'Drohnenfilm Köln – Zertifizierte Drohnenpilotin | Nici Singer',
+      en: 'Drone Film Cologne – Certified Drone Pilot | Nici Singer'
+    },
+    'drohne.meta.description': {
+      de: 'Professionelle Drohnenfilme & Drohnenaufnahmen aus Köln. Nici Singer ist zertifizierte Drohnenpilotin (A2-Führerschein) für Events, Hochzeiten, Imagefilme und mehr – bundesweit buchbar.',
+      en: 'Professional drone films & aerial footage from Cologne. Nici Singer is a certified drone pilot (A2 licence) for events, weddings, corporate films and more – bookable nationwide.'
+    },
+    'studio.meta.title': {
+      de: 'Videostudio Köln – Atelier für Studioproduktionen | Nici Singer',
+      en: 'Video Studio Cologne – Studio Productions at Zweiraum Atelier | Nici Singer'
+    },
+    'studio.meta.description': {
+      de: 'Videostudio & Atelier in Köln Kalk für Studioproduktionen. Ideal für Corporate Shootings, Portraits, Social Media Content, Produktvideos, Interviews und kleine Sets.',
+      en: 'Video studio & atelier in Cologne Kalk for studio productions. Perfect for corporate shootings, portraits, social media content, product videos, interviews and small sets.'
+    },
+
     /* ── index.html ────────────────────────────────────────── */
     'index.hero.title': {
       de: 'VISUELLE GESCHICHTEN IN BEWEGUNG | VIDEOGRAFIE AUS KÖLN',
@@ -413,6 +471,17 @@
         }
       }
     });
+    /* page title */
+    var titleKey = document.documentElement.getAttribute('data-i18n-title');
+    if (titleKey && T[titleKey] && T[titleKey][lang] !== undefined) {
+      document.title = T[titleKey][lang];
+    }
+    /* meta description */
+    var descKey = document.documentElement.getAttribute('data-i18n-description');
+    if (descKey && T[descKey] && T[descKey][lang] !== undefined) {
+      var metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) metaDesc.setAttribute('content', T[descKey][lang]);
+    }
     /* active button states */
     document.querySelectorAll('.lang-btn').forEach(function (btn) {
       btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
