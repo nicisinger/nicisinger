@@ -2693,7 +2693,11 @@ main.about {
 
   /* Video Showcase */
   .video-showcase {
-    padding: 60px 0;
+    padding: 60px 0 20px;
+  }
+
+  .bts-equipment {
+    padding-top: 20px;
   }
 
   /* Projekte Grid */
