@@ -68,6 +68,46 @@
       de: 'Videostudio & Atelier in Köln Kalk für Studioproduktionen. Ideal für Corporate Shootings, Portraits, Social Media Content, Produktvideos, Interviews und kleine Sets.',
       en: 'Video studio & atelier in Cologne Kalk for studio productions. Perfect for corporate shootings, portraits, social media content, product videos, interviews and small sets.'
     },
+    'portfolio.meta.title': {
+      de: 'Portfolio – Nici Singer | Videografin aus Köln',
+      en: 'Portfolio – Nici Singer | Videographer from Cologne'
+    },
+    'portfolio.meta.description': {
+      de: 'Portfolio von Nici Singer, Videografin aus Köln. Branding, Events, Weddings und Outdoor – nationale und internationale Projekte.',
+      en: 'Portfolio of Nici Singer, videographer from Cologne. Branding, events, weddings and outdoor – national and international projects.'
+    },
+    'about.meta.title': {
+      de: 'Über mich – Nici Singer | Videografin aus Köln',
+      en: 'About – Nici Singer | Videographer from Cologne'
+    },
+    'about.meta.description': {
+      de: 'Ich bin Nici Singer, Videografin aus Köln. Erfahre mehr über meine Arbeit, meine Arbeitsweise und meine Vision für Branding, Events, Weddings und Retreats.',
+      en: 'I am Nici Singer, videographer from Cologne. Learn more about my work, my approach and my vision for branding, events, weddings and retreats.'
+    },
+    'contact.meta.title': {
+      de: 'Kontakt – Nici Singer | Videografin aus Köln',
+      en: 'Contact – Nici Singer | Videographer from Cologne'
+    },
+    'contact.meta.description': {
+      de: 'Nimm Kontakt zu mir auf – ich freue mich über deine Anfrage für Branding-Videos, Events, Hochzeiten, Retreats und Studioproduktionen.',
+      en: 'Get in touch – I look forward to your enquiry for branding videos, events, weddings, retreats and studio productions.'
+    },
+    'impressum.meta.title': {
+      de: 'Impressum – Nici Singer',
+      en: 'Legal Notice – Nici Singer'
+    },
+    'impressum.meta.description': {
+      de: 'Impressum von Nici Singer, freiberufliche Videografin aus Köln.',
+      en: 'Legal notice of Nici Singer, freelance videographer from Cologne.'
+    },
+    'datenschutz.meta.title': {
+      de: 'Datenschutz – Nici Singer',
+      en: 'Privacy Policy – Nici Singer'
+    },
+    'datenschutz.meta.description': {
+      de: 'Datenschutzerklärung von Nici Singer, freiberufliche Videografin aus Köln.',
+      en: 'Privacy policy of Nici Singer, freelance videographer from Cologne.'
+    },
 
     /* ── index.html ────────────────────────────────────────── */
     'index.hero.title': {
