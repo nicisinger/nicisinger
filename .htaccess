@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# Redirect .html URLs to extensionless (301 = permanent, gut für SEO)
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# Intern: extensionlose URLs intern auf .html-Datei zeigen lassen
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^.]+)$ $1.html [L]
