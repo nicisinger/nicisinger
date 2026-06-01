@@ -1,6 +1,13 @@
 (function () {
   var T = {
     /* ── Shared ───────────────────────────────────────────── */
+    'home.services.brands':   { de: 'Imagefilm & Brands', en: 'Brands' },
+    'home.services.events':   { de: 'Events',             en: 'Events' },
+    'home.services.retreats': { de: 'Retreats',           en: 'Retreats' },
+    'home.services.weddings': { de: 'Hochzeitsfilm',      en: 'Weddings' },
+    'home.services.outdoor':  { de: 'Outdoor',            en: 'Outdoor' },
+    'home.services.drohne':   { de: 'Drohnenfilm',        en: 'Drone' },
+
     'role':                { de: 'VIDEOGRAFIN',              en: 'VIDEOGRAPHER' },
     'nav.about':           { de: 'Über mich',                en: 'About' },
     'nav.contact':         { de: 'Kontakt',                  en: 'Contact' },
