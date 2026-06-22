@@ -3201,3 +3201,150 @@ main.about {
   background: transparent;
   color: #F7F4EA;
 }
+
+/* ── Google Reviews Section ───────────────────────────────── */
+.reviews-section {
+  padding: 80px 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.reviews-heading {
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  margin-bottom: 50px;
+}
+
+.reviews-slider-outer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.reviews-slider {
+  overflow: hidden;
+  width: 100%;
+}
+
+.reviews-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.review-card {
+  min-width: 100%;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.review-stars {
+  color: #f2c94c;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  margin-bottom: 24px;
+}
+
+.review-text {
+  font-size: 16px;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.9;
+  color: #111;
+  max-width: 680px;
+  margin: 0 auto 24px;
+}
+
+.review-author {
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  font-weight: 500;
+  color: #111;
+}
+
+.review-time {
+  font-size: 11px;
+  color: #999;
+  margin-top: 6px;
+}
+
+.reviews-arrow {
+  background: none;
+  border: 1px solid rgba(17, 17, 17, 0.2);
+  color: #111;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s, background 0.2s;
+  line-height: 1;
+  padding: 0;
+}
+
+.reviews-arrow:hover {
+  border-color: #111;
+  background: rgba(17, 17, 17, 0.06);
+}
+
+.reviews-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 32px;
+}
+
+.reviews-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(17, 17, 17, 0.2);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.reviews-dot.active {
+  background: #111;
+}
+
+.reviews-cta {
+  display: inline-block;
+  margin-top: 32px;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #111;
+  opacity: 0.45;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.reviews-cta:hover {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .reviews-section {
+    padding: 60px 20px;
+  }
+  .reviews-arrow {
+    display: none;
+  }
+  .review-card {
+    padding: 0 8px;
+  }
+  .review-text {
+    font-size: 15px;
+  }
+  .reviews-heading {
+    font-size: 22px;
+    margin-bottom: 36px;
+  }
+}

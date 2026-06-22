@@ -1,0 +1,61 @@
+name: Update Google Reviews
+
+on:
+  schedule:
+    - cron: '0 5 * * *'  # täglich um 5:00 Uhr UTC
+  workflow_dispatch:       # auch manuell auslösbar
+
+jobs:
+  update-reviews:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Rezensionen auf Deutsch abrufen
+        run: |
+          curl -sf \
+            -H "X-Goog-Api-Key: ${{ secrets.PLACES_API_KEY }}" \
+            -H "X-Goog-FieldMask: reviews" \
+            "https://places.googleapis.com/v1/places/${{ secrets.PLACE_ID }}?languageCode=de" \
+            -o reviews_de.json
+
+      - name: Rezensionen auf Englisch abrufen
+        run: |
+          curl -sf \
+            -H "X-Goog-Api-Key: ${{ secrets.PLACES_API_KEY }}" \
+            -H "X-Goog-FieldMask: reviews" \
+            "https://places.googleapis.com/v1/places/${{ secrets.PLACE_ID }}?languageCode=en" \
+            -o reviews_en.json
+
+      - name: JSON zusammenführen und filtern
+        run: |
+          python3 << 'EOF'
+          import json
+
+          with open('reviews_de.json') as f:
+              de = json.load(f)
+          with open('reviews_en.json') as f:
+              en = json.load(f)
+
+          result = {
+              'de': [r for r in de.get('reviews', []) if r.get('rating', 0) >= 4],
+              'en': [r for r in en.get('reviews', []) if r.get('rating', 0) >= 4]
+          }
+
+          with open('assets/reviews.json', 'w', encoding='utf-8') as f:
+              json.dump(result, f, ensure_ascii=False, indent=2)
+
+          print(f"Gespeichert: {len(result['de'])} DE + {len(result['en'])} EN Rezensionen")
+          EOF
+
+      - name: Änderungen committen und pushen
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/reviews.json
+          git diff --staged --quiet || git commit -m "chore: Google Rezensionen aktualisiert"
+          git push

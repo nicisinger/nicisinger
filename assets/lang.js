@@ -138,6 +138,10 @@
     },
     'index.team.btn': { de: 'Mehr zu mir', en: 'More about me' },
 
+    'reviews.label':   { de: 'Kundenstimmen',              en: 'Client Reviews' },
+    'reviews.heading': { de: 'Das sagen meine Kunden',     en: 'What my clients say' },
+    'reviews.cta':     { de: 'Alle Rezensionen auf Google ansehen', en: 'View all reviews on Google' },
+
     /* ── portfolio.html ─────────────────────────────────────── */
     'portfolio.filter.all':   { de: 'Alle',   en: 'All' },
     'portfolio.filter.drone': { de: 'Drohne', en: 'Drone' },

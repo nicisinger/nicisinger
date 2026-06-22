@@ -208,6 +208,20 @@
     
 </section>
 
+<section class="reviews-section fade-in-section">
+  <span class="category-label" data-i18n="reviews.label">Kundenstimmen</span>
+  <h2 class="reviews-heading" data-i18n="reviews.heading">Das sagen meine Kunden</h2>
+  <div class="reviews-slider-outer">
+    <button class="reviews-arrow" id="reviewsPrev" aria-label="Vorherige Rezension">&#8249;</button>
+    <div class="reviews-slider" id="reviewsSlider">
+      <div class="reviews-track" id="reviewsTrack"></div>
+    </div>
+    <button class="reviews-arrow" id="reviewsNext" aria-label="Nächste Rezension">&#8250;</button>
+  </div>
+  <div class="reviews-dots" id="reviewsDots"></div>
+  <a class="reviews-cta" href="https://maps.app.goo.gl/JH6t8TSpJa44TuBr9" target="_blank" rel="noopener noreferrer" data-i18n="reviews.cta">Alle Rezensionen auf Google ansehen</a>
+</section>
+
 </main>
 
 <script>
@@ -327,6 +341,105 @@ fadeElements.forEach(el => observer.observe(el));
   })();
 </script>
 
+
+<script>
+(async function () {
+  const track   = document.getElementById('reviewsTrack');
+  const dotsEl  = document.getElementById('reviewsDots');
+  const slider  = document.getElementById('reviewsSlider');
+  const prevBtn = document.getElementById('reviewsPrev');
+  const nextBtn = document.getElementById('reviewsNext');
+  if (!track) return;
+
+  let reviews = [];
+  let current = 0;
+  let timer;
+
+  function getLang() {
+    return document.documentElement.lang || localStorage.getItem('nicisinger-lang') || 'de';
+  }
+
+  function stars(n) {
+    return '<span style=”color:#f2c94c”>' + '★'.repeat(n) + '</span>' +
+           '<span style=”color:#ddd”>'    + '★'.repeat(5 - n) + '</span>';
+  }
+
+  function goTo(index) {
+    current = (index + reviews.length) % reviews.length;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    dotsEl.querySelectorAll('.reviews-dot').forEach((d, i) =>
+      d.classList.toggle('active', i === current)
+    );
+  }
+
+  function renderReviews(data) {
+    const lang = getLang();
+    reviews = data[lang] || data['de'] || [];
+    if (!reviews.length) {
+      document.querySelector('.reviews-section')?.remove();
+      return false;
+    }
+
+    track.innerHTML = '';
+    dotsEl.innerHTML = '';
+
+    reviews.forEach((r, i) => {
+      const card = document.createElement('div');
+      card.className = 'review-card';
+      card.innerHTML =
+        `<div class=”review-stars”>${stars(r.rating)}</div>` +
+        `<p class=”review-text”>”${(r.text?.text || '').replace(/\n/g, ' ')}”</p>` +
+        `<div class=”review-author”>${r.authorAttribution?.displayName || ''}</div>` +
+        `<div class=”review-time”>${r.relativePublishTimeDescription || ''}</div>`;
+      track.appendChild(card);
+
+      const dot = document.createElement('span');
+      dot.className = 'reviews-dot' + (i === 0 ? ' active' : '');
+      dot.addEventListener('click', () => { clearInterval(timer); goTo(i); });
+      dotsEl.appendChild(dot);
+    });
+
+    goTo(0);
+    return true;
+  }
+
+  let allData = {};
+  try {
+    const res = await fetch('assets/reviews.json');
+    allData = await res.json();
+  } catch (e) {
+    document.querySelector('.reviews-section')?.remove();
+    return;
+  }
+
+  if (!renderReviews(allData)) return;
+
+  prevBtn.addEventListener('click', () => { clearInterval(timer); goTo(current - 1); });
+  nextBtn.addEventListener('click', () => { clearInterval(timer); goTo(current + 1); });
+
+  // Bei Sprachwechsel Rezensionen neu rendern
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      clearInterval(timer);
+      renderReviews(allData);
+      if (window.innerWidth > 768) timer = setInterval(() => goTo(current + 1), 6000);
+    });
+  });
+
+  let touchStart = 0;
+  slider.addEventListener('touchstart', e => { touchStart = e.touches[0].clientX; }, { passive: true });
+  slider.addEventListener('touchend', e => {
+    const diff = touchStart - e.changedTouches[0].clientX;
+    if (Math.abs(diff) < 40) return;
+    clearInterval(timer);
+    goTo(diff > 0 ? current + 1 : current - 1);
+  }, { passive: true });
+
+  if (window.innerWidth > 768) {
+    timer = setInterval(() => goTo(current + 1), 6000);
+  }
+})();
+</script>
 
 <script src="assets/cookie-consent.js"></script>
 <script src="assets/lang.js"></script>
