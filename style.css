@@ -3339,17 +3339,32 @@ main.about {
 @media (max-width: 768px) {
   .reviews-section {
     padding: 60px 20px;
-    overflow: hidden;
   }
   .reviews-slider-outer {
     display: block;
+  }
+  .reviews-slider {
+    overflow: visible;
+  }
+  .reviews-track {
+    flex-direction: column;
+    transform: none !important;
+  }
+  .review-card {
+    flex: none;
     width: 100%;
+    padding: 28px 0;
+    border-bottom: 1px solid rgba(17, 17, 17, 0.08);
+  }
+  .review-card:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
   }
   .reviews-arrow {
     display: none;
   }
-  .review-card {
-    padding: 0;
+  .reviews-dots {
+    display: none;
   }
   .review-text {
     font-size: 15px;
