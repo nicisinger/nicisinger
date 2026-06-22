@@ -3208,6 +3208,7 @@ main.about {
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
+  overflow: hidden;
 }
 
 .reviews-heading {
@@ -3222,20 +3223,24 @@ main.about {
   display: flex;
   align-items: center;
   gap: 20px;
+  width: 100%;
 }
 
 .reviews-slider {
   overflow: hidden;
   width: 100%;
+  min-width: 0;
 }
 
 .reviews-track {
   display: flex;
+  width: 100%;
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .review-card {
-  min-width: 100%;
+  flex: 0 0 100%;
+  min-width: 0;
   padding: 0 40px;
   box-sizing: border-box;
 }
@@ -3333,12 +3338,17 @@ main.about {
 @media (max-width: 768px) {
   .reviews-section {
     padding: 60px 20px;
+    overflow: hidden;
+  }
+  .reviews-slider-outer {
+    display: block;
+    width: 100%;
   }
   .reviews-arrow {
     display: none;
   }
   .review-card {
-    padding: 0 8px;
+    padding: 0;
   }
   .review-text {
     font-size: 15px;
