@@ -9,8 +9,9 @@
 
 /* Kein horizontales Scrollen auf Mobile */
 @media (max-width: 768px) {
-  html {
+  html, body {
     overflow-x: hidden !important;
+    max-width: 100%;
   }
 }
 
