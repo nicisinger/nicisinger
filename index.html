@@ -393,9 +393,10 @@ fadeElements.forEach(el => observer.observe(el));
         `<div class=”review-time”>${r.relativePublishTimeDescription || ''}</div>`;
       track.appendChild(card);
 
-      const textEl = card.querySelector('.review-text');
-      textEl.classList.add('review-text-clamped');
-      if (textEl.scrollHeight > textEl.clientHeight) {
+      const reviewText = (r.text?.text || '').replace(/\n/g, ' ');
+      if (reviewText.length > 350) {
+        const textEl = card.querySelector('.review-text');
+        textEl.classList.add('review-text-clamped');
         const btn = document.createElement('button');
         btn.className = 'review-expand-btn';
         btn.textContent = lang === 'en' ? 'Read more' : 'Mehr lesen';
@@ -406,8 +407,6 @@ fadeElements.forEach(el => observer.observe(el));
             : (lang === 'en' ? 'Show less' : 'Weniger anzeigen');
         });
         card.insertBefore(btn, card.querySelector('.review-author'));
-      } else {
-        textEl.classList.remove('review-text-clamped');
       }
 
       const dot = document.createElement('span');
