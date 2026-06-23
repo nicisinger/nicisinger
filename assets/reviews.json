@@ -1,6 +1,27 @@
 {
   "de": [
     {
+      "name": "places/ChIJnT87zfw15mIRVEHhSb8HspA/reviews/Ci9DQUlRQUNvZENodHljRjlvT2s1ZlMwRm9kakI1TFMxUFYydDBYM0U1WjFKT1VVRRAB",
+      "relativePublishTimeDescription": "in der letzten Woche",
+      "rating": 5,
+      "text": {
+        "text": "Wir hatten mit Nici ein Familienshooting.\nSie ist sehr auf unsere Wünsche eingegangen und hat ihre eigenen Ideen und Kreativität einfließen lassen. Ein absoluter Profi. Wir sind sehr happy mit den Fotos und würden es immer wieder so machen.\nDas Studio ist perfekt für Innenaufnahmen.\nDanke!",
+        "languageCode": "de"
+      },
+      "originalText": {
+        "text": "Wir hatten mit Nici ein Familienshooting.\nSie ist sehr auf unsere Wünsche eingegangen und hat ihre eigenen Ideen und Kreativität einfließen lassen. Ein absoluter Profi. Wir sind sehr happy mit den Fotos und würden es immer wieder so machen.\nDas Studio ist perfekt für Innenaufnahmen.\nDanke!",
+        "languageCode": "de"
+      },
+      "authorAttribution": {
+        "displayName": "Desiree Linke",
+        "uri": "https://www.google.com/maps/contrib/112828643743923244820/reviews",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocJDqyTVCLKuRGmjaZd-YP_UhZkw5xFSGd6-YNchwWX3GSCBPw=s128-c0x00000000-cc-rp-mo-ba3"
+      },
+      "publishTime": "2026-06-22T18:25:49.918511758Z",
+      "flagContentUri": "https://www.google.com/local/content/rap/report?postId=Ci9DQUlRQUNvZENodHljRjlvT2s1ZlMwRm9kakI1TFMxUFYydDBYM0U1WjFKT1VVRRAB&d=17924085&t=1",
+      "googleMapsUri": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2s1ZlMwRm9kakI1TFMxUFYydDBYM0U1WjFKT1VVRRAB!2m1!1s0x62e635fccd3b3f9d:0x90b207bf49e14154"
+    },
+    {
       "name": "places/ChIJnT87zfw15mIRVEHhSb8HspA/reviews/Ci9DQUlRQUNvZENodHljRjlvT2taSlgzazJSbmh5T0VoYWFrTmpabEF5Y1U5aWQxRRAB",
       "relativePublishTimeDescription": "in der letzten Woche",
       "rating": 5,
@@ -66,11 +87,32 @@
   ],
   "en": [
     {
+      "name": "places/ChIJnT87zfw15mIRVEHhSb8HspA/reviews/Ci9DQUlRQUNvZENodHljRjlvT2s1ZlMwRm9kakI1TFMxUFYydDBYM0U1WjFKT1VVRRAB",
+      "relativePublishTimeDescription": "in the last week",
+      "rating": 5,
+      "text": {
+        "text": "Wir hatten mit Nici ein Familienshooting.\nSie ist sehr auf unsere Wünsche eingegangen und hat ihre eigenen Ideen und Kreativität einfließen lassen. Ein absoluter Profi. Wir sind sehr happy mit den Fotos und würden es immer wieder so machen.\nDas Studio ist perfekt für Innenaufnahmen.\nDanke!",
+        "languageCode": "de"
+      },
+      "originalText": {
+        "text": "Wir hatten mit Nici ein Familienshooting.\nSie ist sehr auf unsere Wünsche eingegangen und hat ihre eigenen Ideen und Kreativität einfließen lassen. Ein absoluter Profi. Wir sind sehr happy mit den Fotos und würden es immer wieder so machen.\nDas Studio ist perfekt für Innenaufnahmen.\nDanke!",
+        "languageCode": "de"
+      },
+      "authorAttribution": {
+        "displayName": "Desiree Linke",
+        "uri": "https://www.google.com/maps/contrib/112828643743923244820/reviews",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocJDqyTVCLKuRGmjaZd-YP_UhZkw5xFSGd6-YNchwWX3GSCBPw=s128-c0x00000000-cc-rp-mo-ba3"
+      },
+      "publishTime": "2026-06-22T18:25:49.918511758Z",
+      "flagContentUri": "https://www.google.com/local/content/rap/report?postId=Ci9DQUlRQUNvZENodHljRjlvT2s1ZlMwRm9kakI1TFMxUFYydDBYM0U1WjFKT1VVRRAB&d=17924085&t=1",
+      "googleMapsUri": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2s1ZlMwRm9kakI1TFMxUFYydDBYM0U1WjFKT1VVRRAB!2m1!1s0x62e635fccd3b3f9d:0x90b207bf49e14154"
+    },
+    {
       "name": "places/ChIJnT87zfw15mIRVEHhSb8HspA/reviews/Ci9DQUlRQUNvZENodHljRjlvT2taSlgzazJSbmh5T0VoYWFrTmpabEF5Y1U5aWQxRRAB",
       "relativePublishTimeDescription": "in the last week",
       "rating": 5,
       "text": {
-        "text": "Business photos and videos – in a lovely little courtyard studio, very creative ideas, straightforward, top execution and very attentive support even after the shoot.\nI can only warmly recommend!",
+        "text": "Business photos and videos – in a charming little backyard studio, very creative ideas, straightforward, top-notch execution, and excellent after-sales service.\n\nI highly recommend them!",
         "languageCode": "en"
       },
       "originalText": {
