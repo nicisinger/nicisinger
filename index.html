@@ -383,6 +383,7 @@ fadeElements.forEach(el => observer.observe(el));
     track.innerHTML = '';
     dotsEl.innerHTML = '';
 
+    const lang = getLang();
     reviews.forEach((r, i) => {
       const card = document.createElement('div');
       card.className = 'review-card';
@@ -392,6 +393,23 @@ fadeElements.forEach(el => observer.observe(el));
         `<div class=”review-author”>${r.authorAttribution?.displayName || ''}</div>` +
         `<div class=”review-time”>${r.relativePublishTimeDescription || ''}</div>`;
       track.appendChild(card);
+
+      const textEl = card.querySelector('.review-text');
+      textEl.classList.add('review-text-clamped');
+      if (textEl.scrollHeight > textEl.clientHeight) {
+        const btn = document.createElement('button');
+        btn.className = 'review-expand-btn';
+        btn.textContent = lang === 'en' ? 'Read more' : 'Mehr lesen';
+        btn.addEventListener('click', () => {
+          const clamped = textEl.classList.toggle('review-text-clamped');
+          btn.textContent = clamped
+            ? (lang === 'en' ? 'Read more' : 'Mehr lesen')
+            : (lang === 'en' ? 'Show less' : 'Weniger anzeigen');
+        });
+        card.insertBefore(btn, card.querySelector('.review-author'));
+      } else {
+        textEl.classList.remove('review-text-clamped');
+      }
 
       const dot = document.createElement('span');
       dot.className = 'reviews-dot' + (i === 0 ? ' active' : '');

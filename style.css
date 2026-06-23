@@ -3213,8 +3213,9 @@ main.about {
 
 .reviews-heading {
   font-size: 26px;
-  font-weight: 400;
-  letter-spacing: 0.02em;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   margin-bottom: 50px;
 }
 
@@ -3266,7 +3267,7 @@ main.about {
   text-transform: uppercase;
   font-size: 11px;
   letter-spacing: 0.2em;
-  font-weight: 500;
+  font-weight: 700;
   color: #111;
 }
 
@@ -3274,6 +3275,26 @@ main.about {
   font-size: 11px;
   color: #999;
   margin-top: 6px;
+}
+
+.review-text-clamped {
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.review-expand-btn {
+  display: block;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  color: #666;
+  padding: 8px 0 16px;
+  text-decoration: underline;
+  letter-spacing: 0.05em;
+  margin: 0 auto;
 }
 
 .reviews-arrow {
