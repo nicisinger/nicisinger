@@ -375,6 +375,9 @@ fadeElements.forEach(el => observer.observe(el));
   function renderReviews(data) {
     const lang = getLang();
     reviews = data[lang] || data['de'] || [];
+    if (window.innerWidth <= 768) {
+      reviews = reviews.slice(0, 3);
+    }
     if (!reviews.length) {
       document.querySelector('.reviews-section')?.remove();
       return false;
