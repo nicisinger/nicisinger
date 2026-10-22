@@ -3286,13 +3286,6 @@ main.about {
   margin-top: 6px;
 }
 
-.review-text-clamped {
-  display: -webkit-box;
-  -webkit-line-clamp: 7;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
 .review-expand-btn {
   display: block;
   background: none;
@@ -3397,6 +3390,12 @@ main.about {
   }
   .review-text {
     font-size: 15px;
+  }
+  .review-text-clamped {
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
   .reviews-heading {
     font-size: 22px;
