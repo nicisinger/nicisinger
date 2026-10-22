@@ -375,12 +375,12 @@ fadeElements.forEach(el => observer.observe(el));
     if (window.innerWidth > 768) {
       // Desktop: immer vollständiger Text, kein "Mehr lesen"
       textEl.classList.remove('review-text-clamped');
-      btn.hidden = true;
+      btn.style.display = 'none';
       return;
     }
     textEl.classList.add('review-text-clamped');
     const overflowing = textEl.scrollHeight > textEl.clientHeight + 1;
-    btn.hidden = !overflowing;
+    btn.style.display = overflowing ? '' : 'none';
     if (!overflowing) textEl.classList.remove('review-text-clamped');
   }
 
@@ -419,7 +419,7 @@ fadeElements.forEach(el => observer.observe(el));
         `<div class="review-author">${r.name || ''}</div>` +
         `<div class="review-stars">${stars(r.rating)}</div>` +
         `<p class="review-text review-text-clamped">”${text}”</p>` +
-        `<button class="review-expand-btn" hidden>${readMore}</button>` +
+        `<button class="review-expand-btn" style="display:none">${readMore}</button>` +
         (r.time ? `<div class="review-time">${r.time}</div>` : '');
 
       const textEl = card.querySelector('.review-text');
