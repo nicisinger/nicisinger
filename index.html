@@ -360,8 +360,8 @@ fadeElements.forEach(el => observer.observe(el));
   }
 
   function stars(n) {
-    return '<span style=”color:#f2c94c”>' + '★'.repeat(n) + '</span>' +
-           '<span style=”color:#ddd”>'    + '★'.repeat(5 - n) + '</span>';
+    return '<span style="color:#f2c94c">' + '★'.repeat(n) + '</span>' +
+           '<span style="color:#ddd">'    + '★'.repeat(5 - n) + '</span>';
   }
 
   function goTo(index) {
@@ -389,15 +389,18 @@ fadeElements.forEach(el => observer.observe(el));
     reviews.forEach((r, i) => {
       const card = document.createElement('div');
       card.className = 'review-card';
-      const text = (r.text?.text || '').replace(/\n/g, ' ');
+      const text = (r.text || '').replace(/\n/g, ' ');
       const isLong = text.length > 350;
       const readMore = lang === 'en' ? 'Read more' : 'Mehr lesen';
       card.innerHTML =
-        `<div class=”review-stars”>${stars(r.rating)}</div>` +
-        `<p class=”review-text${isLong ? ' review-text-clamped' : ''}”>”${text}”</p>` +
-        (isLong ? `<button class=”review-expand-btn”>${readMore}</button>` : '') +
-        `<div class=”review-author”>${r.authorAttribution?.displayName || ''}</div>` +
-        `<div class=”review-time”>${r.relativePublishTimeDescription || ''}</div>`;
+        (r.avatar
+          ? `<img class="review-avatar" src="${r.avatar}" alt="${r.name || ''}" loading="lazy">`
+          : '') +
+        `<div class="review-author">${r.name || ''}</div>` +
+        `<div class="review-stars">${stars(r.rating)}</div>` +
+        `<p class="review-text${isLong ? ' review-text-clamped' : ''}">”${text}”</p>` +
+        (isLong ? `<button class="review-expand-btn">${readMore}</button>` : '') +
+        (r.time ? `<div class="review-time">${r.time}</div>` : '');
       if (isLong) {
         const textEl = card.querySelector('.review-text');
         const btn = card.querySelector('.review-expand-btn');
@@ -415,6 +418,11 @@ fadeElements.forEach(el => observer.observe(el));
       dot.addEventListener('click', () => { clearInterval(timer); goTo(i); });
       dotsEl.appendChild(dot);
     });
+
+    const hasMultiple = reviews.length > 1;
+    prevBtn.style.display = hasMultiple ? '' : 'none';
+    nextBtn.style.display = hasMultiple ? '' : 'none';
+    dotsEl.style.display  = hasMultiple ? '' : 'none';
 
     goTo(0);
     return true;

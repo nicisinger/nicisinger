@@ -3245,10 +3245,20 @@ main.about {
   box-sizing: border-box;
 }
 
+.review-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 14px;
+  display: block;
+}
+
 .review-stars {
   color: #f2c94c;
   font-size: 20px;
   letter-spacing: 0.1em;
+  margin-top: 10px;
   margin-bottom: 24px;
 }
 
