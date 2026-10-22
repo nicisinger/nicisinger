@@ -390,28 +390,33 @@ fadeElements.forEach(el => observer.observe(el));
       const card = document.createElement('div');
       card.className = 'review-card';
       const text = (r.text || '').replace(/\n/g, ' ');
-      const isLong = text.length > 350;
       const readMore = lang === 'en' ? 'Read more' : 'Mehr lesen';
+      const showLess = lang === 'en' ? 'Show less' : 'Weniger anzeigen';
       card.innerHTML =
         (r.avatar
           ? `<img class="review-avatar" src="${r.avatar}" alt="${r.name || ''}" loading="lazy">`
           : '') +
         `<div class="review-author">${r.name || ''}</div>` +
         `<div class="review-stars">${stars(r.rating)}</div>` +
-        `<p class="review-text${isLong ? ' review-text-clamped' : ''}">”${text}”</p>` +
-        (isLong ? `<button class="review-expand-btn">${readMore}</button>` : '') +
+        `<p class="review-text review-text-clamped">”${text}”</p>` +
+        `<button class="review-expand-btn" hidden>${readMore}</button>` +
         (r.time ? `<div class="review-time">${r.time}</div>` : '');
-      if (isLong) {
-        const textEl = card.querySelector('.review-text');
-        const btn = card.querySelector('.review-expand-btn');
-        btn.addEventListener('click', () => {
-          const clamped = textEl.classList.toggle('review-text-clamped');
-          btn.textContent = clamped
-            ? (lang === 'en' ? 'Read more' : 'Mehr lesen')
-            : (lang === 'en' ? 'Show less' : 'Weniger anzeigen');
-        });
-      }
+
+      const textEl = card.querySelector('.review-text');
+      const btn = card.querySelector('.review-expand-btn');
+      btn.addEventListener('click', () => {
+        const clamped = textEl.classList.toggle('review-text-clamped');
+        btn.textContent = clamped ? readMore : showLess;
+        btn.dataset.expanded = clamped ? 'false' : 'true';
+      });
       track.appendChild(card);
+
+      // Button nur einblenden, wenn der Text am aktuellen Viewport wirklich abgeschnitten wird
+      if (textEl.scrollHeight > textEl.clientHeight + 1) {
+        btn.hidden = false;
+      } else {
+        textEl.classList.remove('review-text-clamped');
+      }
 
       const dot = document.createElement('span');
       dot.className = 'reviews-dot' + (i === 0 ? ' active' : '');
@@ -449,6 +454,23 @@ fadeElements.forEach(el => observer.observe(el));
       renderReviews(allData);
       if (window.innerWidth > 768) timer = setInterval(() => goTo(current + 1), 6000);
     });
+  });
+
+  // Nach Resize neu prüfen, ob der Text bei der neuen Breite abgeschnitten wird
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      track.querySelectorAll('.review-card').forEach(card => {
+        const textEl = card.querySelector('.review-text');
+        const btn = card.querySelector('.review-expand-btn');
+        if (!textEl || !btn || btn.dataset.expanded === 'true') return;
+        textEl.classList.add('review-text-clamped');
+        const overflowing = textEl.scrollHeight > textEl.clientHeight + 1;
+        btn.hidden = !overflowing;
+        if (!overflowing) textEl.classList.remove('review-text-clamped');
+      });
+    }, 200);
   });
 
   let touchStart = 0;
