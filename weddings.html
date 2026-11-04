@@ -452,6 +452,14 @@ if (window.innerWidth <= 768) {
           const cutoffWord = fullText.includes('Erinnerungen') ? 'Erinnerungen' : 'memories';
           const cutoff = fullText.indexOf(cutoffWord);
           if (cutoff !== -1) fullText = fullText.slice(0, cutoff + cutoffWord.length) + '.';
+          // Zweizeilig: am Leerzeichen umbrechen, das der Satzmitte am nächsten liegt
+          const mid = fullText.length / 2;
+          let breakAt = -1;
+          for (let j = 0; j < fullText.length; j++) {
+            if (fullText[j] === ' ' && (breakAt === -1 || Math.abs(j - mid) < Math.abs(breakAt - mid))) breakAt = j;
+          }
+          if (breakAt !== -1) fullText = fullText.slice(0, breakAt) + '\n' + fullText.slice(breakAt + 1);
+          typingEl.style.whiteSpace = 'pre-line';
           typingEl.textContent = '';
           typingEl.classList.add('visible');
           let i = 0;
