@@ -460,11 +460,17 @@ if (window.innerWidth <= 768) {
           }
           if (breakAt !== -1) fullText = fullText.slice(0, breakAt) + '\n' + fullText.slice(breakAt + 1);
           typingEl.style.whiteSpace = 'pre-line';
+          // Eigener Cursor direkt hinter dem Text (statt Rahmen des ganzen Absatzes)
+          typingEl.style.borderRight = 'none';
           typingEl.textContent = '';
+          const textNode = document.createTextNode('');
+          const cursor = document.createElement('span');
+          cursor.style.cssText = 'display:inline-block;width:0;height:1.1em;margin-left:1px;vertical-align:text-bottom;border-right:2px solid #111;animation:blink 0.7s step-end infinite;';
+          typingEl.append(textNode, cursor);
           typingEl.classList.add('visible');
           let i = 0;
           const interval = setInterval(() => {
-            typingEl.textContent = fullText.slice(0, i + 1);
+            textNode.textContent = fullText.slice(0, i + 1);
             i++;
             if (i >= fullText.length) clearInterval(interval);
           }, Math.round(4000 / fullText.length));
