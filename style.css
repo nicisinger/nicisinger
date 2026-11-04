@@ -990,8 +990,17 @@ main {
 }
 
 /* Carousel */
+/* Pfeile links und rechts neben den Thumbnails, nicht darüber */
 .carousel-wrapper {
   position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.carousel-wrapper .carousel-viewport {
+  flex: 1;
+  min-width: 0;
 }
 
 .carousel {
@@ -1023,9 +1032,8 @@ main {
 }
 
 .carousel-btn {
-  position: absolute;
-  top: 45%;
-  transform: translateY(-50%);
+  flex-shrink: 0;
+  margin-bottom: 24px; /* auf Höhe der Bilder statt der Bildunterschrift */
   font-size: 30px;
   background: rgba(0,0,0,0.1);
   border: none;
@@ -1036,8 +1044,6 @@ main {
   z-index: 2;
 }
 
-.carousel-btn.prev { left: 10px; }
-.carousel-btn.next { right: 10px; }
 
 /* Video Modal */
 .video-modal {
