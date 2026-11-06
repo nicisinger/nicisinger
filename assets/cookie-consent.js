@@ -32,7 +32,7 @@
 
   var T = {
     de: {
-      bannerText : 'Diese Website nutzt externe Dienste (Google Fonts, YouTube, Google Maps, Instagram) sowie das Meta-Pixel zur Messung des Erfolgs meiner Werbeanzeigen. Beim Laden dieser Inhalte werden Daten wie Ihre IP-Adresse an die jeweiligen Anbieter übermittelt – auch in Drittländer wie die USA. Mehr Infos in unserer',
+      bannerText : 'Diese Website nutzt externe Dienste (Google Fonts, YouTube, Google Maps, Instagram) und das Meta-Pixel für Werbezwecke. Dabei können Daten wie Ihre IP-Adresse an die Anbieter übermittelt werden, auch in die USA. Mehr in der',
       privacy    : 'Datenschutzerklärung',
       accept     : 'Alle akzeptieren',
       decline    : 'Nur notwendige',
@@ -43,7 +43,7 @@
       ytBtn      : 'Video laden (Cookies akzeptieren)',
     },
     en: {
-      bannerText : 'This website uses external services (Google Fonts, YouTube, Google Maps, Instagram) and the Meta Pixel to measure the success of my ads. When loading this content, data such as your IP address is transmitted to the respective providers – including to third countries such as the USA. More info in our',
+      bannerText : 'This website uses external services (Google Fonts, YouTube, Google Maps, Instagram) and the Meta Pixel for advertising purposes. Data such as your IP address may be transmitted to these providers, including to the USA. More in my',
       privacy    : 'Privacy Policy',
       accept     : 'Accept all',
       decline    : 'Only necessary',
