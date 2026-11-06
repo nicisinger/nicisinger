@@ -1,19 +1,28 @@
 /**
  * Cookie Consent – nicisinger.de
- * Blockiert Google Fonts, YouTube, Google Maps und Instagram embed.js
- * bis der Nutzer einwilligt. Bilingual DE/EN.
+ * Blockiert Google Fonts, YouTube, Google Maps, Instagram embed.js
+ * und das Meta-Pixel bis der Nutzer einwilligt. Bilingual DE/EN.
  */
 (function () {
   var KEY  = 'nicisinger-cookie-consent';
+  /* Version der Einwilligung: bei neuen Diensten erhöhen, dann wird erneut gefragt */
+  var VKEY = 'nicisinger-consent-version';
+  var VERSION = '2';
+  var META_PIXEL_ID = '1633313431673214';
   var FONT = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap';
 
   /* ── Hilfsfunktionen ─────────────────────────────────────────── */
 
   function getConsent() {
-    try { return localStorage.getItem(KEY); } catch (e) { return null; }
+    try {
+      var v = localStorage.getItem(KEY);
+      /* Alte Zustimmung (ohne Meta-Pixel) gilt nicht mehr -> neu fragen */
+      if (v === 'accepted' && localStorage.getItem(VKEY) !== VERSION) return null;
+      return v;
+    } catch (e) { return null; }
   }
   function setConsent(val) {
-    try { localStorage.setItem(KEY, val); } catch (e) {}
+    try { localStorage.setItem(KEY, val); localStorage.setItem(VKEY, VERSION); } catch (e) {}
   }
   function getLang() {
     try { return localStorage.getItem('nicisinger-lang') || 'de'; } catch (e) { return 'de'; }
@@ -23,7 +32,7 @@
 
   var T = {
     de: {
-      bannerText : 'Diese Website nutzt externe Dienste (Google Fonts, YouTube, Google Maps, Instagram). Beim Laden dieser Inhalte werden Daten wie Ihre IP-Adresse an die jeweiligen Anbieter übermittelt – auch in Drittländer wie die USA. Mehr Infos in unserer',
+      bannerText : 'Diese Website nutzt externe Dienste (Google Fonts, YouTube, Google Maps, Instagram) sowie das Meta-Pixel zur Messung des Erfolgs meiner Werbeanzeigen. Beim Laden dieser Inhalte werden Daten wie Ihre IP-Adresse an die jeweiligen Anbieter übermittelt – auch in Drittländer wie die USA. Mehr Infos in unserer',
       privacy    : 'Datenschutzerklärung',
       accept     : 'Alle akzeptieren',
       decline    : 'Nur notwendige',
@@ -34,7 +43,7 @@
       ytBtn      : 'Video laden (Cookies akzeptieren)',
     },
     en: {
-      bannerText : 'This website uses external services (Google Fonts, YouTube, Google Maps, Instagram). When loading this content, data such as your IP address is transmitted to the respective providers – including to third countries such as the USA. More info in our',
+      bannerText : 'This website uses external services (Google Fonts, YouTube, Google Maps, Instagram) and the Meta Pixel to measure the success of my ads. When loading this content, data such as your IP address is transmitted to the respective providers – including to third countries such as the USA. More info in our',
       privacy    : 'Privacy Policy',
       accept     : 'Accept all',
       decline    : 'Only necessary',
@@ -64,6 +73,21 @@
     var lnk = document.createElement('link');
     lnk.rel = 'stylesheet'; lnk.href = FONT;
     document.head.appendChild(lnk);
+  }
+
+  /* ── Meta-Pixel (nur nach Einwilligung) ────────────────────── */
+
+  function loadMetaPixel() {
+    if (window.fbq) return;
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    window.fbq('init', META_PIXEL_ID);
+    window.fbq('track', 'PageView');
   }
 
   /* ── Embeds aktivieren ───────────────────────────────────────── */
@@ -184,6 +208,7 @@
     hideBanner();
     loadGoogleFonts();
     activateEmbeds();
+    loadMetaPixel();
   }
 
   function decline() {
@@ -198,6 +223,7 @@
     if (consent === 'accepted') {
       loadGoogleFonts();
       activateEmbeds();
+      loadMetaPixel();
     } else {
       insertMapsPlaceholders();
       blockYouTube();

@@ -366,7 +366,7 @@
     <button class="lp-video-close" id="lpVideoClose" aria-label="Schließen">&times;</button>
     <iframe id="lpVideoFrame" src="" allow="autoplay; fullscreen" allowfullscreen title="Hochzeitsfilm"></iframe>
     <div class="lp-yt-consent" id="lpYtConsent">
-      <p>Die Filme liegen auf YouTube. Beim Abspielen werden Daten (z. B. deine IP-Adresse) an YouTube übertragen.</p>
+      <p>Die Filme liegen auf YouTube. Beim Abspielen werden Daten (z. B. eure IP-Adresse) an YouTube übertragen.</p>
       <button class="lp-btn" id="lpYtAccept">Video abspielen</button>
     </div>
   </div>
@@ -455,11 +455,8 @@
       if (hasConsent()) { play(currentId); } else { vFrame.style.display = 'none'; ytBox.style.display = 'flex'; }
     });
   });
-  document.getElementById('lpYtAccept').addEventListener('click', function () {
-    if (window.CookieConsent && window.CookieConsent.accept) { window.CookieConsent.accept(); }
-    else { try { localStorage.setItem('nicisinger-cookie-consent', 'accepted'); } catch (e) {} }
-    play(currentId);
-  });
+  /* Spielt nur dieses eine Video ab – ohne Zustimmung zu anderen Diensten (z. B. Meta-Pixel) */
+  document.getElementById('lpYtAccept').addEventListener('click', function () { play(currentId); });
   function closeVideo() { vModal.style.display = 'none'; vFrame.src = ''; }
   document.getElementById('lpVideoClose').addEventListener('click', closeVideo);
   vModal.addEventListener('click', function (e) { if (e.target === vModal) closeVideo(); });
