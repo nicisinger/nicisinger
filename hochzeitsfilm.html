@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <title>Euer Hochzeitsfilm – Nici Singer, Hochzeitsvideografin aus Köln</title>
+  <meta name="description" content="Emotionale, unaufdringliche Hochzeitsfilme aus Köln – für NRW und ganz Deutschland. Fragt jetzt unverbindlich euer Hochzeitsdatum an.">
+  <!-- Landingpage für Ads: nicht in Google indexieren (sonst Konkurrenz zu /weddings) -->
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://nicisinger.de/weddings">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nicisinger.de/hochzeitsfilm">
+  <meta property="og:title" content="Euer Hochzeitsfilm – Nici Singer">
+  <meta property="og:description" content="Emotionale, unaufdringliche Hochzeitsfilme aus Köln. Jetzt euer Datum anfragen.">
+  <meta property="og:image" content="https://nicisinger.de/assets/thumbnails/wedding-berni-marc.jpg">
+  <meta property="og:locale" content="de_DE">
+  <link rel="stylesheet" href="style.css">
+  <script>try{if(localStorage.getItem('nicisinger-cookie-consent')==='accepted'){var _l=document.createElement('link');_l.rel='stylesheet';_l.href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap';document.head.appendChild(_l);}}catch(e){}</script>
+
+  <style>
+    /* ---------- Grundlayout Landingpage ---------- */
+    body.lp { padding: 0; display: block; height: auto; }
+    html { scroll-behavior: smooth; }
+    .lp-wrap { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
+    .lp section { position: relative; }
+
+    /* Header: nur Logo + ein Button, keine Navigation (Fokus auf Anfrage) */
+    .lp header {
+      margin: 0; padding: 18px 40px;
+      position: fixed; top: 0; left: 0; right: 0;
+      background: transparent; transition: background .3s ease, box-shadow .3s ease;
+    }
+    .lp header .logo .name, .lp header .logo .role { color: #F7F4EA; transition: color .3s ease; }
+    .lp header.scrolled { background: #F7F4EA; }
+    .lp header.scrolled .logo .name, .lp header.scrolled .logo .role { color: #111; }
+    .lp-header-btn {
+      text-decoration: none; text-transform: uppercase; font-size: 12px; letter-spacing: .12em;
+      padding: 10px 20px; border: 1px solid #F7F4EA; color: #F7F4EA; transition: all .3s ease; white-space: nowrap;
+    }
+    .lp header.scrolled .lp-header-btn { border-color: #111; color: #111; }
+    .lp-header-btn:hover, .lp header.scrolled .lp-header-btn:hover { background: #111; border-color: #111; color: #F7F4EA; }
+
+    /* ---------- Hero ---------- */
+    .lp-hero { height: 100vh; min-height: 560px; overflow: hidden; color: #F7F4EA; }
+    .lp-hero video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .lp-hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,.25) 45%, rgba(0,0,0,.6) 100%); }
+    .lp-hero-content {
+      position: relative; z-index: 2; height: 100%;
+      display: flex; flex-direction: column; justify-content: flex-end; align-items: center; text-align: center;
+      padding: 0 24px 12vh;
+    }
+    .lp-eyebrow { font-size: 12px; letter-spacing: .3em; text-transform: uppercase; font-weight: 400; opacity: .85; margin-bottom: 18px; }
+    .lp-hero h2 {
+      font-size: clamp(2rem, 5vw, 4rem); font-weight: 700; letter-spacing: .03em; text-transform: uppercase;
+      line-height: 1.1; max-width: 900px; margin-bottom: 20px;
+    }
+    .lp-hero p { font-size: 16px; font-weight: 300; max-width: 560px; line-height: 1.7; margin-bottom: 34px; }
+    .lp-btn {
+      display: inline-block; text-decoration: none; text-transform: uppercase; font-size: 13px; letter-spacing: .12em; font-weight: 500;
+      padding: 16px 34px; background: #F7F4EA; color: #111; border: 1px solid #F7F4EA; transition: all .3s ease; cursor: pointer;
+    }
+    .lp-btn:hover { background: #f2c94c; border-color: #f2c94c; transform: translateY(-2px); }
+    .lp-btn--dark { background: #111; color: #F7F4EA; border-color: #111; }
+    .lp-btn--dark:hover { background: #f2c94c; border-color: #f2c94c; color: #111; }
+    .lp-scroll-hint { margin-top: 26px; font-size: 12px; letter-spacing: .2em; text-transform: uppercase; opacity: .7; }
+
+    /* ---------- Vertrauensleiste ---------- */
+    .lp-trust { border-bottom: 1px solid rgba(17,17,17,.1); }
+    .lp-trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); text-align: center; }
+    .lp-trust-item { padding: 34px 12px; }
+    .lp-trust-item + .lp-trust-item { border-left: 1px solid rgba(17,17,17,.1); }
+    .lp-trust-item strong { display: block; font-size: 15px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 4px; }
+    .lp-trust-item span { font-size: 13px; font-weight: 300; opacity: .7; }
+
+    /* ---------- Textblöcke ---------- */
+    .lp-block { padding: 110px 0; }
+    .lp-kicker { font-size: 12px; letter-spacing: .3em; text-transform: uppercase; opacity: .5; margin-bottom: 14px; text-align: center; }
+    .lp-h { font-size: 26px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; text-align: center; margin-bottom: 24px; }
+    .lp-lead { font-size: 16px; font-weight: 300; line-height: 1.9; max-width: 720px; margin: 0 auto; text-align: center; }
+
+    /* ---------- Filme ---------- */
+    .lp-films { padding-top: 0; }
+    .lp-film-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 50px; }
+    .lp-film { cursor: pointer; background: none; border: none; text-align: left; padding: 0; font: inherit; color: inherit; }
+    .lp-film-thumb { position: relative; aspect-ratio: 16/9; overflow: hidden; background: #000; }
+    .lp-film-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s ease, opacity .3s ease; }
+    .lp-film:hover .lp-film-thumb img { transform: scale(1.04); opacity: .85; }
+    .lp-play {
+      position: absolute; left: 50%; top: 50%; width: 58px; height: 58px; margin: -29px 0 0 -29px; border-radius: 50%;
+      border: 1px solid rgba(247,244,234,.9); background: rgba(0,0,0,.25); display: flex; align-items: center; justify-content: center;
+      transition: background .3s ease;
+    }
+    .lp-play::before { content: ""; border-style: solid; border-width: 9px 0 9px 15px; border-color: transparent transparent transparent #F7F4EA; margin-left: 4px; }
+    .lp-film:hover .lp-play { background: rgba(242,201,76,.85); }
+    .lp-film p { margin-top: 12px; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; font-weight: 400; }
+
+    /* ---------- Split: Video + Arbeitsweise ---------- */
+    .lp-split { display: grid; grid-template-columns: 1fr 1fr; background: #111; color: #F7F4EA; }
+    .lp-split video { width: 100%; height: 100%; aspect-ratio: 4/5; object-fit: cover; display: block; }
+    .lp-split-content { display: flex; flex-direction: column; justify-content: center; padding: 6vw; }
+    .lp-split-content .lp-kicker, .lp-split-content .lp-h { text-align: left; }
+    .lp-split-content .lp-kicker { opacity: .6; }
+    .lp-points { list-style: none; margin-top: 10px; }
+    .lp-points li { padding: 20px 0; border-top: 1px solid rgba(247,244,234,.15); }
+    .lp-points li:last-child { border-bottom: 1px solid rgba(247,244,234,.15); }
+    .lp-points strong { display: block; font-size: 14px; letter-spacing: .1em; text-transform: uppercase; font-weight: 500; margin-bottom: 6px; color: #f2c94c; }
+    .lp-points span { font-size: 15px; font-weight: 300; line-height: 1.7; opacity: .85; }
+
+    /* ---------- Bewertung ---------- */
+    .lp-review { text-align: center; max-width: 820px; margin: 0 auto; }
+    .lp-stars { color: #f2c94c; letter-spacing: .3em; font-size: 18px; margin-bottom: 26px; }
+    .lp-review blockquote { font-size: clamp(17px, 2vw, 21px); font-weight: 300; line-height: 1.8; font-style: italic; }
+    .lp-review-author { display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 32px; }
+    .lp-review-author img { width: 52px; height: 52px; border-radius: 50%; object-fit: cover; }
+    .lp-review-author span { font-size: 13px; letter-spacing: .15em; text-transform: uppercase; font-weight: 500; }
+    .lp-review-author small { display: block; font-size: 12px; letter-spacing: .05em; text-transform: none; font-weight: 300; opacity: .6; }
+
+    /* ---------- Drohnenbild ---------- */
+    .lp-drone { height: 70vh; min-height: 420px; overflow: hidden; color: #F7F4EA; }
+    .lp-drone img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .lp-drone::after { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,.35); }
+    .lp-drone-content { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 24px; }
+    .lp-drone h2 { font-size: clamp(2rem, 5vw, 4rem); font-weight: 700; letter-spacing: .04em; text-transform: uppercase; margin-bottom: 14px; }
+    .lp-drone p { font-size: 16px; font-weight: 300; max-width: 560px; line-height: 1.7; }
+
+    /* ---------- Ablauf ---------- */
+    .lp-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; margin-top: 60px; counter-reset: step; }
+    .lp-step { border-top: 1px solid #111; padding-top: 22px; }
+    .lp-step::before { counter-increment: step; content: "0" counter(step); display: block; font-size: 12px; letter-spacing: .2em; opacity: .5; margin-bottom: 12px; }
+    .lp-step strong { display: block; font-size: 14px; letter-spacing: .1em; text-transform: uppercase; font-weight: 600; margin-bottom: 8px; }
+    .lp-step span { font-size: 14px; font-weight: 300; line-height: 1.7; }
+
+    /* ---------- Formular ---------- */
+    .lp-form-section { background: #eae7dd; }
+    .lp-form-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 70px; align-items: center; }
+    .lp-form-intro .lp-kicker, .lp-form-intro .lp-h { text-align: left; }
+    .lp-form-intro p { font-size: 15px; font-weight: 300; line-height: 1.8; margin-bottom: 26px; }
+    .lp-form-intro img { width: 100%; max-width: 360px; aspect-ratio: 4/5; object-fit: cover; display: block; }
+    .lp-form { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .lp-field { display: flex; flex-direction: column; gap: 8px; }
+    .lp-field--full { grid-column: 1 / -1; }
+    .lp-field label { font-size: 12px; font-weight: 500; text-transform: uppercase; letter-spacing: .08em; }
+    .lp-field label em { font-style: normal; font-weight: 300; text-transform: none; letter-spacing: 0; opacity: .6; }
+    .lp-field input, .lp-field textarea, .lp-field select {
+      font-family: 'Inter', sans-serif; font-size: 16px; padding: 13px 16px; border: 1px solid #ccc; border-radius: 4px;
+      background: #fff; color: #111; outline: none; transition: border-color .3s ease, box-shadow .3s ease; width: 100%;
+    }
+    .lp-field input:focus, .lp-field textarea:focus, .lp-field select:focus { border-color: #f2c94c; box-shadow: 0 0 8px rgba(242,201,76,.4); }
+    .lp-consent { grid-column: 1 / -1; font-size: 12px; font-weight: 300; line-height: 1.6; opacity: .75; }
+    .lp-consent a { color: inherit; }
+    .lp-form .lp-btn { grid-column: 1 / -1; justify-self: start; border-radius: 4px; }
+    .lp-form .lp-btn[disabled] { opacity: .6; cursor: wait; transform: none; }
+    .lp-hp { position: absolute; left: -9999px; }
+
+    /* Danke-Modal (wie Kontaktseite) */
+    .lp-modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.3); backdrop-filter: blur(3px); display: none; justify-content: center; align-items: center; z-index: 100001; }
+    .lp-modal { background: #F7F4EA; padding: 36px 30px; border-radius: 4px; text-align: center; max-width: 380px; width: 90%; position: relative; border: 1px solid rgba(17,17,17,.12); }
+    .lp-modal h3 { font-size: 13px; font-weight: 400; margin-bottom: 12px; text-transform: uppercase; letter-spacing: .2em; }
+    .lp-modal p { font-size: 14px; font-weight: 300; opacity: .75; line-height: 1.7; }
+    .lp-modal .lp-close { position: absolute; top: 10px; right: 14px; font-size: 20px; background: none; border: none; cursor: pointer; opacity: .5; }
+
+    /* Video-Modal */
+    .lp-video-modal { position: fixed; inset: 0; background: rgba(0,0,0,.85); display: none; justify-content: center; align-items: center; z-index: 100000; padding: 20px; }
+    .lp-video-box { position: relative; width: 100%; max-width: 1000px; aspect-ratio: 16/9; background: #000; }
+    .lp-video-box iframe { width: 100%; height: 100%; border: 0; }
+    .lp-video-close { position: absolute; top: -44px; right: 0; color: #F7F4EA; font-size: 32px; background: none; border: none; cursor: pointer; }
+    .lp-yt-consent { position: absolute; inset: 0; display: none; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: #F7F4EA; padding: 30px; gap: 20px; font-size: 14px; font-weight: 300; line-height: 1.7; }
+
+    /* Sticky-CTA auf dem Handy */
+    .lp-sticky-cta { display: none; }
+
+    /* Animation */
+    .lp .fade-in { opacity: 0; transform: translateY(24px); transition: opacity .9s ease, transform .9s ease; }
+    .lp .fade-in.visible { opacity: 1; transform: none; }
+
+    .lp .site-footer { padding-left: 40px; padding-right: 40px; }
+
+    /* ---------- Mobile ---------- */
+    @media (max-width: 900px) {
+      .lp-split, .lp-form-grid { grid-template-columns: 1fr; }
+      .lp-form-grid { gap: 40px; }
+      .lp-form-intro img { display: none; }
+      .lp-steps { grid-template-columns: 1fr 1fr; }
+      .lp-film-grid { grid-template-columns: 1fr 1fr; }
+      .lp-trust-grid { grid-template-columns: 1fr 1fr; }
+      .lp-trust-item:nth-child(3) { border-left: none; }
+      .lp-trust-item:nth-child(n+3) { border-top: 1px solid rgba(17,17,17,.1); }
+    }
+    @media (max-width: 768px) {
+      .lp header { padding: 14px 20px; }
+      .lp header .logo { gap: 8px; }
+      .lp header .logo .name, .lp header .logo .role { font-size: 14px; }
+      .lp-header-btn { display: none; }
+      .lp-wrap { padding: 0 22px; }
+      .lp-block { padding: 80px 0; }
+      .lp-hero-content { padding-bottom: 16vh; }
+      .lp-hero p { font-size: 15px; }
+      .lp-film-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+      .lp-film p { font-size: 11px; margin-top: 8px; }
+      .lp-play { width: 40px; height: 40px; margin: -20px 0 0 -20px; }
+      .lp-steps { grid-template-columns: 1fr; gap: 22px; }
+      .lp-form { grid-template-columns: 1fr; }
+      .lp-form .lp-btn { justify-self: stretch; text-align: center; }
+      .lp-split-content { padding: 60px 22px; }
+      .lp .site-footer { padding-left: 22px; padding-right: 22px; padding-bottom: 90px; }
+      .lp-sticky-cta {
+        display: block; position: fixed; left: 14px; right: 14px; bottom: 14px; z-index: 9999; text-align: center;
+        transform: translateY(140%); transition: transform .35s ease; box-shadow: 0 8px 24px rgba(0,0,0,.2); border-radius: 4px;
+      }
+      .lp-sticky-cta.show { transform: none; }
+    }
+  </style>
+</head>
+<body class="lp">
+
+<header>
+  <a href="/" style="text-decoration:none">
+    <h1 class="logo">
+      <span class="name">NICI SINGER</span>
+      <span class="role">VIDEOGRAFIN</span>
+    </h1>
+  </a>
+  <a href="#anfrage" class="lp-header-btn">Datum anfragen</a>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="lp-hero">
+    <video src="assets/video-weddings-lp.mp4" poster="assets/video-weddings-lp-poster.jpg" autoplay muted loop playsinline preload="auto"></video>
+    <div class="lp-hero-content">
+      <p class="lp-eyebrow">Hochzeitsfilme aus Köln</p>
+      <h2>Erlebt euren Tag immer und immer wieder.</h2>
+      <p>Ich begleite eure Hochzeit unaufdringlich und mit viel Gefühl, damit ihr später auch all die Momente seht, die ihr am Tag selbst gar nicht mitbekommen habt.</p>
+      <a href="#anfrage" class="lp-btn">Euer Datum anfragen</a>
+      <span class="lp-scroll-hint">Unverbindlich &amp; kostenlos</span>
+    </div>
+  </section>
+
+  <!-- VERTRAUEN -->
+  <section class="lp-trust">
+    <div class="lp-wrap lp-trust-grid">
+      <div class="lp-trust-item"><strong>7 Jahre</strong><span>Erfahrung als Videografin</span></div>
+      <div class="lp-trust-item"><strong>Unaufdringlich</strong><span>Ihr genießt, ich filme</span></div>
+      <div class="lp-trust-item"><strong>Drohne</strong><span>Aufnahmen aus der Luft möglich</span></div>
+      <div class="lp-trust-item"><strong>Köln &amp; NRW</strong><span>und deutschlandweit</span></div>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="lp-block">
+    <div class="lp-wrap fade-in">
+      <p class="lp-kicker">Euer Hochzeitsfilm</p>
+      <h2 class="lp-h">Momente für immer</h2>
+      <p class="lp-lead">
+        Stellt euch vor, ihr schaut an jedem Hochzeitstag zurück und erlebt alles noch einmal neu: eure Liebsten, die kleinen Details, die großen Gefühle, genau so, wie sie waren.
+        Mein Stil ist ruhig, minimalistisch und zeitlos, damit euer Film auch in zwanzig Jahren noch berührt.
+        Und Achtung: Sucht- und Tränengefahr!
+      </p>
+    </div>
+  </section>
+
+  <!-- FILME -->
+  <section class="lp-block lp-films">
+    <div class="lp-wrap">
+      <p class="lp-kicker fade-in">Echte Paare, echte Filme</p>
+      <h2 class="lp-h fade-in">Schaut selbst</h2>
+      <div class="lp-film-grid fade-in">
+        <button class="lp-film" data-video="Q0SsJ4Z6ezM"><div class="lp-film-thumb"><img src="assets/thumbnails/wedding-berni-marc.jpg" alt="Hochzeitsfilm Berni und Marc" loading="lazy"><span class="lp-play"></span></div><p>Berni &amp; Marc</p></button>
+        <button class="lp-film" data-video="tMqYtwZ91_k"><div class="lp-film-thumb"><img src="assets/thumbnails/wedding-lara-basti.jpg" alt="Hochzeitsfilm Lara und Basti" loading="lazy"><span class="lp-play"></span></div><p>Lara &amp; Basti</p></button>
+        <button class="lp-film" data-video="oW-2eIVl5NQ"><div class="lp-film-thumb"><img src="assets/thumbnails/wedding-annika-benjamin.jpg" alt="Hochzeitsfilm Annika und Benjamin" loading="lazy"><span class="lp-play"></span></div><p>Annika &amp; Benjamin</p></button>
+        <button class="lp-film" data-video="sJsEj6OGiXE"><div class="lp-film-thumb"><img src="assets/thumbnails/wedding-isabel-justin.jpg" alt="Hochzeitsfilm Isabel und Justin" loading="lazy"><span class="lp-play"></span></div><p>Isabel &amp; Justin</p></button>
+        <button class="lp-film" data-video="hwyef_SqYUI"><div class="lp-film-thumb"><img src="assets/thumbnails/wedding-maxi-manni.jpg" alt="Hochzeitsfilm Maxi und Manni" loading="lazy"><span class="lp-play"></span></div><p>Maxi &amp; Manni</p></button>
+        <button class="lp-film" data-video="0wj3MJI1oAE"><div class="lp-film-thumb"><img src="assets/thumbnails/wedding-lena-stefan.jpg" alt="Hochzeitsfilm Lena und Stefan" loading="lazy"><span class="lp-play"></span></div><p>Lena &amp; Stefan</p></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARBEITSWEISE -->
+  <section class="lp-split">
+    <video src="assets/video-wedding-couple.mp4" autoplay muted loop playsinline preload="metadata"></video>
+    <div class="lp-split-content fade-in">
+      <p class="lp-kicker">So arbeite ich</p>
+      <h2 class="lp-h">Ihr feiert. Ich halte es fest.</h2>
+      <ul class="lp-points">
+        <li><strong>Unaufdringlich</strong><span>Ich bewege mich ruhig im Hintergrund, mit kleinem Setup. Keine gestellten Szenen und kein Stress für euch und eure Gäste.</span></li>
+        <li><strong>Mit Gefühl fürs Detail</strong><span>Die Blicke, die Tränen, die Tanzfläche um Mitternacht: Ich achte auf das, was euren Tag ausmacht.</span></li>
+        <li><strong>Professionell</strong><span>Ausgebildete Mediengestalterin Bild &amp; Ton, Profi-Kameras, sauberer Ton und Drohne, alles aus einer Hand.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- BEWERTUNG -->
+  <section class="lp-block">
+    <div class="lp-wrap lp-review fade-in">
+      <div class="lp-stars" aria-label="5 von 5 Sternen">★★★★★</div>
+      <blockquote>„Sie war den ganzen Tag an unserer Seite, unkompliziert und unaufdringlich. Trotzdem hat sie sooo schöne Szenen gefilmt, das meiste haben wir gar nicht mitbekommen. […] Jedes Mal, wenn wir es anschauen, fühlen wir uns zurückversetzt zu unserer Hochzeit.“</blockquote>
+      <div class="lp-review-author">
+        <img src="assets/reviews/linda-felix-hochzeitsfilm.jpg" alt="Linda und Felix">
+        <span>Linda &amp; Felix<small>Google-Bewertung</small></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- DROHNE -->
+  <section class="lp-drone fade-in">
+    <img src="assets/wedding-group-photo-lp.jpg" alt="Gruppenaufnahme einer Hochzeitsgesellschaft mit der Drohne" loading="lazy">
+    <div class="lp-drone-content">
+      <h2>Von oben</h2>
+      <p>Mit meiner Drohne sind auch besondere Gruppenaufnahmen und Bilder eurer Location aus der Luft möglich.</p>
+    </div>
+  </section>
+
+  <!-- ABLAUF -->
+  <section class="lp-block">
+    <div class="lp-wrap">
+      <p class="lp-kicker fade-in">In vier Schritten</p>
+      <h2 class="lp-h fade-in">So einfach geht's</h2>
+      <div class="lp-steps fade-in">
+        <div class="lp-step"><strong>Anfrage</strong><span>Schickt mir euer Datum und eure Location. Ich melde mich schnell mit meiner Verfügbarkeit.</span></div>
+        <div class="lp-step"><strong>Kennenlernen</strong><span>In einem unverbindlichen Gespräch erzählt ihr mir von euch und euren Wünschen.</span></div>
+        <div class="lp-step"><strong>Euer Tag</strong><span>Ihr genießt eure Hochzeit, ich bin dabei und fange alles ein.</span></div>
+        <div class="lp-step"><strong>Euer Film</strong><span>Ihr bekommt euren fertigen Hochzeitsfilm, zum Teilen und immer wieder Anschauen.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANFRAGE -->
+  <section class="lp-block lp-form-section" id="anfrage">
+    <div class="lp-wrap lp-form-grid">
+      <div class="lp-form-intro fade-in">
+        <p class="lp-kicker">Seid ihr es euch wert?</p>
+        <h2 class="lp-h">Ist euer Datum noch frei?</h2>
+        <p>Beliebte Termine sind schnell vergeben. Schreibt mir einfach, wann und wo ihr heiratet. Ich melde mich persönlich bei euch, unverbindlich und kostenlos.</p>
+        <img src="assets/nici-singer.jpg" alt="Nici Singer, Hochzeitsvideografin aus Köln" loading="lazy">
+      </div>
+
+      <form id="lpForm" class="lp-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="40bd3c17-59ac-4004-be8c-94680870521c">
+        <input type="hidden" name="subject" value="Neue Hochzeitsanfrage über die Landingpage">
+        <input type="hidden" name="from_name" value="nicisinger.de – Hochzeit Landingpage">
+        <input type="hidden" name="Quelle" id="lpSource" value="">
+        <input type="checkbox" name="botcheck" class="lp-hp" tabindex="-1" autocomplete="off">
+
+        <div class="lp-field"><label for="lpName">Eure Namen</label><input type="text" id="lpName" name="name" placeholder="z. B. Lisa &amp; Tom" required></div>
+        <div class="lp-field"><label for="lpMail">E-Mail</label><input type="email" id="lpMail" name="email" placeholder="eure@email.de" required></div>
+        <div class="lp-field"><label for="lpDate">Hochzeitsdatum</label><input type="text" id="lpDate" name="Hochzeitsdatum" placeholder="TT.MM.JJJJ oder z. B. Sommer 2027" required></div>
+        <div class="lp-field"><label for="lpPlace">Ort / Location</label><input type="text" id="lpPlace" name="Location" placeholder="z. B. Köln, Schloss …" required></div>
+        <div class="lp-field lp-field--full"><label for="lpPhone">Telefon <em>(optional, für einen kurzen Rückruf)</em></label><input type="tel" id="lpPhone" name="Telefon" placeholder="+49 …"></div>
+        <div class="lp-field lp-field--full"><label for="lpMsg">Erzählt mir von eurer Hochzeit <em>(optional)</em></label><textarea id="lpMsg" name="message" rows="4" placeholder="Wie viele Gäste, freie Trauung, was euch wichtig ist …"></textarea></div>
+
+        <p class="lp-consent">Mit dem Absenden willigt ihr ein, dass eure Angaben zur Bearbeitung der Anfrage verwendet werden. Mehr dazu in der <a href="datenschutz">Datenschutzerklärung</a>.</p>
+        <button type="submit" class="lp-btn lp-btn--dark" id="lpSubmit">Unverbindlich anfragen</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<a href="#anfrage" class="lp-btn lp-btn--dark lp-sticky-cta" id="lpSticky">Euer Datum anfragen</a>
+
+<!-- Video-Modal -->
+<div class="lp-video-modal" id="lpVideoModal">
+  <div class="lp-video-box">
+    <button class="lp-video-close" id="lpVideoClose" aria-label="Schließen">&times;</button>
+    <iframe id="lpVideoFrame" src="" allow="autoplay; fullscreen" allowfullscreen title="Hochzeitsfilm"></iframe>
+    <div class="lp-yt-consent" id="lpYtConsent">
+      <p>Die Filme liegen auf YouTube. Beim Abspielen werden Daten (z. B. deine IP-Adresse) an YouTube übertragen.</p>
+      <button class="lp-btn" id="lpYtAccept">Video abspielen</button>
+    </div>
+  </div>
+</div>
+
+<!-- Danke-Modal -->
+<div class="lp-modal-overlay" id="lpThanks">
+  <div class="lp-modal">
+    <button class="lp-close" id="lpThanksClose" aria-label="Schließen">&times;</button>
+    <h3>Danke für eure Anfrage!</h3>
+    <p>Ich schaue direkt in meinen Kalender und melde mich so schnell wie möglich bei euch.</p>
+  </div>
+</div>
+
+<footer class="site-footer fade-in-section">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="/" class="footer-name">Nici Singer – Videografin</a>
+      <a href="mailto:nicisinger.media@gmail.com" class="footer-mail">nicisinger.media@gmail.com</a>
+      <div class="footer-icons">
+        <a href="https://www.instagram.com/nicisinger/" target="_blank" rel="noopener" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt="Instagram"></a>
+        <a href="mailto:nicisinger.media@gmail.com" aria-label="E-Mail"><img src="assets/icons/mail.svg" alt="E-Mail"></a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <nav class="footer-nav-main">
+        <a href="/">Home</a>
+        <a href="weddings">Hochzeiten</a>
+        <a href="portfolio">Portfolio</a>
+      </nav>
+      <nav class="footer-nav-legal">
+        <a href="impressum">Impressum</a>
+        <a href="datenschutz">Datenschutz</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  /* Header beim Scrollen hell machen, Sticky-CTA auf dem Handy */
+  var header = document.querySelector('header');
+  var sticky = document.getElementById('lpSticky');
+  var formSec = document.getElementById('anfrage');
+  function onScroll() {
+    var y = window.scrollY;
+    header.classList.toggle('scrolled', y > window.innerHeight * 0.6);
+    var r = formSec.getBoundingClientRect();
+    var formVisible = r.top < window.innerHeight && r.bottom > 0;
+    sticky.classList.toggle('show', y > window.innerHeight * 0.8 && !formVisible);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  /* Einblenden */
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.fade-in, .fade-in-section').forEach(function (el) { io.observe(el); });
+
+  /* Herkunft der Anfrage mitschicken (z. B. ?utm_source=instagram&utm_campaign=hochzeit-ad-1) */
+  try {
+    var p = new URLSearchParams(location.search), parts = [];
+    ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content'].forEach(function (k) { if (p.get(k)) parts.push(k.replace('utm_', '') + ': ' + p.get(k)); });
+    if (p.get('fbclid')) parts.push('Meta-Klick');
+    document.getElementById('lpSource').value = parts.length ? parts.join(' | ') : 'Landingpage direkt';
+  } catch (e) {}
+
+  /* Video-Modal mit YouTube-Einwilligung */
+  var vModal = document.getElementById('lpVideoModal');
+  var vFrame = document.getElementById('lpVideoFrame');
+  var ytBox = document.getElementById('lpYtConsent');
+  var currentId = null;
+  function hasConsent() { try { return localStorage.getItem('nicisinger-cookie-consent') === 'accepted'; } catch (e) { return false; } }
+  function play(id) {
+    vFrame.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0&modestbranding=1';
+    vFrame.style.display = 'block'; ytBox.style.display = 'none';
+  }
+  document.querySelectorAll('.lp-film').forEach(function (b) {
+    b.addEventListener('click', function () {
+      currentId = b.dataset.video;
+      vModal.style.display = 'flex';
+      if (hasConsent()) { play(currentId); } else { vFrame.style.display = 'none'; ytBox.style.display = 'flex'; }
+    });
+  });
+  document.getElementById('lpYtAccept').addEventListener('click', function () {
+    if (window.CookieConsent && window.CookieConsent.accept) { window.CookieConsent.accept(); }
+    else { try { localStorage.setItem('nicisinger-cookie-consent', 'accepted'); } catch (e) {} }
+    play(currentId);
+  });
+  function closeVideo() { vModal.style.display = 'none'; vFrame.src = ''; }
+  document.getElementById('lpVideoClose').addEventListener('click', closeVideo);
+  vModal.addEventListener('click', function (e) { if (e.target === vModal) closeVideo(); });
+
+  /* Formular absenden */
+  var form = document.getElementById('lpForm');
+  var btn = document.getElementById('lpSubmit');
+  var thanks = document.getElementById('lpThanks');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    btn.disabled = true; btn.textContent = 'Wird gesendet …';
+    fetch('https://api.web3forms.com/submit', { method: 'POST', body: new FormData(form) })
+      .then(function (r) { return r.json(); })
+      .then(function (d) {
+        if (!d.success) throw new Error();
+        thanks.style.display = 'flex';
+        form.reset();
+        /* Meta-Pixel: zählt die Anfrage als Lead, sobald das Pixel eingebunden ist */
+        if (typeof window.fbq === 'function') window.fbq('track', 'Lead');
+      })
+      .catch(function () { alert('Das hat leider nicht geklappt. Bitte versucht es noch einmal oder schreibt an nicisinger.media@gmail.com.'); })
+      .finally(function () { btn.disabled = false; btn.textContent = 'Unverbindlich anfragen'; });
+  });
+  document.getElementById('lpThanksClose').addEventListener('click', function () { thanks.style.display = 'none'; });
+  thanks.addEventListener('click', function (e) { if (e.target === thanks) thanks.style.display = 'none'; });
+})();
+</script>
+
+<script src="assets/cookie-consent.js"></script>
+</body>
+</html>
