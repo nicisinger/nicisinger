@@ -255,8 +255,11 @@
       .lp-reels-nav { display: none; }
       .lp-swipe-hint { display: block; }
     }
-    .lp-split--intro video { aspect-ratio: auto; height: 100%; min-height: 520px; object-position: 50% 50%; }
-    @media (max-width: 900px) { .lp-split--intro video { aspect-ratio: 16/9; min-height: 0; height: auto; } }
+    .lp-split--intro .lp-split-media { position: relative; overflow: hidden; min-height: 560px; }
+    .lp-split--intro .lp-split-media video { position: absolute; inset: 0; width: 100%; height: 100%; aspect-ratio: auto; object-fit: cover; object-position: 50% 50%; transform: scale(1.35); transform-origin: 48% 55%; }
+    @media (max-width: 900px) { .lp-split--intro .lp-split-media { min-height: 0; aspect-ratio: 4/3; } .lp-split--intro .lp-split-media video { transform: scale(1.6); transform-origin: 48% 50%; } }
+    .lp-intro { padding-bottom: 60px; }
+    @media (max-width: 768px) { .lp-intro { padding-bottom: 10px; } }
     @media (max-width: 768px) { .lp-hero h2 { font-size: clamp(1.7rem, 8vw, 2.4rem); } }
     @media (max-width: 900px) { .lp-offer-grid { grid-template-columns: 1fr 1fr; } }
     @media (max-width: 768px) { .lp-film-grid--2 { grid-template-columns: 1fr; } .lp-offer-grid { grid-template-columns: 1fr; } }
@@ -299,7 +302,7 @@
   </section>
 
   <!-- INTRO -->
-  <section class="lp-block">
+  <section class="lp-block lp-intro">
     <div class="lp-wrap fade-in">
       <p class="lp-kicker">Dein Retreat in Bildern</p>
       <h2 class="lp-h">Mehr als Erinnerungen</h2>
@@ -379,7 +382,7 @@
 
   <!-- ARBEITSWEISE -->
   <section class="lp-split lp-split--intro">
-    <video src="assets/video-intro-lp.mp4" autoplay muted loop playsinline preload="metadata"></video>
+    <div class="lp-split-media"><video src="assets/video-intro-lp.mp4" autoplay muted loop playsinline preload="metadata"></video></div>
     <div class="lp-split-content fade-in">
       <p class="lp-kicker">So arbeite ich</p>
       <h2 class="lp-h">Präsent, aber leise.</h2>
